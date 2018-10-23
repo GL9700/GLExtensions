@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
     long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/liandyii@msn.com/GLExtensions'
+  s.homepage         = 'https://github.com/GL9700/GLExtensions'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'liandyii@msn.com' => 'guoliang@51jianjiao.com' }
-  s.source           = { :git => 'https://github.com/liandyii@msn.com/GLExtensions.git', :tag => s.version.to_s }
+  s.author           = { 'liguoliang' => '36617161@qq.com' }
+  s.source           = { :git => 'https://github.com/GL9700/GLExtensions.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
