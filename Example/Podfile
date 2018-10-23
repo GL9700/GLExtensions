@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GLExtensions_Example' do
+  pod 'GLExtensions', :path => '../'
+
+  target 'GLExtensions_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
