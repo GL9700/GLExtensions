@@ -32,7 +32,7 @@
     self.frame = CGRectMake(self.x, bottom - self.height, self.width, self.height);
 }
 
-- (void)setCenterX:(CGFloat)centerX{
+- (void)setCenterX:(CGFloat)centerX {
     CGPoint center = self.center;
     center.x = centerX;
     self.center = center;
@@ -109,7 +109,6 @@
     return self.x + self.width;
 }
 
-
 + (instancetype)defaultViewForActivityWithFrame:(CGRect)frame {
     static dispatch_once_t onceToken;
     static UIView *instance;
@@ -123,7 +122,7 @@
         [instance addSubview:instance.activity];
         [instance.activity startAnimating];
     });
-    if(!CGRectEqualToRect(frame, CGRectZero)){
+    if (!CGRectEqualToRect(frame, CGRectZero)) {
         instance.frame = frame;
     }
     return instance;

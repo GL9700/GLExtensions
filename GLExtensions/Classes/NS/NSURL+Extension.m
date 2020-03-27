@@ -14,7 +14,7 @@
     NSString *paramstr = self.query;
     NSArray *split = [paramstr componentsSeparatedByString:@"&"];
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    [split enumerateObjectsUsingBlock:^(NSString *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+    [split enumerateObjectsUsingBlock: ^(NSString *_Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
         NSString *key = [obj substringToIndex:[obj rangeOfString:@"="].location];
         NSString *value = [obj substringFromIndex:[obj rangeOfString:@"="].location + 1];
         dic[key] = value;
@@ -36,7 +36,9 @@
                     struct sockaddr_in6 *remoteAddr6 = (struct sockaddr_in6 *)CFDataGetBytePtr(saData);
                     struct sockaddr_in *remoteAddr4 = (struct sockaddr_in *)CFDataGetBytePtr(saData);
                     if (remoteAddr6 != NULL) {
-                        char ip[INET6_ADDRSTRLEN] = { 0 };
+                        char ip[INET6_ADDRSTRLEN] = {
+                            0
+                        };
                         const char *strIP61 = inet_ntop(PF_INET6, &remoteAddr6->sin6_addr, ip, sizeof(ip));
                         NSString *strDNS = [NSString stringWithCString:strIP61 encoding:NSASCIIStringEncoding];
                         if (strDNS && ![strDNS isEqualToString:@"::"]) [tempDNS addObject:strDNS];

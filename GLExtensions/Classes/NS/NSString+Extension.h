@@ -19,7 +19,8 @@
 #define kRegexForEmail @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 
 /** 判空 */
-UIKIT_STATIC_INLINE BOOL isEmptyString(NSString *str) {
+UIKIT_STATIC_INLINE BOOL isEmptyString(NSString *str)
+{
     return (str == nil || str.length == 0 || [[str lowercaseString] isEqualToString:@"<null>"] || [str isEqual:[NSNull null]]);
 }
 

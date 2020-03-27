@@ -14,12 +14,10 @@
     return [calendar components:unit fromDate:d1 toDate:d2 options:0];
 }
 
-
 - (NSString *)stringDateWithFormat:(NSString *)format {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    if(format!=nil)
-        formatter.dateFormat = format;
+    if (format != nil) formatter.dateFormat = format;
     return [formatter stringFromDate:self];
 }
 

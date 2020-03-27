@@ -10,148 +10,141 @@
 #import <UserNotifications/UserNotifications.h>
 #import <UIAlertController+Extension.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <CoreTelephony/CTCellularData.h>
+#import <Contacts/Contacts.h>
+#import <AddressBook/AddressBook.h>
 
 @implementation UIApplication (Extension)
-/** 获得PhotoLibrary授权 */
-+ (BOOL)privacyAuthorizedForPhotoLibrary:(BOOL)needAlert {
-    __block BOOL allow = NO;
-    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-    if(status == PHAuthorizationStatusAuthorized){
-        allow = YES;
-    }else if(status == PHAuthorizationStatusNotDetermined){
-        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-            if(status == PHAuthorizationStatusAuthorized) {
-                allow = YES;
-            }
+
+//MARK: 获得PhotoLibrary授权
++ (BOOL)privacyPhotoLibraryAuthorizedWithHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
+    PHAuthorizationStatus aStatus = [PHPhotoLibrary authorizationStatus];
+    if (aStatus == PHAuthorizationStatusNotDetermined) {
+        [PHPhotoLibrary requestAuthorization: ^(PHAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                               authorized = (BOOL)(status == PHAuthorizationStatusAuthorized);
+                           });
         }];
-    }else{
-        if (needAlert) {
-            NSString *str = [NSString stringWithFormat:@"请在“设置->隐私->照片”选项中,允许%@访问你的相册。", [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey]];
-            [[UIAlertController alertWithTitle:@"提示" message:str singleButton:@"好的" event:nil] show];
-        }
     }
-    return allow;
+    else {
+        authorized = (BOOL)(aStatus == PHAuthorizationStatusAuthorized);
+    }
+    if (handle) {
+        handle(authorized);
+    }
+    return authorized;
 }
 
-/** 获得Camera授权 */
-+ (BOOL)privacyAuthorizedForCamera:(BOOL)needAlert {
-    __block BOOL allow = NO;
+//MARK: 获得Camera授权
++ (BOOL)privacyCameraWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if(status == AVAuthorizationStatusAuthorized) {
-        allow = YES;
-    }else if(status == AVAuthorizationStatusNotDetermined) {
-        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-            if(granted){
-                allow = YES;
-            }
+    if (status == AVAuthorizationStatusNotDetermined) {
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler: ^(BOOL granted) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                               authorized = granted;
+                           });
         }];
-    }else{
-        if (needAlert) {
-            NSString *str = [NSString stringWithFormat:@"请在“设置->隐私->相机”选项中,允许%@访问你的相机。", [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey]];
-            [[UIAlertController alertWithTitle:@"提示" message:str singleButton:@"好的" event:nil] show];
-        }
     }
-    return allow;
+    else {
+        authorized = (BOOL)(status == PHAuthorizationStatusAuthorized);
+    }
+    if (handle) {
+        handle(authorized);
+    }
+    return authorized;
 }
 
-/** 已获得Microphone授权 */
-+ (BOOL)privacyAuthorizedForMicrophone:(BOOL)needAlert {
-    __block BOOL allow = NO;
-    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
-    if(status == AVAuthorizationStatusAuthorized) {
-        allow = YES;
-    }else if(status == AVAuthorizationStatusNotDetermined) {
-        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
-            if(granted){
-                allow = YES;
-            }
+//MARK: 获得Microphone授权
++ (BOOL)privacyMicrophoneWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
+    AVAudioSessionRecordPermission status = [[AVAudioSession sharedInstance] recordPermission];
+    if (status == AVAudioSessionRecordPermissionUndetermined) {
+        [[AVAudioSession sharedInstance] requestRecordPermission: ^(BOOL granted) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                               authorized = granted;
+                           });
         }];
-    }else{
-        if (needAlert) {
-            NSString *str = [NSString stringWithFormat:@"请在“设置->隐私->麦克风”选项中,允许%@访问你的麦克风。", [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey]];
-            [[UIAlertController alertWithTitle:@"提示" message:str singleButton:@"好的" event:nil] show];
-        }
     }
-    return allow;
+    else {
+        authorized = (BOOL)(status == AVAudioSessionRecordPermissionDenied);
+    }
+    if (handle) {
+        handle(authorized);
+    }
+    return authorized;
 }
 
-/** 已获得AddressBook授权 */
-+ (BOOL)privacyAuthorizedForAddressBook:(BOOL)needAlert {
-    return YES;
+//MARK: 获得AddressBook授权
++ (BOOL)privacyAddressBookWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
+    CNAuthorizationStatus authStatus = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+    if (authStatus == CNAuthorizationStatusNotDetermined) {
+        CNContactStore *contactStore = [[CNContactStore alloc] init];
+        [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler: ^(BOOL granted, NSError *_Nullable error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                               authorized = granted;
+                           });
+        }];
+    }
+    else {
+        authorized = (BOOL)(authStatus == CNAuthorizationStatusAuthorized);
+    }
+    if (handle) {
+        handle(authorized);
+    }
+    return authorized;
 }
 
-/** 已获得RemoteNotificationPush授权 */
-+ (BOOL)privacyAuthorizedForRemoteNotification:(BOOL)needAlert {
-    __block BOOL allow = NO;
-    if(@available(iOS 10.0 , *)) {
-        [[UNUserNotificationCenter currentNotificationCenter] getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-            if(settings.authorizationStatus == UNAuthorizationStatusAuthorized){
-                allow = YES;
-            }else if(settings.authorizationStatus == UNAuthorizationStatusNotDetermined){
-                [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionAlert | UNAuthorizationOptionBadge | UNAuthorizationOptionSound completionHandler:^(BOOL granted, NSError * _Nullable error) {
-                    allow = granted;
-                }];
-            }else{
-                if (needAlert) {
-                    NSString *str = [NSString stringWithFormat:@"请在“设置->通知”中,允许%@的通知。", [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey]];
-                    [[UIAlertController alertWithTitle:@"提示" message:str singleButton:@"好的" event:nil] show];
-                }
-            }
-       }];
-    }else{
-        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil]];
+//MARK: 获得PushNotification授权
++ (BOOL)privacyPushNotificationWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
+    if (@available(iOS 10.0, *)) {
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionCarPlay) completionHandler: ^(BOOL granted, NSError *_Nullable error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                               authorized = granted;
+                           });
+        }];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
-        UIUserNotificationSettings * setting = [[UIApplication sharedApplication] currentUserNotificationSettings];
-        if (setting.types != UIUserNotificationTypeNone) {
-            allow = YES;
+        if (handle) {
+            handle(authorized);
         }
+        return authorized;
     }
-    
-    return allow;
+    else {
+        NSLog(@"!! PushNotification授权 暂时仅支持 iOS10+ 版本");
+        return NO;
+    }
 }
 
-/** 已获得Calendar授权 */
-+ (BOOL)privacyAuthorizedForCalendar:(BOOL)needAlert {
-    return YES;
+//MARK: 获得Calendar授权
++ (BOOL)privacyCalendarWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
+    NSLog(@"!! 获得Calendar授权 暂时未实现");
+    if (handle) {
+        handle(authorized);
+    }
+    return authorized;
 }
 
-/** 已获得Location授权 */
-+ (BOOL)privacyAuthorizedForLocationInUse:(BOOL)needAlert {
-    CLLocationManager *location = [[CLLocationManager alloc]init];
-    [location requestWhenInUseAuthorization];
-    BOOL allow = NO;
-    static BOOL first;
-    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-    if([CLLocationManager locationServicesEnabled]==NO || status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
-        if (needAlert || first) {
-            NSString *str = [NSString stringWithFormat:@"请在“设置->隐私->定位服务”选项中,允许%@访问你位置。", [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey]];
-            [[UIAlertController alertWithTitle:@"提示" message:str singleButton:@"好的" event:nil] show];
-        }else{
-            first = YES;
-        }
-    }else if(status == kCLAuthorizationStatusNotDetermined){
-        allow = YES;
+//MARK: 获得Location授权
++ (BOOL)privacyLocationInUseWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
+    __block BOOL authorized = NO;
+    BOOL enable = [CLLocationManager locationServicesEnabled];
+    int status = [CLLocationManager authorizationStatus];
+    if (!enable || status == 1 || status == 2) {
+        authorized = NO;
     }
-    return allow;
-}
-/** 已获得Location授权 */
-+ (BOOL)privacyAuthorizedForLocationAlways:(BOOL)needAlert {
-    CLLocationManager *location = [[CLLocationManager alloc]init];
-    [location requestAlwaysAuthorization];
-    BOOL allow = NO;
-    static BOOL first;
-    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
-    if([CLLocationManager locationServicesEnabled]==NO || status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
-        if (needAlert || first) {
-            NSString *str = [NSString stringWithFormat:@"请在“设置->隐私->定位服务”选项中,允许%@访问你位置。", [NSBundle mainBundle].infoDictionary[(NSString *)kCFBundleNameKey]];
-            [[UIAlertController alertWithTitle:@"提示" message:str singleButton:@"好的" event:nil] show];
-        }else{
-            first = YES;
-        }
-    }else if(status == kCLAuthorizationStatusNotDetermined){
-        allow = YES;
+    else {
+        authorized = YES;
     }
-    return allow;
+    if (handle) {
+        handle(authorized);
+    }
+    return authorized;
 }
 
 @end

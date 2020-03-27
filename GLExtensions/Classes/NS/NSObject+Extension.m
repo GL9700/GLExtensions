@@ -34,14 +34,13 @@ static char kAssociatedObjectKey;
     NSString *result = nil;
     @try {
         if ([NSJSONSerialization isValidJSONObject:self]) {
-            NSError * error = nil;
+            NSError *error = nil;
             NSData *data = [NSJSONSerialization dataWithJSONObject:self options:0 error:&error];
-            if (data && error==nil) {
+            if (data && error == nil) {
                 result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
             }
         }
-    }@catch (NSException *exception) {
-        
+    } @catch (NSException *exception) {
     }
     return result;
 }

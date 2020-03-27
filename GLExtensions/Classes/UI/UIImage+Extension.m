@@ -10,16 +10,16 @@
 
 @implementation UIImage (Extension)
 /** 加载原始图片 */
-+ (instancetype)imageNamedWithOriganlMode:(NSString *)imageName{
-    return  [_img(imageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
++ (instancetype)imageNamedWithOriganlMode:(NSString *)imageName {
+    return [_img(imageName) imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
+
 /** 压缩图片 */
-+ (NSData *)compressWithLengthLimit:(NSUInteger)maxLength withOrignImg:(UIImage *)orignImg{
++ (NSData *)compressWithLengthLimit:(NSUInteger)maxLength withOrignImg:(UIImage *)orignImg {
     // Compress by quality
     CGFloat compression = 1;
     NSData *data = UIImageJPEGRepresentation(orignImg, compression);
     if (data.length < maxLength) return data;
-    
     CGFloat max = 1;
     CGFloat min = 0;
     for (int i = 0; i < 6; ++i) {
@@ -27,9 +27,11 @@
         data = UIImageJPEGRepresentation(orignImg, compression);
         if (data.length < maxLength * 0.9) {
             min = compression;
-        } else if (data.length > maxLength) {
+        }
+        else if (data.length > maxLength) {
             max = compression;
-        } else {
+        }
+        else {
             break;
         }
     }
@@ -50,4 +52,5 @@
     }
     return data;
 }
+
 @end

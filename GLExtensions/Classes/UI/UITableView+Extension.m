@@ -8,11 +8,11 @@
 #import "UITableView+Extension.h"
 #import <objc/message.h>
 
-typedef void (* VoidIMP) (id , SEL , ...);
+typedef void (*VoidIMP) (id, SEL, ...);
 
 @interface UITableView (Extension)
-@property (nonatomic , strong) UIView *emptyView;
-@property (nonatomic , strong) NSObject *data;
+@property (nonatomic, strong) UIView *emptyView;
+@property (nonatomic, strong) NSObject *data;
 @end
 
 @implementation UITableView (Extension)
@@ -28,13 +28,14 @@ typedef void (* VoidIMP) (id , SEL , ...);
 - (void)setData:(NSObject *)data {
     objc_setAssociatedObject(self, @selector(data), data, OBJC_ASSOCIATION_RETAIN);
 }
+
 - (NSObject *)data {
     return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)bindingArrayDatasource:(NSObject *)data withEmptyView:(UIView *)emptyView {
     self.data = data;
-    if(emptyView && [data mutableArrayValueForKey:@"array"].count==0) {
+    if (emptyView && [data mutableArrayValueForKey:@"array"].count == 0) {
         self.emptyView = emptyView;
         self.backgroundView = [[UIView alloc]init];
         [self.backgroundView addSubview:self.emptyView];
@@ -43,15 +44,17 @@ typedef void (* VoidIMP) (id , SEL , ...);
     [self.data addObserver:self forKeyPath:@"array" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if([keyPath isEqualToString:@"array"]) {
-        if(self.emptyView && [object mutableArrayValueForKey:keyPath].count==0){
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey, id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"array"]) {
+        if (self.emptyView && [object mutableArrayValueForKey:keyPath].count == 0) {
             self.backgroundView = self.emptyView;
-        }else{
+        }
+        else {
             self.backgroundView = nil;
         }
     }
 }
+
 /*
 - (void)setDataSource:(id<UITableViewDataSource>)dataSource {
     if(self.tableFooterView==nil)

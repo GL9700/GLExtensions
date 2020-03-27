@@ -5,20 +5,18 @@
 //  Created by liguoliang on 2018/9/10.
 //
 
-
-
 #import "UIDevice+Extension.h"
 #import <sys/utsname.h>
 #import "Reachability.h"
 
-typedef void(^NStatusBlock)(NetworkStatus);
+typedef void (^NStatusBlock)(NetworkStatus);
 static Reachability *REACH;
 static NStatusBlock NSBLK;
 
 @implementation UIDevice (Extension)
 
 + (Reachability *)reachability {
-    if(REACH==nil){
+    if (REACH == nil) {
         REACH = [Reachability reachabilityForInternetConnection];
     }
     return REACH;
@@ -28,7 +26,7 @@ static NStatusBlock NSBLK;
     return [self reachability].currentReachabilityStatus;
 }
 
-+ (void)listenNetworkStatusUseHandler:(void(^)(NetworkStatus netStatus))block {
++ (void)listenNetworkStatusUseHandler:(void (^)(NetworkStatus netStatus))block {
     NSBLK = block;
     [[NSNotificationCenter defaultCenter] removeObserver:self name:kReachabilityChangedNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(REACHDIDChanged:) name:kReachabilityChangedNotification object:nil];
@@ -36,7 +34,7 @@ static NStatusBlock NSBLK;
 }
 
 + (void)REACHDIDChanged:(NSNotification *)notifcation {
-    if(NSBLK){
+    if (NSBLK) {
         NSBLK([self reachability].currentReachabilityStatus);
     }
 }
@@ -48,8 +46,6 @@ static NStatusBlock NSBLK;
 }
 
 @end
-
-
 
 /**
  iPhone3,1 -- iPhone 4
@@ -77,13 +73,13 @@ static NStatusBlock NSBLK;
  iPhone10,5 -- 美版(Global/A1897)iPhone 8 Plus
  iPhone10,3 -- 国行(A1865)、日行(A1902)iPhone X
  iPhone10,6 -- 美版(Global/A1901)iPhone X
- 
+
  iPod1,1 -- iPod Touch 1G
  iPod2,1 -- iPod Touch 2G
  iPod3,1 -- iPod Touch 3G
  iPod4,1 -- iPod Touch 4G
  iPod5,1 -- iPod Touch (5 Gen)
- 
+
  iPad1,1 -- iPad
  iPad1,2 -- iPad 3G
  iPad2,1 -- iPad 2 (WiFi)
@@ -121,12 +117,12 @@ static NStatusBlock NSBLK;
  iPad7,2 -- iPad Pro 12.9 inch 2nd gen (Cellular)
  iPad7,3 -- iPad Pro 10.5 inch (WiFi)
  iPad7,4 -- iPad Pro 10.5 inch (Cellular)
- 
+
  AppleTV2,1 -- Apple TV 2
  AppleTV3,1 -- Apple TV 3
  AppleTV3,2 -- Apple TV 3
  AppleTV5,3 -- Apple TV 4
- 
+
  i386 -- Simulator
  x86_64 -- Simulator
  */

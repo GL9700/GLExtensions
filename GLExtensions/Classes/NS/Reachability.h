@@ -1,7 +1,7 @@
 /*
  Copyright (C) 2016 Apple Inc. All Rights Reserved.
  See LICENSE.txt for this sample’s licensing information
- 
+
  Abstract:
  Basic demonstration of how to use the SystemConfiguration Reachablity APIs.
  */
@@ -10,19 +10,16 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <netinet/in.h>
 
-
 typedef enum : NSInteger {
-	NotReachable = 0,
-	ReachableViaWiFi,
-	ReachableViaWWAN
+    NotReachable = 0,
+    ReachableViaWiFi,
+    ReachableViaWWAN
 } NetworkStatus;
 
 #pragma mark IPv6 Support
 //Reachability fully support IPv6.  For full details, see ReadMe.md.
 
-
 extern NSString *kReachabilityChangedNotification;
-
 
 @interface Reachability : NSObject
 
@@ -40,7 +37,6 @@ extern NSString *kReachabilityChangedNotification;
  * Checks whether the default route is available. Should be used by applications that do not connect to a particular host.
  */
 + (instancetype)reachabilityForInternetConnection;
-
 
 #pragma mark reachabilityForLocalWiFi
 //reachabilityForLocalWiFi has been removed from the sample.  See ReadMe.md for more information.
@@ -60,5 +56,3 @@ extern NSString *kReachabilityChangedNotification;
 - (BOOL)connectionRequired;
 
 @end
-
-

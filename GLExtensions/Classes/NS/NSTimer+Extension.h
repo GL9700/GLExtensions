@@ -11,7 +11,7 @@
 @interface NSTimer (Extension)
 
 /** 开始计时器 */
-+ (NSTimer *)startWithTimeInterval:(NSTimeInterval)interval repeat:(BOOL)repeat withBlock:(void(^)(void))block;
++ (NSTimer *)startWithTimeInterval:(NSTimeInterval)interval repeat:(BOOL)repeat withBlock:(void (^)(void))block;
 
 /** 结束计时器 */
 + (void)stopTime:(NSTimer *)timer;

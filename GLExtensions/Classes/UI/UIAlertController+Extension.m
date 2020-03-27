@@ -15,7 +15,7 @@
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)msg singleButton:(NSString *)btnTitle event:(void (^)(void))eventBLK {
     UIAlertController *instance = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
     if (btnTitle != nil) {
-        [instance addAction:[UIAlertAction actionWithTitle:btnTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
+        [instance addAction:[UIAlertAction actionWithTitle:btnTitle style:UIAlertActionStyleDefault handler: ^(UIAlertAction *_Nonnull action) {
             if (eventBLK != nil) eventBLK();
         }]];
     }
@@ -26,7 +26,7 @@
     UIAlertController *instance = [UIAlertController alertControllerWithTitle:title message:msg preferredStyle:UIAlertControllerStyleAlert];
     if (btnTitles != nil) {
         for (int i = 0; i < btnTitles.count; i++) {
-            UIAlertAction *act = [UIAlertAction actionWithTitle:btnTitles[i] style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
+            UIAlertAction *act = [UIAlertAction actionWithTitle:btnTitles[i] style:UIAlertActionStyleDefault handler: ^(UIAlertAction *_Nonnull action) {
                 if (eventBLK != nil) eventBLK(i);
             }];
             [instance addAction:act];
@@ -48,7 +48,7 @@
 }
 
 - (void)showAfterAutoDismissSec:(NSUInteger)sec withComplete:(void (^)(void))complete {
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self animated:YES completion:^{
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self animated:YES completion: ^{
         if (sec > 0) {
             /*
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -64,12 +64,12 @@
             });
              */
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                           if (self.view.superview) {
-                               [self dismissViewControllerAnimated:YES completion:^{
-                                   if (complete) complete();
-                               }];
-                           }
-                       });
+                               if (self.view.superview) {
+                                   [self dismissViewControllerAnimated:YES completion: ^{
+                                       if (complete) complete();
+                                   }];
+                               }
+                           });
         }
     }];
 }
@@ -92,21 +92,21 @@
         label.layer.masksToBounds = YES;
         label.alpha = 0;
         [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:label];
-        [UIView animateWithDuration:0.25 animations:^{
+        [UIView animateWithDuration:0.25 animations: ^{
             label.alpha = 1;
             label.frame = CGRectOffset(label.frame, 0, 5);
-        } completion:^(BOOL finished) {
+        } completion: ^(BOOL finished) {
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-               sleep(kToastShowTime);
-               dispatch_async(dispatch_get_main_queue(), ^{
-                   [UIView animateWithDuration:0.25 animations:^{
-                       label.alpha = 0;
-                       label.frame = CGRectOffset(label.frame, 0, -5);
-                   } completion:^(BOOL finished) {
-                      if (label.superview) [label removeFromSuperview];
-                   }];
-               });
-            });
+                               sleep(kToastShowTime);
+                               dispatch_async(dispatch_get_main_queue(), ^{
+                                                  [UIView animateWithDuration:0.25 animations: ^{
+                                                      label.alpha = 0;
+                                                      label.frame = CGRectOffset(label.frame, 0, -5);
+                                                  } completion: ^(BOOL finished) {
+                        if (label.superview) [label removeFromSuperview];
+                    }];
+                                              });
+                           });
         }];
     });
 }
