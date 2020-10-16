@@ -8,8 +8,19 @@
 #import "UIColor+Extension.h"
 
 @implementation UIColor (Extension)
-+ (UIColor *)colorWithHexString:(NSString *)hexString {
-    NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
++ (instancetype)colorFromHexValue:(uint32_t)hex {
+    uint8_t r = (hex & 0xff0000) >> 16;
+    uint8_t g = (hex & 0x00ff00) >> 8;
+    uint8_t b = hex & 0x0000ff;
+    return  [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
+}
++ (instancetype)colorFromHexStr:(NSString *)hexStr {
+    NSString *sp = [hexStr hasPrefix:@"0x"] ? @"0x" : [hexStr hasPrefix:@"0X"] ? @"0X": [hexStr hasPrefix:@"#"] ? @"#" : nil;
+    return [self colorFromHexStr:hexStr headStr:sp];
+}
++ (instancetype)colorFromHexStr:(NSString *)hexStr headStr:(NSString *)str {
+    NSString *sp = str ? str : @"";
+    NSString *colorString = [[hexStr stringByReplacingOccurrencesOfString:sp withString:@""] uppercaseString];
     CGFloat alpha, red, blue, green;
     switch ([colorString length]) {
         case 3: // #RGB
@@ -42,7 +53,6 @@
     }
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
-
 + (CGFloat)colorComponentFrom:(NSString *)string start:(NSUInteger)start length:(NSUInteger)length Case:(int)ARGB {
     NSString *substring = [string substringWithRange:NSMakeRange(start, length)];
     NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat:@"%@%@", substring, substring];
