@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "NSObject+Extension.h"
+#import <GLExtensions/NSObject+Extension.h>
 #import <objc/runtime.h>
 
 static char kAssociatedObjectRetainKey;

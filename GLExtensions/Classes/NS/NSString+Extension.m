@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "NSString+Extension.h"
+#import <GLExtensions/NSString+Extension.h>
 #import <CommonCrypto/CommonDigest.h>
 
 #define kURLEncodeCharters "?!@#$^&%*+,:;='\"`<>()[]{}/\\| "

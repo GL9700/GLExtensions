@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UIViewController+Extension.h"
+#import <GLExtensions/UIViewController+Extension.h>
 
 @implementation UIViewController (Extension)
 

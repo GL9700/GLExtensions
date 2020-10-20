@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UIView+Extension.h"
+#import <GLExtensions/UIView+Extension.h>
 #import <objc/message.h>
 
 @implementation UIView (Extension)

@@ -1,5 +1,5 @@
 PODS:
-  - GLExtensions (0.1.0)
+  - GLExtensions (0.2.1)
 
 DEPENDENCIES:
   - GLExtensions (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GLExtensions: 59a7b20f9e6ffe867166bee246e053c4b7ae0847
+  GLExtensions: 8bc5e276fccf96841957e7c67b16e67d29f88903
 
-PODFILE CHECKSUM: 80660a4cf5a882ccbd8bf388e23701c1d3e1d2e8
+PODFILE CHECKSUM: c939f991861175dc9f3f2337dea179e44dad1de2
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

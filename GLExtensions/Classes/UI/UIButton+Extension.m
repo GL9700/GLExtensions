@@ -5,7 +5,7 @@
 //  Created by liguoliang on 2018/9/27.
 //
 
-#import "UIButton+Extension.h"
+#import <GLExtensions/UIButton+Extension.h>
 #import <objc/message.h>
 
 @implementation UIButton (Extension)

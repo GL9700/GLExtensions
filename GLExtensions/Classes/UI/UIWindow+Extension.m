@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UIWindow+Extension.h"
+#import <GLExtensions/UIWindow+Extension.h>
 
 @implementation UIWindow (Extension)
 

@@ -5,10 +5,10 @@
 //  Created by liguoliang on 2018/9/17.
 //
 
-#import "UIApplication+Extension.h"
+#import <GLExtensions/UIApplication+Extension.h>
+#import <GLExtensions/UIAlertController+Extension.h>
 #import <Photos/Photos.h>
 #import <UserNotifications/UserNotifications.h>
-#import <UIAlertController+Extension.h>
 #import <CoreLocation/CoreLocation.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreTelephony/CTCellularData.h>
@@ -80,20 +80,22 @@
 //MARK: 获得AddressBook授权
 + (BOOL)privacyAddressBookWithAuthorizedHandle:(void (^)(BOOL authorized))handle {
     __block BOOL authorized = NO;
-    CNAuthorizationStatus authStatus = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
-    if (authStatus == CNAuthorizationStatusNotDetermined) {
-        CNContactStore *contactStore = [[CNContactStore alloc] init];
-        [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler: ^(BOOL granted, NSError *_Nullable error) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                               authorized = granted;
-                           });
-        }];
-    }
-    else {
-        authorized = (BOOL)(authStatus == CNAuthorizationStatusAuthorized);
-    }
-    if (handle) {
-        handle(authorized);
+    if (@available(iOS 9.0, *)) {
+        CNAuthorizationStatus authStatus = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+        if (authStatus == CNAuthorizationStatusNotDetermined) {
+            CNContactStore *contactStore = [[CNContactStore alloc] init];
+            [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler: ^(BOOL granted, NSError *_Nullable error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    authorized = granted;
+                });
+            }];
+        }
+        else {
+            authorized = (BOOL)(authStatus == CNAuthorizationStatusAuthorized);
+        }
+        if (handle) {
+            handle(authorized);
+        }
     }
     return authorized;
 }

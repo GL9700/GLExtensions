@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UIResponder+Extension.h"
+#import <GLExtensions/UIResponder+Extension.h>
 
 @implementation UIResponder (Extension)
 

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIView+Extension.h"
-#import <UIAlertController+Extension.h>
+#import <GLExtensions/UIView+Extension.h>
+#import <GLExtensions/UIAlertController+Extension.h>
 
 UIKIT_STATIC_INLINE void hideActivity()
 {

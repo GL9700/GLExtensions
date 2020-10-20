@@ -6,10 +6,10 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UINavigationController+Extension.h"
-#import "UIButton+Extension.h"
-#import "UIView+Extension.h"
-#import "UIImage+Extension.h"
+#import <GLExtensions/UINavigationController+Extension.h>
+#import <GLExtensions/UIButton+Extension.h>
+#import <GLExtensions/UIView+Extension.h>
+#import <GLExtensions/UIImage+Extension.h>
 #import <objc/message.h>
 
 @interface UINavigationController (Extensions)

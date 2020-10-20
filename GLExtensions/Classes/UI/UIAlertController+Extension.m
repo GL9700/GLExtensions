@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UIAlertController+Extension.h"
+#import <GLExtensions/UIAlertController+Extension.h>
 
 #define kToastShowTime 2
 

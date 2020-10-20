@@ -5,7 +5,7 @@
 //  Created by liguoliang on 2018/9/21.
 //
 
-#import "NSDate+Extension.h"
+#import <GLExtensions/NSDate+Extension.h>
 
 @implementation NSDate (Extension)
 

@@ -1,5 +1,5 @@
-#use_frameworks!
 
+use_frameworks!
 target 'GLExtensions_Example' do
   pod 'GLExtensions', :path => '../'
 

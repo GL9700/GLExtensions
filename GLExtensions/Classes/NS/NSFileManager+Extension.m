@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "NSFileManager+Extension.h"
+#import <GLExtensions/NSFileManager+Extension.h>
 
 @implementation NSFileManager (Extension)
 

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "NSData+Extension.h"
+#import <GLExtensions/NSData+Extension.h>
 
 @implementation NSData (Extension)
 

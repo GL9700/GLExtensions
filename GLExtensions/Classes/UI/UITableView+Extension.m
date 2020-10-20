@@ -5,7 +5,7 @@
 //  Created by liguoliang on 2018/9/6.
 //
 
-#import "UITableView+Extension.h"
+#import <GLExtensions/UITableView+Extension.h>
 #import <objc/message.h>
 
 typedef void (*VoidIMP) (id, SEL, ...);

@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "NSTimer+Extension.h"
+#import <GLExtensions/NSTimer+Extension.h>
 
 @implementation NSTimer (Extension)
 

@@ -5,7 +5,7 @@
 //  Created by liguoliang on 2018/9/10.
 //
 
-#import "UIColor+Extension.h"
+#import <GLExtensions/UIColor+Extension.h>
 
 @implementation UIColor (Extension)
 + (instancetype)colorFromHexValue:(uint32_t)hex {

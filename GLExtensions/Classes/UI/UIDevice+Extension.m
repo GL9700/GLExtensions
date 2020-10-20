@@ -5,7 +5,7 @@
 //  Created by liguoliang on 2018/9/10.
 //
 
-#import "UIDevice+Extension.h"
+#import <GLExtensions/UIDevice+Extension.h>
 #import <sys/utsname.h>
 #import "Reachability.h"
 

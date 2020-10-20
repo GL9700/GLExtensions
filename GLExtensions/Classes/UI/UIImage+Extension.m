@@ -6,7 +6,7 @@
 //  Copyright © 2018年 liguoliang. All rights reserved.
 //
 
-#import "UIImage+Extension.h"
+#import <GLExtensions/UIImage+Extension.h>
 
 @implementation UIImage (Extension)
 /** 加载原始图片 */
