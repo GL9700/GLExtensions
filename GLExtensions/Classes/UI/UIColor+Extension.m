@@ -8,6 +8,14 @@
 #import <GLExtensions/UIColor+Extension.h>
 
 @implementation UIColor (Extension)
+
++ (instancetype)randomColor {
+    float r = arc4random()%255/255.0;
+    float g = arc4random()%255/255.0;
+    float b = arc4random()%255/255.0;
+    return [UIColor colorWithRed:r green:g blue:b alpha:1];
+}
+
 + (instancetype)colorFromHexValue:(uint32_t)hex {
     uint8_t r = (hex & 0xff0000) >> 16;
     uint8_t g = (hex & 0x00ff00) >> 8;
