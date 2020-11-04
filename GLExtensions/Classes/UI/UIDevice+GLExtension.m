@@ -7,17 +7,17 @@
 
 #import <GLExtensions/UIDevice+GLExtension.h>
 #import <sys/utsname.h>
-#import "Reachability.h"
+#import "GLExtReachability.h"
 
 typedef void (^NStatusBlock)(NetworkStatus);
-static Reachability *REACH;
+static GLExtReachability *REACH;
 static NStatusBlock NSBLK;
 
 @implementation UIDevice (GLExtension)
 
-+ (Reachability *)reachability {
++ (GLExtReachability *)reachability {
     if (REACH == nil) {
-        REACH = [Reachability reachabilityForInternetConnection];
+        REACH = [GLExtReachability reachabilityForInternetConnection];
     }
     return REACH;
 }
