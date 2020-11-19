@@ -10,6 +10,7 @@
 #import <GLExtensions/UIView+GLExtension.h>
 #import <GLExtensions/UIAlertController+GLExtension.h>
 
+/// 隐藏已经显示的Activity
 UIKIT_STATIC_INLINE void hideActivity()
 {
     UIView *actView = [UIView defaultViewForActivityWithFrame:CGRectZero];
@@ -19,6 +20,7 @@ UIKIT_STATIC_INLINE void hideActivity()
     [actView performSelectorOnMainThread:NSSelectorFromString(@"hideActivity") withObject:nil waitUntilDone:NO];
 }
 
+/// 显示单例Activity
 UIKIT_STATIC_INLINE void showActivity(id vc)
 {
     UIView *view = [UIApplication sharedApplication].keyWindow;
@@ -31,10 +33,18 @@ UIKIT_STATIC_INLINE void showActivity(id vc)
     [view addSubview:actView];
 }
 
+/// Toast
 UIKIT_STATIC_INLINE void showToastMsg(NSString *msg)
 {
     [UIAlertController showToastWithMessage:msg];
 }
+
+/// Toast 自定义显示位置
+UIKIT_STATIC_INLINE void showToastMsgWithCenterPoint(NSString *msg, CGPoint point)
+{
+    [UIAlertController showToastWithMessage:msg withPoint:point];
+}
+
 
 @interface UIViewController (GLExtension)
 

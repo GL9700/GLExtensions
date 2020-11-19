@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="onX-UG-bu6">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +19,139 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-wV-Wma">
+                                <rect key="frame" x="72" y="234" width="231" height="199"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-wR-LlC">
+                                        <rect key="frame" x="0.0" y="0.0" width="231" height="89"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="f5N-KE-Nga">
+                                                <rect key="frame" x="0.0" y="0.0" width="231" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入手机号或邮箱" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPT-Tu-0KD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="193" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gJ-2H-im2">
+                                                        <rect key="frame" x="193" y="0.0" width="38" height="34"/>
+                                                        <state key="normal" title="验证"/>
+                                                        <connections>
+                                                            <action selector="onClickCheckText:" destination="whP-gf-Uak" eventType="touchUpInside" id="mez-7S-iEv"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="978-7P-gn0">
+                                                <rect key="frame" x="0.0" y="39" width="231" height="50"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" red="0.90980392160000001" green="0.35294117650000001" blue="0.2274509804" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-5x-75K">
+                                        <rect key="frame" x="0.0" y="114" width="231" height="30"/>
+                                        <state key="normal" title="打开一页倒计时"/>
+                                        <connections>
+                                            <segue destination="WEe-cW-D6z" kind="push" id="uJf-oF-b4r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-50-Mkq">
+                                        <rect key="frame" x="0.0" y="169" width="231" height="30"/>
+                                        <state key="normal" title="弹出一个居中的Toast"/>
+                                        <connections>
+                                            <action selector="onClickToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="RLr-Fv-BJ6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6CO-wV-Wma" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="fQs-Z2-iiL"/>
+                            <constraint firstItem="6CO-wV-Wma" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="wSv-mh-rdc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PS0-vq-wwP"/>
+                    <connections>
+                        <outlet property="checkResultLabel" destination="978-7P-gn0" id="3oK-u1-iPi"/>
+                        <outlet property="textField" destination="gPT-Tu-0KD" id="Meh-Kp-qgJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="1244" y="432.23388305847078"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xiU-KZ-hgm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="onX-UG-bu6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hCD-lf-1bE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="whP-gf-Uak" kind="relationship" relationship="rootViewController" id="9Gv-2W-1tV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDG-6O-681" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="Doa-nm-yYR">
+            <objects>
+                <viewController id="WEe-cW-D6z" customClass="GLTimerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gxz-2p-PpA"/>
+                        <viewControllerLayoutGuide type="bottom" id="bNP-Dw-XXO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vEq-HA-bRv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oXk-4z-70Y">
+                                <rect key="frame" x="59.5" y="300.5" width="256" height="66"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twH-7y-tZo">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="倒计时30秒，然后结束"/>
+                                        <connections>
+                                            <action selector="onClickTimer_1:" destination="WEe-cW-D6z" eventType="touchUpInside" id="PO8-QX-V9b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFf-7g-UBF">
+                                        <rect key="frame" x="0.0" y="33" width="256" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="倒计时30秒，3秒一次，然后结束"/>
+                                        <connections>
+                                            <action selector="onClickTimer_2:" destination="WEe-cW-D6z" eventType="touchUpInside" id="4nD-cO-eb8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oXk-4z-70Y" firstAttribute="centerY" secondItem="vEq-HA-bRv" secondAttribute="centerY" id="7QW-2y-oSd"/>
+                            <constraint firstItem="oXk-4z-70Y" firstAttribute="centerX" secondItem="vEq-HA-bRv" secondAttribute="centerX" id="x7J-ek-vH2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9wb-YC-1Vd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kre-Qh-icY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="59"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

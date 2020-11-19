@@ -74,7 +74,7 @@
     }];
 }
 
-+ (void)showToastWithMessage:(NSString *)msg {
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center {
     dispatch_async(dispatch_get_main_queue(), ^{
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
         label.numberOfLines = 0;
@@ -85,8 +85,7 @@
         label.backgroundColor = [UIColor colorWithWhite:0 alpha:.6];
         label.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width / 5 * 4, 0);
         [label sizeToFit];
-        label.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2,
-                                   [UIScreen mainScreen].bounds.size.height / 4 * 3);
+        label.center = center;
         label.frame = CGRectInset(label.frame, -10, -8);
         label.layer.cornerRadius = label.frame.size.height / 2;
         label.layer.masksToBounds = YES;
@@ -103,12 +102,17 @@
                                                       label.alpha = 0;
                                                       label.frame = CGRectOffset(label.frame, 0, -5);
                                                   } completion: ^(BOOL finished) {
-                        if (label.superview) [label removeFromSuperview];
-                    }];
+                                                      if (label.superview) {
+                                                          [label removeFromSuperview];
+                                                      }
+                                                  }];
                                               });
                            });
         }];
     });
 }
 
++ (void)showToastWithMessage:(NSString *)msg {
+    [self showToastWithMessage:msg withPoint:CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)];
+}
 @end

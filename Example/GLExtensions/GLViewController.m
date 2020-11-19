@@ -7,23 +7,40 @@
 //
 
 #import "GLViewController.h"
+#import <NSString+GLExtension.h>
+#import <UIViewController+GLExtension.h>
+
+
 
 @interface GLViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UILabel *checkResultLabel;
 
 @end
 
 @implementation GLViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.checkResultLabel.hidden = YES;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onClickCheckText:(id)sender {
+    self.checkResultLabel.hidden = NO;
+    if(isEmptyString(self.textField.text)) {
+        self.checkResultLabel.text = @"这是一个空字符串";
+    }else if(isPhoneNumber(self.textField.text)) {
+        self.checkResultLabel.text = @"这是一个手机号";
+    } else if(isEMail(self.textField.text)) {
+        self.checkResultLabel.text = @"这是一个邮箱";
+    } else {
+        self.checkResultLabel.text = @"验证失败";
+    }
 }
+
+- (IBAction)onClickToast:(id)sender {
+    showToastMsgWithCenterPoint(@"你好，我是居中的", self.view.center);
+}
+
 
 @end

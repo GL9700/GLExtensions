@@ -18,11 +18,32 @@
 #define kRegexForURL   @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
 #define kRegexForEmail @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 
-/** 判空 */
+/// 是否为空
 UIKIT_STATIC_INLINE BOOL isEmptyString(NSString *str)
 {
     return (str == nil || str.length == 0 || [[str lowercaseString] isEqualToString:@"<null>"] || [str isEqual:[NSNull null]]);
 }
+
+/// 是否为手机号
+UIKIT_STATIC_INLINE BOOL isPhoneNumber(NSString *str) {
+    if(isEmptyString(str)){
+        return NO;
+    }
+    NSString *phoneRegex = @"^(1[3|5|7|8])\\d{9}$";
+    NSPredicate *phonePredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+    return [phonePredicate evaluateWithObject:str];
+}
+
+/// 是否为Email
+UIKIT_STATIC_INLINE BOOL isEMail(NSString *str) {
+    if(isEmptyString(str)){
+        return NO;
+    }
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
+    return [emailPredicate evaluateWithObject:str];
+}
+
 
 @interface NSString (GLExtension)
 

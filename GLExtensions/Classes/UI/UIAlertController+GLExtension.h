@@ -29,5 +29,6 @@
 
 /** Toast ** 2秒后自动关闭 ** */
 + (void)showToastWithMessage:(NSString *)msg;
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center;
 
 @end
