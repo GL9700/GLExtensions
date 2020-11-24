@@ -142,7 +142,7 @@
 }
 
 - (UIActivityIndicatorView *)activity {
-    return objc_getAssociatedObject(self, _cmd);
+    return objc_getAssociatedObject(self, @selector(activity));
 }
 
 @end
