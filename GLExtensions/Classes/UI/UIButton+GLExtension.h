@@ -8,4 +8,5 @@
 #import <UIKit/UIKit.h>
 
 @interface UIButton (GLExtension)
+@property (nonatomic) IBInspectable int imagePositionInClock;
 @end

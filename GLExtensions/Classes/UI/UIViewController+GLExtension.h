@@ -17,7 +17,9 @@ UIKIT_STATIC_INLINE void hideActivity()
     if (actView.superview) {
         [actView removeFromSuperview];
     }
-    [actView performSelectorOnMainThread:NSSelectorFromString(@"hideActivity") withObject:nil waitUntilDone:NO];
+    if([actView respondsToSelector:@selector(hideActivity)]) {
+        [actView hideActivity];
+    }
 }
 
 /// 显示单例Activity
@@ -26,7 +28,9 @@ UIKIT_STATIC_INLINE void showActivity(id vc)
     UIView *view = [UIApplication sharedApplication].keyWindow;
     if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
     UIView *actView = [UIView defaultViewForActivityWithFrame:view.bounds];
-    [actView performSelectorOnMainThread:NSSelectorFromString(@"showActivity") withObject:nil waitUntilDone:NO];
+    if([actView respondsToSelector:@selector(showActivity)]) {
+        [actView showActivity];
+    }
     if (actView.superview) {
         [actView removeFromSuperview];
     }
