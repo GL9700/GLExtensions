@@ -37,6 +37,22 @@ UIKIT_STATIC_INLINE void showActivity(id vc)
     [view addSubview:actView];
 }
 
+/// 自定义Activity
+UIKIT_STATIC_INLINE void showActivityWithCustom(id vc)
+{
+    UIView *view = [UIApplication sharedApplication].keyWindow;
+    if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
+    UIView *actView = [UIView defaultViewForActivityWithFrame:view.bounds];
+    if([actView respondsToSelector:@selector(showActivity)]) {
+        [actView showActivity];
+    }
+    if (actView.superview) {
+        [actView removeFromSuperview];
+    }
+    [view addSubview:actView];
+}
+
+
 /// Toast
 UIKIT_STATIC_INLINE void showToastMsg(NSString *msg)
 {
@@ -49,6 +65,13 @@ UIKIT_STATIC_INLINE void showToastMsgWithCenterPoint(NSString *msg, CGPoint poin
     [UIAlertController showToastWithMessage:msg withPoint:point];
 }
 
+UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textColor, CGPoint point, UIColor *bgcolor)
+{
+    [UIAlertController showToastWithMessage:msg
+                                  withPoint:point
+                                  textColor:textColor
+                            backgroundColor:bgcolor];
+}
 
 @interface UIViewController (GLExtension)
 

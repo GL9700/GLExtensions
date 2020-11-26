@@ -74,15 +74,16 @@
     }];
 }
 
-+ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center {
+
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
     dispatch_async(dispatch_get_main_queue(), ^{
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
         label.numberOfLines = 0;
         label.textAlignment = NSTextAlignmentCenter;
         label.text = msg;
         label.font = [UIFont systemFontOfSize:12];
-        label.textColor = [UIColor whiteColor];
-        label.backgroundColor = [UIColor colorWithWhite:0 alpha:.6];
+        label.textColor = tcolor;
+        label.backgroundColor = color;
         label.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width / 5 * 4, 0);
         [label sizeToFit];
         label.center = center;
@@ -112,7 +113,21 @@
     });
 }
 
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center {
+    [self showToastWithMessage:msg
+                     withPoint:center
+                     textColor:[UIColor whiteColor]
+               backgroundColor:[UIColor colorWithWhite:0 alpha:.6]];
+}
 + (void)showToastWithMessage:(NSString *)msg {
     [self showToastWithMessage:msg withPoint:CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)];
+}
+
++ (void)showStatusToastWithTitle:(NSString *)contentText Image:(UIImage *)contentImg backgroundColor:(UIColor *)color size:(CGSize)size {
+    
+}
+
++ (void)showStatusToastWithTitle:(NSString *)contentText Progress:(NSProgress *)progress backgroundColor:(UIColor *)color size:(CGSize)size {
+    
 }
 @end

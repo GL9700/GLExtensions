@@ -20,8 +20,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-wV-Wma">
-                                <rect key="frame" x="72" y="234" width="231" height="199"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-wV-Wma">
+                                <rect key="frame" x="72" y="206.5" width="231" height="254"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-wR-LlC">
                                         <rect key="frame" x="0.0" y="0.0" width="231" height="89"/>
@@ -52,18 +52,22 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UQ-5x-75K">
-                                        <rect key="frame" x="0.0" y="114" width="231" height="30"/>
+                                        <rect key="frame" x="61.5" y="114" width="108" height="30"/>
                                         <state key="normal" title="打开一页倒计时"/>
                                         <connections>
                                             <segue destination="WEe-cW-D6z" kind="push" id="uJf-oF-b4r"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-50-Mkq">
-                                        <rect key="frame" x="0.0" y="169" width="231" height="30"/>
+                                        <rect key="frame" x="43" y="169" width="145" height="30"/>
                                         <state key="normal" title="弹出一个居中的Toast"/>
                                         <connections>
                                             <action selector="onClickToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="RLr-Fv-BJ6"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-aD-WH8">
+                                        <rect key="frame" x="99.5" y="224" width="32" height="30"/>
+                                        <state key="normal" title="+ 86"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -76,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PS0-vq-wwP"/>
                     <connections>
+                        <outlet property="abutton" destination="4sF-aD-WH8" id="zNU-d1-nxG"/>
                         <outlet property="checkResultLabel" destination="978-7P-gn0" id="3oK-u1-iPi"/>
                         <outlet property="textField" destination="gPT-Tu-0KD" id="Meh-Kp-qgJ"/>
                     </connections>
