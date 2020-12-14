@@ -9,9 +9,40 @@
 #import <GLExtensions/NSString+GLExtension.h>
 #import <CommonCrypto/CommonDigest.h>
 
+#define regPhone @"^(1[3|5|7|8])\\d{9}$"
+#define regEmail @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+#define regURL   @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
+#define regEmoji @"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]"
 #define kURLEncodeCharters "?!@#$^&%*+,:;='\"`<>()[]{}/\\| "
 
 @implementation NSString (GLExtension)
+
+- (BOOL)isMatchRemoteURL {
+    if(!isEmptyString(self)) {
+        NSString *phoneRegex = regURL;
+        NSPredicate *phonePredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+        return [phonePredicate evaluateWithObject:self];
+    }
+    return NO;
+}
+
+- (BOOL)isMatchPhone {
+    if(!isEmptyString(self)) {
+        NSString *phoneRegex = regPhone;
+        NSPredicate *phonePredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+        return [phonePredicate evaluateWithObject:self];
+    }
+    return NO;
+}
+
+- (BOOL)isMatchEmail {
+    if(!isEmptyString(self)) {
+        NSString *emailRegex = regEmail;
+        NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
+        return [emailPredicate evaluateWithObject:self];
+    }
+    return NO;
+}
 
 - (NSString *)trim {
     return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -38,18 +69,34 @@
 }
 
 - (BOOL)isContain:(NSString *)str {
-    NSRange range = [self rangeOfString:str];
-    return (range.location == NSNotFound ? NO : YES);
+    if([self isContainString:str exact:YES]) {
+        return YES;
+    }
+    return NO;
+}
+- (NSString *)isContainString:(NSString *)str exact:(BOOL)excatMatch {
+    if(excatMatch == YES) {
+        NSRange range = [self rangeOfString:str];
+        if(range.location == NSNotFound){
+            return nil;
+        }
+        return self;
+    }else{
+        return [self isContainsCharset:[NSCharacterSet characterSetWithCharactersInString:str]];
+    }
 }
 
 - (BOOL)hasChinese {
+    return [self isContainsChineseCharset]!=nil;
+}
+- (NSString *)isContainsChineseCharset {
     for (int i = 0; i < [self length]; i++) {
         int a = [self characterAtIndex:i];
         if (a > 0x4e00 && a < 0x9fff) {
-            return YES;
+            return self;
         }
     }
-    return NO;
+    return nil;
 }
 
 - (NSString *)md5 {
@@ -155,7 +202,8 @@
 }
 
 /** 表情符号的判断 */
-- (BOOL)stringContainsEmoji {
+
+- (NSString *)isContainsEmoji {
     __block BOOL returnValue = NO;
     [self enumerateSubstringsInRange:NSMakeRange(0, [self length])
                              options:NSStringEnumerationByComposedCharacterSequences
@@ -195,11 +243,17 @@
         }
     }];
     if (!returnValue) {//限制第三方键盘的表情
-        NSString *pattern = @"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]";
+        NSString *pattern = regEmoji;
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
         returnValue = [pred evaluateWithObject:self];
     }
-    return returnValue;
+    if(returnValue){
+        return self;
+    }
+    return nil;
+}
+- (BOOL)stringContainsEmoji {
+    return [self isContainsEmoji]!=nil;
 }
 
 /** 判断是不是九宫格拼音键盘 */
@@ -228,5 +282,12 @@
                                           context:nil].size;
     return titleSize;
 }
-
+- (NSString *)isContainsCharset:(NSCharacterSet *)charset {
+    NSRange range = [self rangeOfCharacterFromSet:charset];
+    if(range.location < self.length) {
+        return self;
+    }else{
+        return nil;
+    }
+}
 @end

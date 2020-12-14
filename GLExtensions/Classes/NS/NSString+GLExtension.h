@@ -11,53 +11,57 @@
 /** 快速格式化文字 stringWithFormat: */
 #define SF(str, ...) [NSString stringWithFormat:str, ## __VA_ARGS__]
 
-//#define kRegexStringForEmail @"(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w+)+)$"
-//#define kRegexStringForPhone @"^1\\d{10}$"
-
-#define kRegexForPhone @"1+\\d{10}"
-#define kRegexForURL   @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)"
-#define kRegexForEmail @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
-
 /// 是否为空
 UIKIT_STATIC_INLINE BOOL isEmptyString(NSString *str)
 {
     return (str == nil || str.length == 0 || [[str lowercaseString] isEqualToString:@"<null>"] || [str isEqual:[NSNull null]]);
 }
 
-/// 是否为手机号
-UIKIT_STATIC_INLINE BOOL isPhoneNumber(NSString *str) {
-    if(isEmptyString(str)){
-        return NO;
-    }
-    NSString *phoneRegex = @"^(1[3|5|7|8])\\d{9}$";
-    NSPredicate *phonePredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
-    return [phonePredicate evaluateWithObject:str];
-}
-
-/// 是否为Email
-UIKIT_STATIC_INLINE BOOL isEMail(NSString *str) {
-    if(isEmptyString(str)){
-        return NO;
-    }
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES%@",emailRegex];
-    return [emailPredicate evaluateWithObject:str];
-}
-
-
 @interface NSString (GLExtension)
 
-/** 表情符号的判断 */
-- (BOOL)stringContainsEmoji;
+/*
+ * [NSCharacterSet controlCharacterSet];                 //控制符的字符集
+ * [NSCharacterSet whitespaceCharacterSet];              //空格的字符集
+ * [NSCharacterSet whitespaceAndNewlineCharacterSet];    //空格和换行符的字符集
+ * [NSCharacterSet decimalDigitCharacterSet];            //十进制数字的字符集
+ * [NSCharacterSet letterCharacterSet];                  //所有字母的字符集
+ * [NSCharacterSet lowercaseLetterCharacterSet];         //小写字母的字符集
+ * [NSCharacterSet uppercaseLetterCharacterSet];         //大写字母的字符集
+ * [NSCharacterSet nonBaseCharacterSet];                 //非基础的字符集
+ * [NSCharacterSet alphanumericCharacterSet];            //字母和数字的字符集
+ * [NSCharacterSet decomposableCharacterSet];            //可分解
+ * [NSCharacterSet illegalCharacterSet];                 //非法的字符集
+ * [NSCharacterSet punctuationCharacterSet];             //标点的字符集
+ * [NSCharacterSet capitalizedLetterCharacterSet];       //首字母大写的字符集
+ * [NSCharacterSet symbolCharacterSet];                  //符号的字符集
+ * [NSCharacterSet newlineCharacterSet];                 //换行符的字符集
+ */
+/// 是否包含字符集。(如果不包含，则返回nil，否则返回自身值)
+- (NSString *)isContainsCharset:(NSCharacterSet *)charset;
+
+/// 表情符号的判断。(如果不包含，则返回nil，否则返回自身值)
+- (NSString *)isContainsEmoji;
+- (BOOL)stringContainsEmoji API_DEPRECATED("use [<instance> containsEmoji]", ios(2.0,2.0));
 
 /** 判断是不是九宫格拼音键盘 */
 - (BOOL)isNineKeyBoard;
 
-/** 包含中文 */
-- (BOOL)hasChinese;
+/// 包含中文字符。(如果不包含，则返回nil，否则返回自身值)
+- (NSString *)isContainsChineseCharset;
+- (BOOL)hasChinese API_DEPRECATED("use [<instance> isContainsChineseCharset]", ios(2.0,2.0));
 
-/** 包含字符 */
-- (BOOL)isContain:(NSString *)str;
+/// 包含指定字符串, exact:完全匹配字符串
+- (NSString *)isContainString:(NSString *)str exact:(BOOL)excatMatch;
+- (BOOL)isContain:(NSString *)str API_DEPRECATED("use [<instance> isContainString:exact:]", ios(2.0,2.0));;
+
+
+/// 匹配手机号
+- (BOOL)isMatchPhone;
+/// 匹配邮箱
+- (BOOL)isMatchEmail;
+/// 匹配WebURL地址
+- (BOOL)isMatchRemoteURL;
+
 
 /** 去除所有空格和回车 */
 - (NSString *)trim;
@@ -74,7 +78,7 @@ UIKIT_STATIC_INLINE BOOL isEMail(NSString *str) {
 /** 使用Base64编码 */
 - (NSData *)base64Decode;
 
-/** 使用正则 (已定义 kRegexForPhone kRegexForURL kRegexForEmail) */
+/** 使用正则获取内容 */
 - (NSString *)stringForRegular:(NSString *)regular;
 
 /*** 去掉html标签*/
@@ -83,3 +87,14 @@ UIKIT_STATIC_INLINE BOOL isEMail(NSString *str) {
 /** 计算字符串size */
 - (CGSize)boundingRectWithWidth:(float)width Font:(UIFont *)font;
 @end
+
+
+/// 是否为手机号
+UIKIT_STATIC_INLINE BOOL isPhoneNumber(NSString *str) API_DEPRECATED("use [<instance> isMatchPhone]", ios(2.0,2.0)){
+    return [str isMatchPhone];
+}
+
+/// 是否为Email
+UIKIT_STATIC_INLINE BOOL isEMail(NSString *str) API_DEPRECATED("use [<instance> isMatchEmail]", ios(2.0,2.0)){
+    return [str isMatchEmail];
+}
