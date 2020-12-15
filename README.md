@@ -20,7 +20,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'GLExtensions'
 ```
+## History
 
+* 1.0.7 -- 2020.12.15
+    * `NSString+GLExtensions`: 增加了字符验证相关内容，并进行了原方法的 deprecate 标记
+    
 ## Author
 
 liandyii@msn.com, guoliang@51jianjiao.com
