@@ -54,19 +54,20 @@ UIKIT_STATIC_INLINE void showActivityWithCustom(id vc)
 
 
 /// Toast
-UIKIT_STATIC_INLINE void showToastMsg(NSString *msg)
-{
+UIKIT_STATIC_INLINE void showToastMsg(NSString *msg) {
     [UIAlertController showToastWithMessage:msg];
 }
 
 /// Toast 自定义显示位置
-UIKIT_STATIC_INLINE void showToastMsgWithCenterPoint(NSString *msg, CGPoint point)
-{
+UIKIT_STATIC_INLINE void showToastMsgAtPoint(NSString *msg, CGPoint point) {
     [UIAlertController showToastWithMessage:msg withPoint:point];
 }
 
-UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textColor, CGPoint point, UIColor *bgcolor)
-{
+UIKIT_STATIC_INLINE void showToastMsgWithCenterPoint(NSString *msg, CGPoint point) API_DEPRECATED("use showToastMsgAtPoint(msg, point)", ios(2.0,2.0)) {
+    [UIAlertController showToastWithMessage:msg withPoint:point];
+}
+
+UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textColor, CGPoint point, UIColor *bgcolor) {
     [UIAlertController showToastWithMessage:msg
                                   withPoint:point
                                   textColor:textColor

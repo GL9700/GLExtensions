@@ -18,6 +18,9 @@
 /** 标准16进制数值表示颜色 支持 0x000000 ~ 0xFFFFFF */
 + (instancetype)colorFromHexValue:(uint32_t)hex;
 
+
+
+
 /** 随机颜色值 */
 + (instancetype)randomColor;
 @end

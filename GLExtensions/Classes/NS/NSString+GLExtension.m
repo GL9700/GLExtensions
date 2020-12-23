@@ -16,7 +16,8 @@
 #define kURLEncodeCharters "?!@#$^&%*+,:;='\"`<>()[]{}/\\| "
 
 @implementation NSString (GLExtension)
-
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 - (BOOL)isMatchRemoteURL {
     if(!isEmptyString(self)) {
         NSString *phoneRegex = regURL;
@@ -67,7 +68,7 @@
     }
     return @"";
 }
-
+#pragma clang diagnostic pop
 - (BOOL)isContain:(NSString *)str {
     if([self isContainString:str exact:YES]) {
         return YES;

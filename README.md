@@ -22,6 +22,10 @@ pod 'GLExtensions'
 ```
 ## History
 
+* 1.0.8 -- 2020.12.23
+    * `UIViewController+GLExtensions`: 对于名称修改（原方法进行`Deprecated`标记） 
+    * 增加了 `CALayer+GLExtensions`, 并在`import UIView+GLExtensions`时会一并导入
+
 * 1.0.7 -- 2020.12.15
     * `NSString+GLExtensions`: 增加了字符验证相关内容，并进行了原方法的 deprecate 标记
     
