@@ -6,8 +6,8 @@
 //
 
 #import <GLExtensions/UIDevice+GLExtension.h>
+#import <GLExtensions/GLExtReachability.h>
 #import <sys/utsname.h>
-#import "GLExtReachability.h"
 
 typedef void (^NStatusBlock)(NetworkStatus);
 static GLExtReachability *REACH;

@@ -22,6 +22,8 @@ pod 'GLExtensions'
 ```
 ## History
 
+* 1.0.9 -- 2020.12.28
+    * 导入文件名称，采用尖括号方式，修改未规范内容
 * 1.0.8 -- 2020.12.23
     * `UIViewController+GLExtensions`: 对于名称修改（原方法进行`Deprecated`标记） 
     * 增加了 `CALayer+GLExtensions`, 并在`import UIView+GLExtensions`时会一并导入

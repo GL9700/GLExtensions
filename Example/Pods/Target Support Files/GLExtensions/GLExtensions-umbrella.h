@@ -18,6 +18,7 @@
 #import "NSString+GLExtension.h"
 #import "NSTimer+GLExtension.h"
 #import "NSURL+GLExtension.h"
+#import "CALayer+GLExtension.h"
 #import "UIAlertController+GLExtension.h"
 #import "UIApplication+GLExtension.h"
 #import "UIButton+GLExtension.h"

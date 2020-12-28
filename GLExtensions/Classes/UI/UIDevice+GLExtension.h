@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GLExtReachability.h"
+#import <GLExtensions/GLExtReachability.h>
 #define kXSeries ([UIScreen mainScreen].bounds.size.height>=812)
 #define kSafeTopHeight (kXSeries?88.0:64.0)
 #define kSafeBottomHeight (kXSeries?34.0:0)

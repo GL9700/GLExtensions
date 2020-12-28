@@ -28,6 +28,8 @@
 }
 
 - (IBAction)onClickCheckText:(id)sender {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     self.checkResultLabel.hidden = NO;
     if(isEmptyString(self.textField.text)) {
         self.checkResultLabel.text = @"这是一个空字符串";
@@ -38,6 +40,7 @@
     } else {
         self.checkResultLabel.text = @"验证失败";
     }
+#pragma clang diagnostic pop
 }
 
 - (IBAction)onClickToast:(id)sender {

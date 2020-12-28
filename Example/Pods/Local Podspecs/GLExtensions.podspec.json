@@ -1,8 +1,8 @@
 {
   "name": "GLExtensions",
-  "version": "1.0.4",
-  "summary": "short description.",
-  "description": "long description of the pod here.",
+  "version": "1.0.8",
+  "summary": "the GLExtensions.",
+  "description": "GLExtensions For App quick Method, and Extensions",
   "homepage": "https://github.com/GL9700/GLExtensions",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/GL9700/GLExtensions.git",
-    "tag": "1.0.4"
+    "tag": "1.0.8"
   },
   "platforms": {
     "ios": "9.0"
