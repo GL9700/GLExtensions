@@ -30,18 +30,18 @@ UIKIT_STATIC_INLINE NSString * bundleID()
 @interface UIApplication (GLExtension)
 
 /** 获得PhotoLibrary授权 */
-+ (BOOL)privacyPhotoLibraryAuthorizedWithHandle:(void (^)(BOOL authorized))handle;
+- (void)privacyPhotoLibraryWithDeterminedHandle:(void (^)(BOOL authorized))handle ;
 /** 获得Camera授权 */
-+ (BOOL)privacyCameraWithAuthorizedHandle:(void (^)(BOOL authorized))handle;
+- (void)privacyCameraWithDeterminedHandle:(void (^)(BOOL authorized))handle ;
 /** 获得Microphone授权 */
-+ (BOOL)privacyMicrophoneWithAuthorizedHandle:(void (^)(BOOL authorized))handle;
+- (void)privacyMicrophoneWithDeterminedHandle:(void (^)(BOOL authorized))handle ;
 /** 获得AddressBook授权 */
-+ (BOOL)privacyAddressBookWithAuthorizedHandle:(void (^)(BOOL authorized))handle;
+- (void)privacyAddressBookWithDeterminedHandle:(void (^)(BOOL authorized))handle NS_AVAILABLE_IOS(9.0);
 /** 获得PushNotification授权 */
-+ (BOOL)privacyPushNotificationWithAuthorizedHandle:(void (^)(BOOL authorized))handle;
+- (BOOL)privacyPushNotificationWithDeterminedHandle:(void (^)(BOOL authorized))handle NS_AVAILABLE_IOS(10.0);
 /** 获得Calendar授权 */
-+ (BOOL)privacyCalendarWithAuthorizedHandle:(void (^)(BOOL authorized))handle;
+- (void)privacyCalendarWithDeterminedHandle:(void (^)(BOOL authorized))handle ;
 /** 获得Location授权 */
-+ (BOOL)privacyLocationInUseWithAuthorizedHandle:(void (^)(BOOL authorized))handle;
+- (BOOL)privacyLocationDeterminedHandle:(void (^)(BOOL authorized))handle;
 
 @end
