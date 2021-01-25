@@ -9,5 +9,11 @@
 #import <GLExtensions/UIWindow+GLExtension.h>
 
 @implementation UIWindow (GLExtension)
+- (UIViewController *)topViewController {
+    UIViewController *viewController = self.rootViewController;
+    while (viewController.presentedViewController)
+        viewController = viewController.presentedViewController;
+    return viewController;
+}
 
 @end

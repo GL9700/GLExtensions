@@ -58,7 +58,7 @@ UIKIT_STATIC_INLINE void showToastMsg(NSString *msg) {
     [UIAlertController showToastWithMessage:msg];
 }
 
-/// Toast 自定义显示位置
+/// Toast 自定义
 UIKIT_STATIC_INLINE void showToastMsgAtPoint(NSString *msg, CGPoint point) {
     [UIAlertController showToastWithMessage:msg withPoint:point];
 }

@@ -10,6 +10,9 @@
 #import <NSString+GLExtension.h>
 #import <UIViewController+GLExtension.h>
 #import <UIButton+GLExtension.h>
+#import <UIColor+GLExtension.h>
+
+#import "GLEmptyViewController.h"
 
 @interface GLViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
@@ -44,7 +47,13 @@
 }
 
 - (IBAction)onClickToast:(id)sender {
-    showToastMsgWithMoreProps(@"你好，我是居中红色背景", [UIColor yellowColor], self.view.center, [UIColor redColor]);
+    
+    showToastMsgWithMoreProps(@"你好，我是居中红色背景", [UIColor yellowColor], self.view.center, [UIColor randomColor]);
+//    可使用异步线程来获取同步显示
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.navigationController pushViewController:[GLEmptyViewController new] animated:YES];
+        [self.navigationController presentViewController:[GLEmptyViewController new] animated:YES completion:nil];
+//    });
 }
 
 

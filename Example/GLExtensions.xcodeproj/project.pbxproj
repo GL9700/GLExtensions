@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21DFE39C25BF1845008E4120 /* GLEmptyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DFE39B25BF1845008E4120 /* GLEmptyViewController.m */; };
 		21EFD4DC2566DA150011B04C /* GLTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EFD4DB2566DA150011B04C /* GLTimerViewController.m */; };
 		5048B1F57001201E1545CCA4 /* Pods_GLExtensions_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181B84E98CDA350AE2275C66 /* Pods_GLExtensions_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -24,6 +25,8 @@
 /* Begin PBXFileReference section */
 		0A12F01A7A0A2B3F5A790635 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		181B84E98CDA350AE2275C66 /* Pods_GLExtensions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21DFE39A25BF1845008E4120 /* GLEmptyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLEmptyViewController.h; sourceTree = "<group>"; };
+		21DFE39B25BF1845008E4120 /* GLEmptyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLEmptyViewController.m; sourceTree = "<group>"; };
 		21EFD4DA2566DA150011B04C /* GLTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLTimerViewController.h; sourceTree = "<group>"; };
 		21EFD4DB2566DA150011B04C /* GLTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLTimerViewController.m; sourceTree = "<group>"; };
 		37B828AD52B20EB95573466B /* Pods_GLExtensions_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLExtensions_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +111,8 @@
 				6003F5A6195388D20070C39A /* GLViewController.m */,
 				21EFD4DA2566DA150011B04C /* GLTimerViewController.h */,
 				21EFD4DB2566DA150011B04C /* GLTimerViewController.m */,
+				21DFE39A25BF1845008E4120 /* GLEmptyViewController.h */,
+				21DFE39B25BF1845008E4120 /* GLEmptyViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -264,6 +269,7 @@
 				6003F59E195388D20070C39A /* GLAppDelegate.m in Sources */,
 				21EFD4DC2566DA150011B04C /* GLTimerViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* GLViewController.m in Sources */,
+				21DFE39C25BF1845008E4120 /* GLEmptyViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

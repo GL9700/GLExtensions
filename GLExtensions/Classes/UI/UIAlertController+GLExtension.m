@@ -7,6 +7,7 @@
 //
 
 #import <GLExtensions/UIAlertController+GLExtension.h>
+#import <GLExtensions/UIWindow+GLExtension.h>
 
 #define kToastShowTime 2
 
@@ -74,7 +75,6 @@
     }];
 }
 
-
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
     dispatch_async(dispatch_get_main_queue(), ^{
         UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
@@ -91,7 +91,7 @@
         label.layer.cornerRadius = label.frame.size.height / 2;
         label.layer.masksToBounds = YES;
         label.alpha = 0;
-        [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:label];
+        [[UIApplication sharedApplication].keyWindow.topViewController.view addSubview:label];
         [UIView animateWithDuration:0.25 animations: ^{
             label.alpha = 1;
             label.frame = CGRectOffset(label.frame, 0, 5);
@@ -119,15 +119,15 @@
                      textColor:[UIColor whiteColor]
                backgroundColor:[UIColor colorWithWhite:0 alpha:.6]];
 }
+
 + (void)showToastWithMessage:(NSString *)msg {
     [self showToastWithMessage:msg withPoint:CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)];
 }
 
 + (void)showStatusToastWithTitle:(NSString *)contentText Image:(UIImage *)contentImg backgroundColor:(UIColor *)color size:(CGSize)size {
-    
 }
 
 + (void)showStatusToastWithTitle:(NSString *)contentText Progress:(NSProgress *)progress backgroundColor:(UIColor *)color size:(CGSize)size {
-    
 }
+
 @end

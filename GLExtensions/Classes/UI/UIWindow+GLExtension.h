@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface UIWindow (GLExtension)
-
+/// 获取最上层显示的ViewController
+- (UIViewController *)topViewController;
 @end
