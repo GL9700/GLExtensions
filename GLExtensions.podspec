@@ -8,15 +8,15 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GLExtensions'
-  s.version          = '1.0.11'
+  s.version          = '1.0.12'
   s.summary          = 'the GLExtensions.'
   s.description      = <<-DESC
     GLExtensions For App quick Method, and Extensions
                        DESC
-  s.homepage         = 'https://github.com/GL9700/GLExtensions'
+  s.homepage         = 'https://gitee.com/GL9700/GLExtensions'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liguoliang' => '36617161@qq.com' }
-  s.source           = { :git => 'https://github.com/GL9700/GLExtensions.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://gitee.com/GL9700/GLExtensions.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
 

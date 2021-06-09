@@ -21,6 +21,8 @@ it, simply add the following line to your Podfile:
 pod 'GLExtensions'
 ```
 ## History
+* 1.0.12 -- 2021.06.09
+    * 增加了针对NSString的 `正则查找` 和 `正则替换` 的快捷方法
 * 1.0.11 -- 2021.01.26
     * 修改 Toast 显示到最上层 （如需显示于原页面，可使用异步出现新页面的方案）
 * 1.0.10 -- 2021.01.20

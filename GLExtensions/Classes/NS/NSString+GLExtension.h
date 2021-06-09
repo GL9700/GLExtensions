@@ -85,6 +85,12 @@ UIKIT_STATIC_INLINE BOOL isValidString(NSString *str) {
 /** 使用正则获取内容 */
 - (NSString *)stringForRegular:(NSString *)regular;
 
+/** 使用正则获取全部匹配内容 */
+- (NSArray<NSString *> *)resultsForRegular:(NSString *)regular;
+
+/** 使用正则替换内容 */
+- (NSString *)stringByReplacingRegular:(NSString *)regular toTemplate:(NSString *)t;
+
 /*** 去掉html标签*/
 - (NSString *)removeHtmlTag;
 

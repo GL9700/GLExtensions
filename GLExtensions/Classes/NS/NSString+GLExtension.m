@@ -186,6 +186,37 @@
     return [self itemForPattern:regular captureGroupIndex:0];
 }
 
+/** 使用正则获取全部匹配内容 */
+- (NSArray<NSString *> *)resultsForRegular:(NSString *)regular {
+    if (!regular) return nil;
+    NSError *error = nil;
+    NSRegularExpression *regx = [[NSRegularExpression alloc] initWithPattern:regular options:NSRegularExpressionCaseInsensitive error:&error];
+    if (!error) {
+        NSRange range = NSMakeRange(0, [self length]);
+        NSArray<NSTextCheckingResult *> * rls = [regx matchesInString:self options:NSMatchingReportCompletion range:range];
+        if(rls && rls.count>0) {
+            NSMutableArray<NSString *> *results = [NSMutableArray array];
+            for(NSTextCheckingResult *cr in rls) {
+                [results addObject:[self substringWithRange:cr.range]];
+            }
+            return results;
+        }
+    }
+    return nil;
+}
+
+/** 使用正则替换内容 */
+- (NSString *)stringByReplacingRegular:(NSString *)regular toTemplate:(NSString *)t {
+    if (!regular) return nil;
+    NSError *error = nil;
+    NSRegularExpression *regx = [[NSRegularExpression alloc] initWithPattern:regular options:NSRegularExpressionCaseInsensitive error:&error];
+    if (!error) {
+        NSRange range = NSMakeRange(0, [self length]);
+        return [regx stringByReplacingMatchesInString:self options:0 range:range withTemplate:t];
+    }
+    return self;
+}
+
 - (NSString *)itemForPattern:(NSString *)pattern captureGroupIndex:(NSUInteger)index {
     if (!pattern) return nil;
     NSError *error = nil;
