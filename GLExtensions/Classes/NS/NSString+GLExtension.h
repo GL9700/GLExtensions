@@ -7,17 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreGraphics/CGGeometry.h>
+#import <UIKit/UIFont.h>
 
 /** 快速格式化文字 stringWithFormat: */
 #define SF(str, ...) [NSString stringWithFormat:str, ## __VA_ARGS__]
 
 /// 变量不可用
-UIKIT_STATIC_INLINE BOOL isInvalidString(NSString *str) {
+static inline BOOL isInvalidString(NSString *str) {
     return (str == nil || str.length == 0 || [[str lowercaseString] isEqualToString:@"<null>"] || [str isEqual:[NSNull null]]);
 }
 
 /// 变量是一个字符串，且可用
-UIKIT_STATIC_INLINE BOOL isValidString(NSString *str) {
+static inline BOOL isValidString(NSString *str) {
     return !isInvalidString(str);
 }
 
@@ -101,16 +103,16 @@ UIKIT_STATIC_INLINE BOOL isValidString(NSString *str) {
 
 
 /// 是否为空 (♻️ isInvalidString(_) or isValidString(_))
-UIKIT_STATIC_INLINE BOOL isEmptyString(NSString *str) API_DEPRECATED("use isInvalidString(_) or isValidString(_)", ios(2.0,2.0)) {
+static inline BOOL isEmptyString(NSString *str) API_DEPRECATED("use isInvalidString(_) or isValidString(_)", ios(2.0,2.0)) {
     return (str == nil || str.length == 0 || [[str lowercaseString] isEqualToString:@"<null>"] || [str isEqual:[NSNull null]]);
 }
 
 /// 是否为手机号 (♻️ [<instance> isMatchPhone])
-UIKIT_STATIC_INLINE BOOL isPhoneNumber(NSString *str) API_DEPRECATED("use [<instance> isMatchPhone]", ios(2.0,2.0)){
+static inline BOOL isPhoneNumber(NSString *str) API_DEPRECATED("use [<instance> isMatchPhone]", ios(2.0,2.0)){
     return [str isMatchPhone];
 }
 
 /// 是否为Email (♻️ [<instance> isMatchEmail])
-UIKIT_STATIC_INLINE BOOL isEMail(NSString *str) API_DEPRECATED("use [<instance> isMatchEmail]", ios(2.0,2.0)){
+static inline BOOL isEMail(NSString *str) API_DEPRECATED("use [<instance> isMatchEmail]", ios(2.0,2.0)){
     return [str isMatchEmail];
 }

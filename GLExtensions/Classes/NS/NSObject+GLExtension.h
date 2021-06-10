@@ -12,7 +12,7 @@
 #define strong(o) autoreleasepool {} __strong typeof(o) o = o ## Weak;
 
 /** 异步执行 ，主线更新 */
-UIKIT_STATIC_INLINE void dispatch_async_work_ui(dispatch_block_t workblock, dispatch_block_t uiblock)
+static inline void dispatch_async_work_ui(dispatch_block_t workblock, dispatch_block_t uiblock)
 {
     if (workblock) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
