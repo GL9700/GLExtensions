@@ -24,6 +24,6 @@
 
 /// 结束计时器
 /// @param timer 计时器指针
-+ (void)stopTime:(NSTimer *)timer;
++ (void)stopTimer:(NSTimer *)timer;
 
 @end
