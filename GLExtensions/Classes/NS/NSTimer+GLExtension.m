@@ -48,7 +48,7 @@
     }
 }
 
-+ (void)stopTime:(NSTimer *)timer {
++ (void)stopTimer:(NSTimer *)timer {
     if (timer) {
         [timer invalidate];
         timer = nil;
