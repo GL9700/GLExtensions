@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="onX-UG-bu6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="onX-UG-bu6">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-wV-Wma">
-                                <rect key="frame" x="72" y="206.5" width="231" height="254"/>
+                                <rect key="frame" x="72" y="179" width="231" height="309"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i9C-wR-LlC">
                                         <rect key="frame" x="0.0" y="0.0" width="231" height="89"/>
@@ -65,8 +65,15 @@
                                             <action selector="onClickToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="RLr-Fv-BJ6"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARy-Kt-ELE">
+                                        <rect key="frame" x="73.5" y="224" width="84" height="30"/>
+                                        <state key="normal" title="正常的Toast"/>
+                                        <connections>
+                                            <action selector="onClickNormalToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="073-u0-2qB"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-aD-WH8">
-                                        <rect key="frame" x="99.5" y="224" width="32" height="30"/>
+                                        <rect key="frame" x="99.5" y="279" width="32" height="30"/>
                                         <state key="normal" title="+ 86"/>
                                     </button>
                                 </subviews>

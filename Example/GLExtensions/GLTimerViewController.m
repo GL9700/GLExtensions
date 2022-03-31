@@ -40,7 +40,7 @@
     }];
 }
 - (void)dealloc {
-    [NSTimer stopTime:self.t1];
+    [NSTimer stopTimer:self.t1];
     NSLog(@"--- dealloc ---");
 }
 @end

@@ -29,8 +29,9 @@
 
 /// Toast ** 2秒后自动关闭 **
 + (void)showToastWithMessage:(NSString *)msg;
-+ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center;
-+ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color;
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point;
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color;
+
 
 /// Status Toast(默认模态)
 /// @param contentText 文字内容。如果nil，则其他内容居中

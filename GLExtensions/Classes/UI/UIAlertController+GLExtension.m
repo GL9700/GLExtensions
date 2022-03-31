@@ -10,6 +10,60 @@
 #import <GLExtensions/UIWindow+GLExtension.h>
 
 #define kToastShowTime 2
+#define kToastPointDefault CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)
+
+
+
+@interface ToastView : UIView
+@property (nonatomic) CGPoint cenpoint;
+@property (nonatomic) UIColor *fontColor;
+@property (nonatomic) UIColor *backgroundColor;
+@property (nonatomic) UILabel *textLabel;
+- (instancetype)initWithMessage:(NSString *)msg;
+@end
+
+@implementation ToastView
+- (instancetype)initWithMessage:(NSString *)msg {
+    if((self = [super init])) {
+        [self setToastMessage:msg];
+        [self addSubview:self.textLabel];
+    }
+    return self;
+}
+- (void)setToastMessage:(NSString *)msg {
+    self.textLabel.text = msg;
+    [self.textLabel sizeToFit];
+    self.textLabel.frame = CGRectInset(self.textLabel.frame, -10, -8);
+    self.textLabel.layer.cornerRadius = _textLabel.frame.size.height / 2;
+    self.frame = self.textLabel.frame;
+}
+- (void)setFontColor:(UIColor *)fontColor {
+    _fontColor = fontColor;
+    self.textLabel.textColor = fontColor;
+}
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    _backgroundColor = backgroundColor;
+    self.textLabel.backgroundColor = backgroundColor;
+}
+- (void)setCenpoint:(CGPoint)cenpoint {
+    _cenpoint = cenpoint;
+    self.center = cenpoint;
+}
+- (UILabel *)textLabel {
+    if(!_textLabel) {
+        _textLabel = [[UILabel alloc]initWithFrame:CGRectZero];
+        _textLabel.numberOfLines = 0;
+        _textLabel.textAlignment = NSTextAlignmentCenter;
+        _textLabel.font = [UIFont systemFontOfSize:12];
+        _textLabel.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width / 5 * 4, 0);
+        _textLabel.layer.masksToBounds = YES;
+    }
+    return _textLabel;
+}
+@end
+
+
+static NSMutableArray<ToastView *> *toastList;
 
 @implementation UIAlertController (GLExtension)
 
@@ -75,36 +129,40 @@
     }];
 }
 
-+ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
++ (void)showToastWithMessage:(NSString *)msg {
+    [self showToastWithMessage:msg withPoint:CGPointZero];
+}
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point {
+    [self showToastWithMessage:msg withPoint:point textColor:nil backgroundColor:nil];
+}
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
+    ToastView *toast = [[ToastView alloc] initWithMessage:msg];
+    toast.fontColor = tcolor ? : [UIColor whiteColor];
+    toast.backgroundColor = color ? : [UIColor colorWithWhite:0 alpha:.6];
+    toast.cenpoint = point;
+    [self showToast:toast inQueue:YES];
+}
+
++ (void)showToast:(ToastView *)toast {
+    toast.alpha = 0;
     dispatch_async(dispatch_get_main_queue(), ^{
-        UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
-        label.numberOfLines = 0;
-        label.textAlignment = NSTextAlignmentCenter;
-        label.text = msg;
-        label.font = [UIFont systemFontOfSize:12];
-        label.textColor = tcolor;
-        label.backgroundColor = color;
-        label.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width / 5 * 4, 0);
-        [label sizeToFit];
-        label.center = center;
-        label.frame = CGRectInset(label.frame, -10, -8);
-        label.layer.cornerRadius = label.frame.size.height / 2;
-        label.layer.masksToBounds = YES;
-        label.alpha = 0;
-        [[UIApplication sharedApplication].keyWindow.topViewController.view addSubview:label];
+        [[UIApplication sharedApplication].keyWindow.topViewController.view addSubview:toast];
         [UIView animateWithDuration:0.25 animations: ^{
-            label.alpha = 1;
-            label.frame = CGRectOffset(label.frame, 0, 5);
+            toast.alpha = 1;
+            toast.frame = CGRectOffset(toast.frame, 0, 5);
         } completion: ^(BOOL finished) {
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
                                sleep(kToastShowTime);
                                dispatch_async(dispatch_get_main_queue(), ^{
                                                   [UIView animateWithDuration:0.25 animations: ^{
-                                                      label.alpha = 0;
-                                                      label.frame = CGRectOffset(label.frame, 0, -5);
+                                                      toast.alpha = 0;
+                                                      toast.frame = CGRectOffset(toast.frame, 0, -5);
                                                   } completion: ^(BOOL finished) {
-                                                      if (label.superview) {
-                                                          [label removeFromSuperview];
+                                                      if (toast.superview) {
+                                                          [toast removeFromSuperview];
+                                                      }
+                                                      if (toastList && [toastList containsObject:toast]) {
+                                                          [toastList removeObject:toast];
                                                       }
                                                   }];
                                               });
@@ -112,16 +170,17 @@
         }];
     });
 }
-
-+ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)center {
-    [self showToastWithMessage:msg
-                     withPoint:center
-                     textColor:[UIColor whiteColor]
-               backgroundColor:[UIColor colorWithWhite:0 alpha:.6]];
-}
-
-+ (void)showToastWithMessage:(NSString *)msg {
-    [self showToastWithMessage:msg withPoint:CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)];
++ (void)showToast:(ToastView *)toast inQueue:(BOOL)queue {
+    if(!toastList) {toastList = [NSMutableArray array];}
+    if(toastList.count==0){
+        if(CGPointEqualToPoint(toast.cenpoint, CGPointZero)){
+            toast.cenpoint = kToastPointDefault;
+        }
+    }else{
+        toast.cenpoint = CGPointMake(toastList.firstObject.center.x, CGRectGetMinY(toastList.firstObject.frame)- CGRectGetHeight(toast.frame)/2-10);
+    }
+    [toastList insertObject:toast atIndex:0];
+    [self showToast:toastList.firstObject];
 }
 
 + (void)showStatusToastWithTitle:(NSString *)contentText Image:(UIImage *)contentImg backgroundColor:(UIColor *)color size:(CGSize)size {

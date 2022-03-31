@@ -184,6 +184,12 @@
 				CLASSPREFIX = GL;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "liandyii@msn.com";
+				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = H49DK955B9;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
 			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "GLExtensions" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -374,6 +380,8 @@
 			baseConfigurationReference = C00322C32A019B173D433826 /* Pods-GLExtensions_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H49DK955B9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GLExtensions/GLExtensions-Prefix.pch";
 				INFOPLIST_FILE = "GLExtensions/GLExtensions-Info.plist";
@@ -381,6 +389,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -391,6 +400,8 @@
 			baseConfigurationReference = 3993094897606D20F07CF14B /* Pods-GLExtensions_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = H49DK955B9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GLExtensions/GLExtensions-Prefix.pch";
 				INFOPLIST_FILE = "GLExtensions/GLExtensions-Info.plist";
@@ -398,6 +409,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

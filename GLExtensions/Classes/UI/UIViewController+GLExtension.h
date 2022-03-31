@@ -63,10 +63,6 @@ UIKIT_STATIC_INLINE void showToastMsgAtPoint(NSString *msg, CGPoint point) {
     [UIAlertController showToastWithMessage:msg withPoint:point];
 }
 
-UIKIT_STATIC_INLINE void showToastMsgWithCenterPoint(NSString *msg, CGPoint point) API_DEPRECATED("use showToastMsgAtPoint(msg, point)", ios(2.0,2.0)) {
-    [UIAlertController showToastWithMessage:msg withPoint:point];
-}
-
 UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textColor, CGPoint point, UIColor *bgcolor) {
     [UIAlertController showToastWithMessage:msg
                                   withPoint:point
