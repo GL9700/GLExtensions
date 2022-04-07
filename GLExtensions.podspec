@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GLExtensions'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'the GLExtensions.'
   s.description      = <<-DESC
     GLExtensions For App quick Method, and Extensions
@@ -17,8 +17,19 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liguoliang' => '36617161@qq.com' }
   s.source           = { :git => 'https://gitee.com/GL9700/GLExtensions.git', :tag => s.version.to_s }
-
   s.ios.deployment_target = '9.0'
+  
+  s.default_subspec = 'ALL'
+  s.subspec 'ALL' do |subs|
+    subs.source_files = 'GLExtensions/Classes/**/*'
+  end
 
-  s.source_files = 'GLExtensions/Classes/**/*'
+  s.subspec 'NS' do |subs|
+    subs.source_files = 'GLExtensions/Classes/NS/**/*'
+  end
+
+  s.subspec 'UI' do |subs|
+    subs.source_files = 'GLExtensions/Classes/UI/**/*'
+  end
+
 end

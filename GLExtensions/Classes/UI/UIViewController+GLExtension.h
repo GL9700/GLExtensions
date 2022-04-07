@@ -54,8 +54,8 @@ UIKIT_STATIC_INLINE void showActivityWithCustom(id vc)
 
 
 /// Toast
-UIKIT_STATIC_INLINE void showToastMsg(NSString *msg) {
-    [UIAlertController showToastWithMessage:msg];
+UIKIT_STATIC_INLINE void showToastMsg(NSString *msg, ...) {
+    [UIAlertController showToastWithMessage:[NSString stringWithFormat:msg, ## __VA_ARGS__]];
 }
 
 /// Toast 自定义

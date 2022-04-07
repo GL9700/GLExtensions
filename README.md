@@ -21,6 +21,8 @@ it, simply add the following line to your Podfile:
 pod 'GLExtensions'
 ```
 ## History
+* 1.1.1 -- 2022.04.07
+    * 优化toast的设计
 * 1.0.12 -- 2021.06.09
     * 增加了针对NSString的 `正则查找` 和 `正则替换` 的快捷方法
 * 1.0.11 -- 2021.01.26
@@ -38,7 +40,7 @@ pod 'GLExtensions'
     
 ## Author
 
-liandyii@msn.com, guoliang@51jianjiao.com
+liguoliang 36617161@qq.com
 
 ## License
 
