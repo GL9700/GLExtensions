@@ -30,6 +30,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'UI' do |subs|
     subs.source_files = 'GLExtensions/Classes/UI/**/*'
+    subs.dependency 'GLExtensions/NS'
   end
 
 end
