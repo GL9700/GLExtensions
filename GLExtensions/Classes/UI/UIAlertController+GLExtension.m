@@ -129,7 +129,11 @@ static NSMutableArray<ToastView *> *toastList;
     }];
 }
 
-+ (void)showToastWithMessage:(NSString *)msg {
++ (void)showToastWithMessage:(NSString *)format valist:(va_list)list {
+    NSString *msg = format;
+    if(list != NULL) {
+        msg = [[NSString alloc] initWithFormat:format arguments:list];
+    }
     [self showToastWithMessage:msg withPoint:CGPointZero];
 }
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point {

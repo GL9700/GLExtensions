@@ -1,7 +1,7 @@
 ![logo](https://github.com/GL9700/gl9700.github.io/blob/master/GLSLogo_800.png?raw=true)
 # GLExtensions
 
-[![CI Status](https://img.shields.io/travis/liandyii@msn.com/GLExtensions.svg?style=flat)](https://travis-ci.org/liandyii@msn.com/GLExtensions)
+[![CI Status](https://img.shields.io/travis/36617161@qq.com/GLExtensions.svg?style=flat)](https://travis-ci.org/36617161@qq.com/GLExtensions)
 [![Version](https://img.shields.io/cocoapods/v/GLExtensions.svg?style=flat)](https://cocoapods.org/pods/GLExtensions)
 [![License](https://img.shields.io/cocoapods/l/GLExtensions.svg?style=flat)](https://cocoapods.org/pods/GLExtensions)
 [![Platform](https://img.shields.io/cocoapods/p/GLExtensions.svg?style=flat)](https://cocoapods.org/pods/GLExtensions)

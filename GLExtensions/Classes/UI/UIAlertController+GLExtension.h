@@ -28,7 +28,7 @@
 - (void)showAfterAutoDismissSec:(NSUInteger)sec withComplete:(void(^)(void))complete;
 
 /// Toast ** 2秒后自动关闭 **
-+ (void)showToastWithMessage:(NSString *)msg;
++ (void)showToastWithMessage:(NSString *)format valist:(va_list)list;
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point;
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color;
 
