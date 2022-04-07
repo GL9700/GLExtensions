@@ -84,7 +84,7 @@
 		3CC4826AA565B3B0E97EDF432E785392 /* NSTimer+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GLExtension.m"; sourceTree = "<group>"; };
 		3DE4A61823ABD091E403C5484484A6A8 /* Pods-GLExtensions_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLExtensions_Example-Info.plist"; sourceTree = "<group>"; };
 		3E005CA8E9A66A67663247B18092F886 /* GLExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLExtensions-umbrella.h"; sourceTree = "<group>"; };
-		3EDEA58ED37F12038D579203BE7CBA0B /* GLExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GLExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3EDEA58ED37F12038D579203BE7CBA0B /* GLExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GLExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		432A64FC0D1BB7FF2A4A1DA24A18F37E /* GLExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLExtensions.modulemap; sourceTree = "<group>"; };
 		47C08329F5F4A9AB83C364723455E366 /* UINavigationController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GLExtension.m"; sourceTree = "<group>"; };
 		4BA58176D871DDA1B0A5516A051D33ED /* UIAlertController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GLExtension.h"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		5230572B8F061F9D7FAA91CC17F4ECFC /* NSDate+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GLExtension.m"; sourceTree = "<group>"; };
 		52F9BA4D3E1EE2F8CCE89895FAC1D7F1 /* UIWindow+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIWindow+GLExtension.h"; sourceTree = "<group>"; };
 		5691698E8AF249CBC990740101C15A89 /* NSTimer+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GLExtension.h"; sourceTree = "<group>"; };
-		59425AAA9F2F1469B073D6140E69761B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		59425AAA9F2F1469B073D6140E69761B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5CCC9E2F22357207CD1D235A58269AC1 /* UIColor+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GLExtension.m"; sourceTree = "<group>"; };
 		5E2725309C4A6C6FDB2F17A81F31938D /* UIImage+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GLExtension.m"; sourceTree = "<group>"; };
 		65DB5E2F662E6AC3557527CA43C4046B /* GLExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLExtensions-prefix.pch"; sourceTree = "<group>"; };
@@ -107,12 +107,12 @@
 		7D41492AA92C7A0415BFC25A326E2AA5 /* Pods-GLExtensions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLExtensions_Example-umbrella.h"; sourceTree = "<group>"; };
 		82CB8C388CDCC10455E777B016D8B6AF /* Pods-GLExtensions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLExtensions_Example-frameworks.sh"; sourceTree = "<group>"; };
 		8685E1BD8104B4099CD5D87BB861C4C5 /* Pods-GLExtensions_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLExtensions_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GLExtensions; path = GLExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		891BA0E373B4A57DACB79103E9FB3541 /* UIButton+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+GLExtension.h"; sourceTree = "<group>"; };
 		90B096D391E4CF2E6D3D6A4B870BE338 /* GLExtReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GLExtReachability.h; sourceTree = "<group>"; };
 		90C3E3D41E5E27715E5FCECA68EECA78 /* GLExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLExtensions.debug.xcconfig; sourceTree = "<group>"; };
-		9C3A152E7492D7842E689763BE4C7D9F /* Pods-GLExtensions_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GLExtensions_Example"; path = Pods_GLExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C3A152E7492D7842E689763BE4C7D9F /* Pods_GLExtensions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DE21D28F94863456AA5BE1332F1DB0C /* NSURL+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GLExtension.m"; sourceTree = "<group>"; };
 		9E43B966FFEFFB9E98224DE24B09EA10 /* NSData+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+GLExtension.m"; sourceTree = "<group>"; };
 		AA54CB7F3C8C292689A6B57D157DFE77 /* GLExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLExtensions.release.xcconfig; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		F26CB6A280DC4D8155865239B0A1E7A5 /* UIViewController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GLExtension.m"; sourceTree = "<group>"; };
 		F7223F43CB4F7469C2B4DAFE4508638E /* UIResponder+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIResponder+GLExtension.h"; sourceTree = "<group>"; };
 		FC8361867710B22B2B34FDEC768C7C15 /* UIColor+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+GLExtension.h"; sourceTree = "<group>"; };
-		FEF08F3F3CB0BBD28EA48B31C3F2236C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		FEF08F3F3CB0BBD28EA48B31C3F2236C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +169,8 @@
 		4511038FAAD68AA571DC3E7217FD5221 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions */,
-				9C3A152E7492D7842E689763BE4C7D9F /* Pods-GLExtensions_Example */,
+				87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions.framework */,
+				9C3A152E7492D7842E689763BE4C7D9F /* Pods_GLExtensions_Example.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -386,7 +386,7 @@
 			);
 			name = "Pods-GLExtensions_Example";
 			productName = Pods_GLExtensions_Example;
-			productReference = 9C3A152E7492D7842E689763BE4C7D9F /* Pods-GLExtensions_Example */;
+			productReference = 9C3A152E7492D7842E689763BE4C7D9F /* Pods_GLExtensions_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E4ECDC68C999A9012BE1C082A6D30726 /* GLExtensions */ = {
@@ -404,7 +404,7 @@
 			);
 			name = GLExtensions;
 			productName = GLExtensions;
-			productReference = 87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions */;
+			productReference = 87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -414,7 +414,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1330;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -517,7 +517,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLExtensions/GLExtensions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLExtensions/GLExtensions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLExtensions/GLExtensions.modulemap";
 				PRODUCT_MODULE_NAME = GLExtensions;
@@ -546,7 +546,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example.modulemap";
@@ -617,7 +617,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -645,7 +645,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLExtensions/GLExtensions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLExtensions/GLExtensions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLExtensions/GLExtensions.modulemap";
 				PRODUCT_MODULE_NAME = GLExtensions;
@@ -710,13 +710,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -737,7 +736,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example.modulemap";

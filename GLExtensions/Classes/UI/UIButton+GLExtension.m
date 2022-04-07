@@ -52,8 +52,16 @@
  */
 
 - (instancetype)copy {
-    NSData *temp = [NSKeyedArchiver archivedDataWithRootObject:self];
-    return [NSKeyedUnarchiver unarchiveObjectWithData:temp];
+    NSData *temp = nil;
+    id result = nil;
+    if (@available(iOS 11.0, *)) {
+        temp = [NSKeyedArchiver archivedDataWithRootObject:self requiringSecureCoding:NO error:nil];
+        result = [NSKeyedUnarchiver unarchivedObjectOfClass:[self class] fromData:temp error:nil];
+    } else {
+        temp = [NSKeyedArchiver archivedDataWithRootObject:self];
+        result = [NSKeyedUnarchiver unarchiveObjectWithData:temp];
+    }
+    return result;
 }
 
 @end
