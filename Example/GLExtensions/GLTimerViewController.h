@@ -3,7 +3,7 @@
 //  GLExtensions_Example
 //
 //  Created by 李国梁 on 2020/11/20.
-//  Copyright © 2020 liandyii@msn.com. All rights reserved.
+//  Copyright © 2020 36617161@qq.com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

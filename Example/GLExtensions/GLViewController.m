@@ -2,8 +2,8 @@
 //  GLViewController.m
 //  GLExtensions
 //
-//  Created by liandyii@msn.com on 10/23/2018.
-//  Copyright (c) 2018 liandyii@msn.com. All rights reserved.
+//  Created by 36617161@qq.com on 10/23/2018.
+//  Copyright (c) 2018 36617161@qq.com. All rights reserved.
 //
 
 #import "GLViewController.h"
@@ -47,7 +47,7 @@
 }
 
 - (IBAction)onClickToast:(id)sender {
-    
+//    showToastMsg(@"%@", @"hello world");
     showToastMsgWithMoreProps(@"你好，我是居中红色背景", [UIColor yellowColor], self.view.center, [UIColor randomColor]);
 //    可使用异步线程来获取同步显示
 //    dispatch_async(dispatch_get_main_queue(), ^{
@@ -57,10 +57,8 @@
 }
 
 - (IBAction)onClickNormalToast:(UIButton *)sender {
-    showToastMsgWithMoreProps([NSString stringWithFormat:@"%@", [self randomWord]],
-                              [UIColor yellowColor],
-                              CGPointZero,
-                              [UIColor randomColor]);
+    showToastMsg(@"%@", [NSError errorWithDomain:@"aaa" code:123 userInfo:@{@"url":@"123"}]);
+//    showToastMsgWithMoreProps([NSString stringWithFormat:@"%@", [self randomWord]], [UIColor yellowColor], CGPointZero, [UIColor randomColor]);
 }
 
 - (NSString *)randomWord {
