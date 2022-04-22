@@ -182,6 +182,9 @@ static NSMutableArray<ToastView *> *toastList;
         }
     }else{
         toast.cenpoint = CGPointMake(toastList.firstObject.center.x, CGRectGetMinY(toastList.firstObject.frame)- CGRectGetHeight(toast.frame)/2-10);
+        if(CGRectGetMinY(toast.frame)<0) {
+            toast.cenpoint = kToastPointDefault;
+        }
     }
     [toastList insertObject:toast atIndex:0];
     [self showToast:toastList.firstObject];
