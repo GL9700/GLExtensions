@@ -21,6 +21,9 @@ it, simply add the following line to your Podfile:
 pod 'GLExtensions'
 ```
 ## History
+* 1.1.2 -- 2022.04.30
+    * 修复toast队列添加数量到最大值导致的崩溃
+    * 修复toast队列位置的问题
 * 1.1.1 -- 2022.04.07
     * 优化toast的设计
 * 1.0.12 -- 2021.06.09
