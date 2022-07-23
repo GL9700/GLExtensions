@@ -9,7 +9,7 @@
 #import <GLExtensions/UIAlertController+GLExtension.h>
 #import <GLExtensions/UIWindow+GLExtension.h>
 
-#define kToastShowTime 2
+#define kToastShowTime 2.5
 #define kToastPointDefault CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)
 
 
@@ -34,7 +34,7 @@
     self.textLabel.text = msg;
     [self.textLabel sizeToFit];
     self.textLabel.frame = CGRectInset(self.textLabel.frame, -10, -8);
-    self.textLabel.layer.cornerRadius = _textLabel.frame.size.height / 2;
+    self.textLabel.layer.cornerRadius = _textLabel.frame.size.height <= 40 ? _textLabel.frame.size.height/2 : 20;
     self.frame = self.textLabel.frame;
 }
 - (void)setFontColor:(UIColor *)fontColor {
@@ -105,26 +105,13 @@ static NSMutableArray<ToastView *> *toastList;
 - (void)showAfterAutoDismissSec:(NSUInteger)sec withComplete:(void (^)(void))complete {
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self animated:YES completion: ^{
         if (sec > 0) {
-            /*
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                sleep((int)sec);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if(self.view.superview) {
-                        [self dismissViewControllerAnimated:YES completion:^{
-                            if(complete)
-                                complete();
-                        }];
-                    }
-                });
-            });
-             */
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                               if (self.view.superview) {
-                                   [self dismissViewControllerAnimated:YES completion: ^{
-                                       if (complete) complete();
-                                   }];
-                               }
-                           });
+                if (self.view.superview) {
+                    [self dismissViewControllerAnimated:YES completion: ^{
+                        if (complete) complete();
+                    }];
+                }
+            });
         }
     }];
 }
@@ -136,9 +123,11 @@ static NSMutableArray<ToastView *> *toastList;
     }
     [self showToastWithMessage:msg withPoint:CGPointZero];
 }
+
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point {
     [self showToastWithMessage:msg withPoint:point textColor:nil backgroundColor:nil];
 }
+
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
     ToastView *toast = [[ToastView alloc] initWithMessage:msg];
     toast.fontColor = tcolor ? : [UIColor whiteColor];
@@ -150,27 +139,23 @@ static NSMutableArray<ToastView *> *toastList;
 + (void)showToast:(ToastView *)toast {
     toast.alpha = 0;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [[UIApplication sharedApplication].keyWindow.topViewController.view addSubview:toast];
+        [[UIApplication sharedApplication].keyWindow addSubview:toast];
         [UIView animateWithDuration:0.25 animations: ^{
             toast.alpha = 1;
             toast.frame = CGRectOffset(toast.frame, 0, 5);
         } completion: ^(BOOL finished) {
             dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                               sleep(kToastShowTime);
-                               dispatch_async(dispatch_get_main_queue(), ^{
-                                                  [UIView animateWithDuration:0.25 animations: ^{
-                                                      toast.alpha = 0;
-                                                      toast.frame = CGRectOffset(toast.frame, 0, -5);
-                                                  } completion: ^(BOOL finished) {
-                                                      if (toast.superview) {
-                                                          [toast removeFromSuperview];
-                                                      }
-                                                      if (toastList && [toastList containsObject:toast]) {
-                                                          [toastList removeObject:toast];
-                                                      }
-                                                  }];
-                                              });
-                           });
+                sleep(kToastShowTime);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [UIView animateWithDuration:0.25 animations: ^{
+                        toast.alpha = 0;
+                        toast.frame = CGRectOffset(toast.frame, 0, -5);
+                    } completion: ^(BOOL finished) {
+                        toast.superview ? [toast removeFromSuperview] : nil;
+                        [toastList containsObject:toast] ? [toastList removeObject:toast] : nil;
+                    }];
+                });
+            });
         }];
     });
 }
