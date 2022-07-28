@@ -129,38 +129,35 @@ static NSMutableArray<ToastView *> *toastList;
 }
 
 + (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
-    ToastView *toast = [[ToastView alloc] initWithMessage:msg];
-    toast.fontColor = tcolor ? : [UIColor whiteColor];
-    toast.backgroundColor = color ? : [UIColor colorWithWhite:0 alpha:.6];
-    toast.cenpoint = point;
-    [self showToast:toast inQueue:YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ToastView *toast = [[ToastView alloc] initWithMessage:msg];
+        toast.fontColor = tcolor ? : [UIColor whiteColor];
+        toast.backgroundColor = color ? : [UIColor colorWithWhite:0 alpha:.6];
+        toast.cenpoint = point;
+        [self showToast:toast inQueue:YES];
+    });
 }
 
 + (void)showToast:(ToastView *)toast {
     toast.alpha = 0;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [[UIApplication sharedApplication].keyWindow addSubview:toast];
-        [UIView animateWithDuration:0.25 animations: ^{
-            toast.alpha = 1;
-            toast.frame = CGRectOffset(toast.frame, 0, 5);
-        } completion: ^(BOOL finished) {
-            dispatch_async(dispatch_get_global_queue(0, 0), ^{
-                sleep(kToastShowTime);
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [UIView animateWithDuration:0.25 animations: ^{
-                        toast.alpha = 0;
-                        toast.frame = CGRectOffset(toast.frame, 0, -5);
-                    } completion: ^(BOOL finished) {
-                        toast.superview ? [toast removeFromSuperview] : nil;
-                        [toastList containsObject:toast] ? [toastList removeObject:toast] : nil;
-                    }];
-                });
-            });
-        }];
-    });
+    [[UIApplication sharedApplication].keyWindow addSubview:toast];
+    [UIView animateWithDuration:0.25 animations: ^{
+        toast.alpha = 1;
+        toast.frame = CGRectOffset(toast.frame, 0, 5);
+    } completion: ^(BOOL finished) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kToastShowTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.25 animations: ^{
+                toast.alpha = 0;
+                toast.frame = CGRectOffset(toast.frame, 0, -5);
+            } completion: ^(BOOL finished) {
+                toast.superview ? [toast removeFromSuperview] : nil;
+                [toastList containsObject:toast] ? [toastList removeObject:toast] : nil;
+            }];
+        });
+    }];
 }
 + (void)showToast:(ToastView *)toast inQueue:(BOOL)queue {
-    if(!toastList) {toastList = [NSMutableArray array];}
+    toastList = toastList==nil ? [NSMutableArray array] : toastList;
     if(toastList.count==0){
         if(CGPointEqualToPoint(toast.cenpoint, CGPointZero)){
             toast.cenpoint = kToastPointDefault;
