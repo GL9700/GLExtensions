@@ -10,7 +10,6 @@
 
 @interface UIAlertController (GLExtension)
 
-# pragam mark- Alert
 
 /// Alert ** 单按钮 **
 + (instancetype)alertWithTitle:(NSString *)title message:(NSString *)msg singleButton:(NSString *)btnTitle event:(void(^)(void))eventBLK;
@@ -23,7 +22,6 @@
 - (void)dismiss;
 - (void)showAfterAutoDismissSec:(NSUInteger)sec withComplete:(void(^)(void))complete;
 
-# pragam mark- Toast
 
 /// 显示Toast ** 位置:3/4, 时间:2.5秒 **
 + (void)showToastWithMessage:(NSString *)format valist:(va_list)list;
