@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
+#import <GLExtensions/NSObject+GLExtension.h>
 
 @interface GLViewController : UIViewController
-
 @end

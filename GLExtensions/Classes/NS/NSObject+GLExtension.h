@@ -10,6 +10,10 @@
 
 #define weak(o)   autoreleasepool {} __weak typeof(o) o ## Weak = o;
 #define strong(o) autoreleasepool {} __strong typeof(o) o = o ## Weak;
+#define GLGETTER(_TYPE_, _VAR_, _VALUE_) -(_TYPE_)_VAR_{if(!_##_VAR_){_##_VAR_=_VALUE_;}return _##_VAR_;}
+#define GLSIGNLE_H(_NAME_) + (instancetype)Shared##_NAME_;
+#define GLSIGNLE_M(_NAME_) + (instancetype)Shared##_NAME_{static dispatch_once_t onceToken;static id instance;dispatch_once(&onceToken,^{instance=[[self class] new];});return instance;}
+
 
 /** 异步执行 ，主线更新 */
 static inline void dispatch_async_work_ui(dispatch_block_t workblock, dispatch_block_t uiblock)
