@@ -11,69 +11,62 @@
 #import <GLExtensions/UIAlertController+GLExtension.h>
 
 /// 隐藏已经显示的Activity
-UIKIT_STATIC_INLINE void hideActivity()
+void hideActivity()
 {
-    UIView *actView = [UIView defaultViewForActivityWithFrame:CGRectZero];
-    if (actView.superview) {
-        [actView removeFromSuperview];
-    }
-    if([actView respondsToSelector:@selector(hideActivity)]) {
-        [actView hideActivity];
-    }
+	UIView *actView = [UIView defaultViewForActivityWithFrame:CGRectZero];
+	if (actView.superview) {
+		[actView removeFromSuperview];
+	}
+	if([actView respondsToSelector:@selector(hideActivity)]) {
+		[actView hideActivity];
+	}
 }
 
 /// 显示单例Activity
-UIKIT_STATIC_INLINE void showActivity(id vc)
+void showActivity(id vc)
 {
-    UIView *view = [UIApplication sharedApplication].keyWindow;
-    if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
-    UIView *actView = [UIView defaultViewForActivityWithFrame:view.bounds];
-    if([actView respondsToSelector:@selector(showActivity)]) {
-        [actView showActivity];
-    }
-    if (actView.superview) {
-        [actView removeFromSuperview];
-    }
-    [view addSubview:actView];
+	UIView *view = [UIApplication sharedApplication].keyWindow;
+	if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
+	UIView *actView = [UIView defaultViewForActivityWithFrame:view.bounds];
+	if([actView respondsToSelector:@selector(showActivity)]) {
+		[actView showActivity];
+	}
+	if (actView.superview) {
+		[actView removeFromSuperview];
+	}
+	[view addSubview:actView];
 }
 
 /// 自定义Activity
-UIKIT_STATIC_INLINE void showActivityWithCustom(id vc)
+void showActivityWithCustom(id vc)
 {
-    UIView *view = [UIApplication sharedApplication].keyWindow;
-    if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
-    UIView *actView = [UIView defaultViewForActivityWithFrame:view.bounds];
-    if([actView respondsToSelector:@selector(showActivity)]) {
-        [actView showActivity];
-    }
-    if (actView.superview) {
-        [actView removeFromSuperview];
-    }
-    [view addSubview:actView];
+	UIView *view = [UIApplication sharedApplication].keyWindow;
+	if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
+	UIView *actView = [UIView defaultViewForActivityWithFrame:view.bounds];
+	if([actView respondsToSelector:@selector(showActivity)]) {
+		[actView showActivity];
+	}
+	if (actView.superview) {
+		[actView removeFromSuperview];
+	}
+	[view addSubview:actView];
 }
 
 
 /// Toast
-UIKIT_STATIC_INLINE void showToastMsg(NSString *format, ...) {
-    va_list args;
-    va_start(args, format);
-    NSLog(@"11");
-    [UIAlertController showToastWithMessage:format valist:args];
-    va_end(args);
+void showToastMsg(NSString *format, ...) {
+	va_list args;
+	va_start(args, format);
+	[UIAlertController showToastWithMessage:format valist:args];
+	va_end(args);
 }
 
-/// Toast 自定义
-UIKIT_STATIC_INLINE void showToastMsgAtPoint(NSString *msg, CGPoint point) {
-    [UIAlertController showToastWithMessage:msg withPoint:point];
+void showToastMsgWithOptions(NSDictionary<GLToastOptionsName, id> *options, NSString *format, ...) {
+	va_list args;
+	va_start(args, format);
+	[UIAlertController showToastWithMessage:format valist:args options:options];
+	va_end(args);
 }
-
-UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textColor, CGPoint point, UIColor *bgcolor) {
-    [UIAlertController showToastWithMessage:msg
-                                  withPoint:point
-                                  textColor:textColor
-                            backgroundColor:bgcolor];
-}
-
 @interface UIViewController (GLExtension)
 
 @end

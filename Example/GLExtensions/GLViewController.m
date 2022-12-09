@@ -48,17 +48,25 @@
 }
 
 - (IBAction)onClickToast:(id)sender {
-//    showToastMsg(@"%@", @"hello world");
-    showToastMsgWithMoreProps(@"你好，我是居中红色背景", [UIColor yellowColor], self.view.center, [UIColor randomColor]);
+	NSInteger tempstamp = [[NSDate date] timeIntervalSince1970];
+	BOOL isDoubleSecond = tempstamp%2==1;
+	showToastMsgWithOptions(@{
+		kToastOptionTextColor:isDoubleSecond ? [UIColor greenColor] : [UIColor redColor],
+		kToastOptionKeepTimeSeconds:@(arc4random()%5)
+	}, @"现在是单数秒?...%@ (%lu)\n随机时间后消失", isDoubleSecond?@" ✅":@" ❌" , tempstamp);
+	
+	
+	
+//    showToastMsgWithMoreProps(@"你好，我是居中红色背景", [UIColor yellowColor], self.view.center, [UIColor randomColor]);
 //    可使用异步线程来获取同步显示
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [self.navigationController pushViewController:[GLEmptyViewController new] animated:YES];
-        [self.navigationController presentViewController:[GLEmptyViewController new] animated:YES completion:nil];
+//        [self.navigationController presentViewController:[GLEmptyViewController new] animated:YES completion:nil];
 //    });
 }
 
 - (IBAction)onClickNormalToast:(UIButton *)sender {
-    showToastMsg(@"%@", [NSError errorWithDomain:@"aaa" code:123 userInfo:@{@"url":@"123"}]);
+    showToastMsg(@"正常的Toast ? ", [NSError errorWithDomain:@"aaa" code:123 userInfo:@{@"url":@"123"}]);
 //    showToastMsgWithMoreProps([NSString stringWithFormat:@"%@", [self randomWord]], [UIColor yellowColor], CGPointZero, [UIColor randomColor]);
 }
 

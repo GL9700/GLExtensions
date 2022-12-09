@@ -58,18 +58,18 @@
                                             <segue destination="WEe-cW-D6z" kind="show" id="uJf-oF-b4r"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-50-Mkq">
-                                        <rect key="frame" x="43" y="169" width="145" height="30"/>
-                                        <state key="normal" title="弹出一个居中的Toast"/>
-                                        <connections>
-                                            <action selector="onClickToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="RLr-Fv-BJ6"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARy-Kt-ELE">
-                                        <rect key="frame" x="73.5" y="224" width="84" height="30"/>
-                                        <state key="normal" title="正常的Toast"/>
+                                        <rect key="frame" x="43" y="169" width="145" height="30"/>
+                                        <state key="normal" title="弹出Toast，简单使用"/>
                                         <connections>
                                             <action selector="onClickNormalToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="073-u0-2qB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSJ-50-Mkq">
+                                        <rect key="frame" x="20" y="224" width="191" height="30"/>
+                                        <state key="normal" title="弹出Toast，包括控制和逻辑"/>
+                                        <connections>
+                                            <action selector="onClickToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="RLr-Fv-BJ6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-aD-WH8">
