@@ -11,7 +11,7 @@
 #import <GLExtensions/UIAlertController+GLExtension.h>
 
 /// 隐藏已经显示的Activity
-void hideActivity()
+NS_INLINE void hideActivity()
 {
 	UIView *actView = [UIView defaultViewForActivityWithFrame:CGRectZero];
 	if (actView.superview) {
@@ -23,7 +23,7 @@ void hideActivity()
 }
 
 /// 显示单例Activity
-void showActivity(id vc)
+NS_INLINE void showActivity(id vc)
 {
 	UIView *view = [UIApplication sharedApplication].keyWindow;
 	if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
@@ -38,7 +38,7 @@ void showActivity(id vc)
 }
 
 /// 自定义Activity
-void showActivityWithCustom(id vc)
+NS_INLINE void showActivityWithCustom(id vc)
 {
 	UIView *view = [UIApplication sharedApplication].keyWindow;
 	if ([vc isKindOfClass:[UIViewController class]]) view = ((UIViewController *)vc).view;
@@ -54,14 +54,14 @@ void showActivityWithCustom(id vc)
 
 
 /// Toast
-void showToastMsg(NSString *format, ...) {
+NS_INLINE void showToastMsg(NSString *format, ...) {
 	va_list args;
 	va_start(args, format);
 	[UIAlertController showToastWithMessage:format valist:args];
 	va_end(args);
 }
 
-void showToastMsgWithOptions(NSDictionary<GLToastOptionsName, id> *options, NSString *format, ...) {
+NS_INLINE void showToastMsgWithOptions(NSDictionary<GLToastOptionsName, id> *options, NSString *format, ...) {
 	va_list args;
 	va_start(args, format);
 	[UIAlertController showToastWithMessage:format valist:args options:options];
