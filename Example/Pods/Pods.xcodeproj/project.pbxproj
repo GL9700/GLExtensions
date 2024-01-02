@@ -7,58 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07FB367977009C727862712038326BD6 /* NSObject+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9E21A6A5EF192EBD1589B922A2E807 /* NSObject+GLExtension.m */; };
-		0B556B2484C734A72DDFEA20DA237B4B /* UIButton+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 891BA0E373B4A57DACB79103E9FB3541 /* UIButton+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16D49EFF118F00B28E3FBCA26773DFAD /* UIButton+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDB886ED20E3CC9913E0AF16B86BFC /* UIButton+GLExtension.m */; };
-		1ABCC31601334FF44FA69DFC206CA78E /* UIView+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BAF48D57553C2737E9DA44C7F99CD51 /* UIView+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C92987F89C01C2FC82D81F57C1190BD /* NSURL+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 51EEFF6F0E027817387DB157C564C3BA /* NSURL+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E25CE90AAED6F81AF4C20458548C09B /* GLExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E005CA8E9A66A67663247B18092F886 /* GLExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26DB9488E85D5BFB43CD9DBC81375955 /* GLExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 378F9601C524E3BC82AF8C818102EDA5 /* GLExtensions-dummy.m */; };
-		29236AC37C751BFF963468B137119BFE /* NSFileManager+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 073C890E76216386DBD52CE42D3F9339 /* NSFileManager+GLExtension.m */; };
-		2DAB6ED9F11CCA91B9E4789B7114F871 /* UIColor+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCC9E2F22357207CD1D235A58269AC1 /* UIColor+GLExtension.m */; };
-		2F10F95C9C06FCA809B450640D842044 /* UIApplication+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D11DB910BCD467DF3C3EF27D602AD4 /* UIApplication+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37491412370FD6B5A2AC54374EC261E3 /* NSString+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 7541352E32407E660186DB6A8BDB4F80 /* NSString+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4562376267BD7F6E275EF5B1857647D6 /* UINavigationController+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C08329F5F4A9AB83C364723455E366 /* UINavigationController+GLExtension.m */; };
-		530E27DC62CF05266852374A2AC7B3C4 /* UIResponder+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7739D17972385EB109770903ED607AD1 /* UIResponder+GLExtension.m */; };
-		5E100DB4D22613374652BF6BB1EE224C /* UIView+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD6CFA1C0C65C9CE48D66EEB626E7A /* UIView+GLExtension.m */; };
-		605FAF823971E484D3A20E751ED8A3D1 /* NSDate+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5230572B8F061F9D7FAA91CC17F4ECFC /* NSDate+GLExtension.m */; };
-		65C1583181A56B0123678C5E8154FF13 /* NSFileManager+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E0E89B66E00BCDA3822C8639A8195E /* NSFileManager+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6C78FF1AB4C2E697186F9E16ECC60CEF /* UIResponder+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F7223F43CB4F7469C2B4DAFE4508638E /* UIResponder+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E893720F1CDCCCD77A9C20DCEBA8AE9 /* UITableView+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B852DA704E24B9E03CCFF7B5BF76EC6 /* UITableView+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		727477C904347C3ED27BEC7AE7A05C7E /* UIWindow+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CD8CFCE9B41722834F2246B2A4A0C8 /* UIWindow+GLExtension.m */; };
+		0D019925D710F1969C0EDE36F8E6ED73 /* UITableView+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B180A1AAD2BFC928FC9CEC59C0B73F1 /* UITableView+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11BCA82A133C735F3BE294608F301E98 /* NSTimer+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = D606BCE35C6F7E95C8F9715D594848FD /* NSTimer+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1362A8456BFA9BDDB4258D9E50A64A0E /* UITableView+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AFD1776BC08B7938BFED1AC199711F /* UITableView+GLExtension.m */; };
+		167AF11AA18CB1DCD9EF5F4252F98DF9 /* NSTimer+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 45715EF2C9AC0926E1039473FC198B5F /* NSTimer+GLExtension.m */; };
+		1F5D3B054F4D002524B1E3E1F5015D83 /* UIResponder+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC5EA8623D6E506AE7FA022E9C70CE2 /* UIResponder+GLExtension.m */; };
+		310F09A27C6080F071A966F2D189078E /* NSString+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F403BC57B16A53987A9442AEE0D212FB /* NSString+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D2BAF4A95BB45D1AF371D1BAC767114 /* NSData+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FDB70A55F9CEEFF1DDE50762284B09C8 /* NSData+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		443A208E59674A71891D06D3A96DDDBB /* NSDate+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = E96D348845C4F4E519560C0AB72729FC /* NSDate+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		477A64B14864E3FF916B9631B41B66EF /* GLExtReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F702492CAAC3CDB483F53933790BDE6A /* GLExtReachability.m */; };
+		48FE16D2A11900BD6F0D0DBB5A8AAB4B /* UIView+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B6F54550C165776D66370B49ABFE403 /* UIView+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51DAA1BCB2D55AEE3AA8CFB868503814 /* UINavigationController+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 06814E5BD8DE19D444BCEB851C5522C1 /* UINavigationController+GLExtension.m */; };
+		52080BFE64A8E2D21FE0C8474AA760BE /* UIView+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1E767596CCB838ABCB49380A2E5399 /* UIView+GLExtension.m */; };
+		60B0DD9AEEAE047BBFE28157FE567966 /* GLExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2ABFF83C41FA311CAD5F95916ED60BF2 /* GLExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6247B3B7A61BBBBF35339D9D28F8FB0B /* UIButton+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DD5DEC7A8A4AA4C5EDC21356F50A07 /* UIButton+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62EC190EB348680DEFE6D6B26DE06B24 /* UIImage+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5F550178FF90E8C792E53CBD3C4561 /* UIImage+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67B844897745729492D2E5E20548555A /* UIDevice+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 94135860C8339AB25DC891AD42F279BC /* UIDevice+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A4BADF96038ADEE2F3D02571A95B6B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6EC849D6ED1EFCA8083EC3B9F78677C5 /* UIWindow+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = DFCC6B434E7E761008EC7BDC3F3C8F7A /* UIWindow+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		726F5570A128E9430612F4FC83907C17 /* UIDevice+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1680855F9699EA9CFEB1C72CE5DCB922 /* UIDevice+GLExtension.m */; };
+		7DF4D5EABB8114E1D3D7FAF2E9734F45 /* NSDate+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 971B14445D007AC2A4CB331668BB4557 /* NSDate+GLExtension.m */; };
+		8140D8F9D90BBF88979D5FCFC70D719C /* NSURL+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FE3F1D275F75CF422677080D1F0794F /* NSURL+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8169331906DCF879E2A6556221EE9F33 /* Pods-GLExtensions_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D41492AA92C7A0415BFC25A326E2AA5 /* Pods-GLExtensions_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81B52CD8ACCC27BC07E16D53F794AACE /* NSURL+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DE21D28F94863456AA5BE1332F1DB0C /* NSURL+GLExtension.m */; };
-		83284E6AD627B35BCD8BA21CFE09AA57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		825A3C00B011ACB38314FAC4D8710A3E /* NSObject+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F7B777E08D3DBDBC22C2F10A20AD585 /* NSObject+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8431232AB255231B25C3D743283BA5D4 /* Pods-GLExtensions_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3F3A848D1FCAD42623B9A4F805BD423 /* Pods-GLExtensions_Example-dummy.m */; };
-		84B66A673EA09187A71F76DB32080E80 /* UIApplication+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB7E53E594C0E747634FE08A18EA3AA /* UIApplication+GLExtension.m */; };
-		88E6EFCDDF578EE93B10F7B37C414D48 /* CALayer+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AF34EAE22D886C90228CC893781AB /* CALayer+GLExtension.m */; };
-		8C991B355878404D1517FADB46BF4B65 /* CALayer+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = B569C9CF411779601113F0B2B8EE208A /* CALayer+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E8BE36F2FCEC0527794D6325A2B69B2 /* UITableView+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 274494911B2A27C83BE6258DA8E75746 /* UITableView+GLExtension.m */; };
-		97464C5494AA1DE21CF698C642F5206F /* UIViewController+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F764FE1D3CE270D0FD6D2709C7626C0 /* UIViewController+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9830E9975271718244CCC1698B306EF3 /* NSData+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E43B966FFEFFB9E98224DE24B09EA10 /* NSData+GLExtension.m */; };
-		9A162569A74A28A41973BA645DC33EB0 /* UIViewController+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F26CB6A280DC4D8155865239B0A1E7A5 /* UIViewController+GLExtension.m */; };
-		9A684A9D3097950911608A93D5722C29 /* UIAlertController+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA58176D871DDA1B0A5516A051D33ED /* UIAlertController+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9ED6E2A963094441B9098EE036EAEFEE /* UIColor+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8361867710B22B2B34FDEC768C7C15 /* UIColor+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A058FD51320A3B829545017D7661E018 /* NSDate+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = C3B71577EE97607FE708B4A2FC10D64D /* NSDate+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A48801F22245AC6D25404D49F0B72394 /* UIImage+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2725309C4A6C6FDB2F17A81F31938D /* UIImage+GLExtension.m */; };
-		B251A93EECD6E883D2F512646A52CA0A /* GLExtReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 76914265D019BDC21F8BA6540C40B92A /* GLExtReachability.m */; };
-		B47AE39A84D686650DBCCEFD0A05FBEE /* NSTimer+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CC4826AA565B3B0E97EDF432E785392 /* NSTimer+GLExtension.m */; };
-		BC29119A508C36F909D07C04967F4776 /* UINavigationController+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 132DAEC34B112B6000B39442C41BFEED /* UINavigationController+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCF6EA2B2D84B5CD6168C5625C228E91 /* GLExtReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 90B096D391E4CF2E6D3D6A4B870BE338 /* GLExtReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C602C8DA0CEB32D61C08DD14BEA7F076 /* NSString+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3BDC5E39A5060D739BE1AA734F78D1 /* NSString+GLExtension.m */; };
-		D049412272A3283D30135C64B9D6DA4B /* UIWindow+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F9BA4D3E1EE2F8CCE89895FAC1D7F1 /* UIWindow+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4F9B7733B93C40740DA87A957C12CFA /* UIImage+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A12A4C62B3302468D513D5D318A65E3 /* UIImage+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5AB02D1D95E2FE75BB7F3A4F04D1843 /* NSData+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A3956972C49EAC3491FABFE844F9461 /* NSData+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95CE8D859CD9604468A94B3DDDCEBF55 /* NSFileManager+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F27EAB9A76765B0FA4875BB9821F898 /* NSFileManager+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97A6CBB6E12D0E3BE0D656C983F4A662 /* UINavigationController+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = FB2EB66B96B0C33A00CBBF606DA382AC /* UINavigationController+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		990252EE8AB4A5636469F118EF6AECCD /* UIButton+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 363B11192273C9389ED71E0F86C5A4EB /* UIButton+GLExtension.m */; };
+		A26421B3676080C2399D9B8BD8117DAC /* UIAlertController+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B19C8655AC73B656EAFEA0EBCE27008 /* UIAlertController+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A71FCA3C756B9BB758C72DAACEAC2664 /* GLExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C4D8A6B76718DEA994FB73564E5A45 /* GLExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD91577CE3E2D8813762038723B463C7 /* UIViewController+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BA6C0270D4E79965E00AAF180D8C613 /* UIViewController+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1EE104F88D5762ADF1318E7FEA80D61 /* UIViewController+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B59AA2C37544960C2D9A003743EC793 /* UIViewController+GLExtension.m */; };
+		BAAD5FB22B05F2D8B8060548A927F3A4 /* UIWindow+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0FF7FCE024980140F93DBF641A72D6 /* UIWindow+GLExtension.m */; };
+		BED1FC7B6EAAFE0B870A75197754435D /* UIAlertController+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AEA418A7D0A9009CEC4EB867D203C4D /* UIAlertController+GLExtension.m */; };
+		C5ED776C4A15C49B1F686AFCE3F750E3 /* NSObject+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C81810C6FF804C9105F64D3165850FD /* NSObject+GLExtension.m */; };
+		C93478143AEFDAA57F75E700ECB357F4 /* UIResponder+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 707C43F59632C627909BFB7A8E76052E /* UIResponder+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAB874F600FD25078EE0401229E15770 /* GLExtReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 8398176AB6B0DBB3DDFD822834086A6B /* GLExtReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEF9BB684FB60DF7D10D43CC867078FD /* NSData+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D8CB4B6CF7B81DD5AF732DCC08F3931A /* NSData+GLExtension.m */; };
+		CF6DA5792FC0B20C99933C5A411A2146 /* NSFileManager+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = AB67886BA8031CB5FC395713134712E9 /* NSFileManager+GLExtension.m */; };
+		D37BF982ED5DEAED78CB3A7569AE41D0 /* UIColor+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E485318337CE715A2B1643A73D92F2 /* UIColor+GLExtension.m */; };
+		D61C0BA1E97005BC7161579E9A580F6B /* UIApplication+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 269285B4BA6548525B0D6B405F46EB2A /* UIApplication+GLExtension.m */; };
+		D83E07FF4616CA762A7A8506F9B9A003 /* CALayer+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 23581C33E4052116166B0721F7CEBE26 /* CALayer+GLExtension.m */; };
+		D988DAC8B4DCCAB8C1E92C2379E117F3 /* CALayer+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = ADC91ED895EB7C8DA4D6E1F62029A6A4 /* CALayer+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE35A630C4A1C286EF8707E99536AF32 /* NSURL+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D31B995E16D943E35AE504FE9A5CD192 /* NSURL+GLExtension.m */; };
+		DF19928C986B49BD69FCF7C1ABDA1824 /* NSString+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5732FDAEB0AF0F0E760EA8C438CCC77B /* NSString+GLExtension.m */; };
 		E0D9B60292DF620A8D46E96A67A93C58 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E22B0A9A89D720339421E45EB25D3E27 /* UIAlertController+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEB282AD63F0AD2EEAC5209E22E994E /* UIAlertController+GLExtension.m */; };
-		E3559001FD6703D7F8D3D14E48153521 /* UIDevice+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7289E48BE51F80604079FDE8D88008EA /* UIDevice+GLExtension.m */; };
-		E8326CE77B5779BA7BF0B56B548B9449 /* NSObject+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6EE038B07AB21AE1FFD8DC8D4801E4 /* NSObject+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E98ADF5F54EA97A74E928F30AAABC6C2 /* UIDevice+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = BA93888D6D65B30D7A3240D9A7857590 /* UIDevice+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEE5C23ABC8DEE4C8A0C6BB6C75C6AE1 /* NSTimer+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 5691698E8AF249CBC990740101C15A89 /* NSTimer+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2378336F31BF02D2BC9A323A0752B1A /* GLExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6428E18B643776FE9401D28CE9A4628 /* GLExtensions-dummy.m */; };
+		F84FF948E564D8018ED030E388C1F307 /* UIImage+GLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA8172424DD1F0C6F91AF527FE3A13 /* UIImage+GLExtension.m */; };
+		FA7B4D9FE0C31509E859EC36FA70C773 /* UIColor+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A2C669FB202C0608E7D66CFEA2D20B /* UIColor+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FDB6E5090705A402F96B70AB328CA387 /* UIApplication+GLExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 73A12E3330E1BA089BBF3545E834C2AE /* UIApplication+GLExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C198AB7D8CE7D7D06D7730CBF7C69C89 /* PBXContainerItemProxy */ = {
+		84BA567BF86C871044FFA7DE5A0C954F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -68,79 +69,80 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		073C890E76216386DBD52CE42D3F9339 /* NSFileManager+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+GLExtension.m"; sourceTree = "<group>"; };
-		132DAEC34B112B6000B39442C41BFEED /* UINavigationController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GLExtension.h"; sourceTree = "<group>"; };
-		13CD8CFCE9B41722834F2246B2A4A0C8 /* UIWindow+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+GLExtension.m"; sourceTree = "<group>"; };
-		274494911B2A27C83BE6258DA8E75746 /* UITableView+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GLExtension.m"; sourceTree = "<group>"; };
-		2A3956972C49EAC3491FABFE844F9461 /* NSData+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+GLExtension.h"; sourceTree = "<group>"; };
-		2B852DA704E24B9E03CCFF7B5BF76EC6 /* UITableView+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+GLExtension.h"; sourceTree = "<group>"; };
-		2E9E21A6A5EF192EBD1589B922A2E807 /* NSObject+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GLExtension.m"; sourceTree = "<group>"; };
-		2F3BDC5E39A5060D739BE1AA734F78D1 /* NSString+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+GLExtension.m"; sourceTree = "<group>"; };
-		2F764FE1D3CE270D0FD6D2709C7626C0 /* UIViewController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GLExtension.h"; sourceTree = "<group>"; };
-		378F9601C524E3BC82AF8C818102EDA5 /* GLExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLExtensions-dummy.m"; sourceTree = "<group>"; };
-		39D11DB910BCD467DF3C3EF27D602AD4 /* UIApplication+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GLExtension.h"; sourceTree = "<group>"; };
-		3A12A4C62B3302468D513D5D318A65E3 /* UIImage+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+GLExtension.h"; sourceTree = "<group>"; };
-		3ACD6CFA1C0C65C9CE48D66EEB626E7A /* UIView+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+GLExtension.m"; sourceTree = "<group>"; };
-		3CC4826AA565B3B0E97EDF432E785392 /* NSTimer+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GLExtension.m"; sourceTree = "<group>"; };
+		06814E5BD8DE19D444BCEB851C5522C1 /* UINavigationController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GLExtension.m"; sourceTree = "<group>"; };
+		0B180A1AAD2BFC928FC9CEC59C0B73F1 /* UITableView+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITableView+GLExtension.h"; sourceTree = "<group>"; };
+		0F27EAB9A76765B0FA4875BB9821F898 /* NSFileManager+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GLExtension.h"; sourceTree = "<group>"; };
+		1680855F9699EA9CFEB1C72CE5DCB922 /* UIDevice+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+GLExtension.m"; sourceTree = "<group>"; };
+		1B6F54550C165776D66370B49ABFE403 /* UIView+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+GLExtension.h"; sourceTree = "<group>"; };
+		23581C33E4052116166B0721F7CEBE26 /* CALayer+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GLExtension.m"; sourceTree = "<group>"; };
+		269285B4BA6548525B0D6B405F46EB2A /* UIApplication+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GLExtension.m"; sourceTree = "<group>"; };
+		27A2C669FB202C0608E7D66CFEA2D20B /* UIColor+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+GLExtension.h"; sourceTree = "<group>"; };
+		28E485318337CE715A2B1643A73D92F2 /* UIColor+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GLExtension.m"; sourceTree = "<group>"; };
+		2ABFF83C41FA311CAD5F95916ED60BF2 /* GLExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLExtensions-umbrella.h"; sourceTree = "<group>"; };
+		2DEA8172424DD1F0C6F91AF527FE3A13 /* UIImage+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GLExtension.m"; sourceTree = "<group>"; };
+		363B11192273C9389ED71E0F86C5A4EB /* UIButton+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GLExtension.m"; sourceTree = "<group>"; };
+		3BA6C0270D4E79965E00AAF180D8C613 /* UIViewController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GLExtension.h"; sourceTree = "<group>"; };
 		3DE4A61823ABD091E403C5484484A6A8 /* Pods-GLExtensions_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLExtensions_Example-Info.plist"; sourceTree = "<group>"; };
-		3E005CA8E9A66A67663247B18092F886 /* GLExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLExtensions-umbrella.h"; sourceTree = "<group>"; };
-		3EDEA58ED37F12038D579203BE7CBA0B /* GLExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = GLExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		432A64FC0D1BB7FF2A4A1DA24A18F37E /* GLExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLExtensions.modulemap; sourceTree = "<group>"; };
-		47C08329F5F4A9AB83C364723455E366 /* UINavigationController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+GLExtension.m"; sourceTree = "<group>"; };
-		4BA58176D871DDA1B0A5516A051D33ED /* UIAlertController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GLExtension.h"; sourceTree = "<group>"; };
-		51EEFF6F0E027817387DB157C564C3BA /* NSURL+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURL+GLExtension.h"; sourceTree = "<group>"; };
-		5230572B8F061F9D7FAA91CC17F4ECFC /* NSDate+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GLExtension.m"; sourceTree = "<group>"; };
-		52F9BA4D3E1EE2F8CCE89895FAC1D7F1 /* UIWindow+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIWindow+GLExtension.h"; sourceTree = "<group>"; };
-		5691698E8AF249CBC990740101C15A89 /* NSTimer+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GLExtension.h"; sourceTree = "<group>"; };
-		59425AAA9F2F1469B073D6140E69761B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5CCC9E2F22357207CD1D235A58269AC1 /* UIColor+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GLExtension.m"; sourceTree = "<group>"; };
-		5E2725309C4A6C6FDB2F17A81F31938D /* UIImage+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GLExtension.m"; sourceTree = "<group>"; };
-		65DB5E2F662E6AC3557527CA43C4046B /* GLExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLExtensions-prefix.pch"; sourceTree = "<group>"; };
-		7289E48BE51F80604079FDE8D88008EA /* UIDevice+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+GLExtension.m"; sourceTree = "<group>"; };
+		3F7B777E08D3DBDBC22C2F10A20AD585 /* NSObject+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+GLExtension.h"; sourceTree = "<group>"; };
+		3FC5EA8623D6E506AE7FA022E9C70CE2 /* UIResponder+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+GLExtension.m"; sourceTree = "<group>"; };
+		45715EF2C9AC0926E1039473FC198B5F /* NSTimer+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+GLExtension.m"; sourceTree = "<group>"; };
+		4F0FF7FCE024980140F93DBF641A72D6 /* UIWindow+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+GLExtension.m"; sourceTree = "<group>"; };
+		5732FDAEB0AF0F0E760EA8C438CCC77B /* NSString+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+GLExtension.m"; sourceTree = "<group>"; };
+		5B16B29ED5D5AC0E70EA3423A2A6956C /* GLExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GLExtensions.modulemap; sourceTree = "<group>"; };
+		67B4E34C9ECF52747517CD85FF1009C1 /* GLExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GLExtensions-Info.plist"; sourceTree = "<group>"; };
+		6B59AA2C37544960C2D9A003743EC793 /* UIViewController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GLExtension.m"; sourceTree = "<group>"; };
+		707C43F59632C627909BFB7A8E76052E /* UIResponder+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIResponder+GLExtension.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		73A12E3330E1BA089BBF3545E834C2AE /* UIApplication+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIApplication+GLExtension.h"; sourceTree = "<group>"; };
 		73AF6FFF7941DECEAE85077CE749E202 /* Pods-GLExtensions_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLExtensions_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7541352E32407E660186DB6A8BDB4F80 /* NSString+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+GLExtension.h"; sourceTree = "<group>"; };
-		76914265D019BDC21F8BA6540C40B92A /* GLExtReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GLExtReachability.m; sourceTree = "<group>"; };
-		7739D17972385EB109770903ED607AD1 /* UIResponder+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+GLExtension.m"; sourceTree = "<group>"; };
-		7BAF48D57553C2737E9DA44C7F99CD51 /* UIView+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+GLExtension.h"; sourceTree = "<group>"; };
-		7BEB282AD63F0AD2EEAC5209E22E994E /* UIAlertController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GLExtension.m"; sourceTree = "<group>"; };
+		7B19C8655AC73B656EAFEA0EBCE27008 /* UIAlertController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+GLExtension.h"; sourceTree = "<group>"; };
+		7C81810C6FF804C9105F64D3165850FD /* NSObject+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GLExtension.m"; sourceTree = "<group>"; };
+		7D1E767596CCB838ABCB49380A2E5399 /* UIView+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+GLExtension.m"; sourceTree = "<group>"; };
 		7D41492AA92C7A0415BFC25A326E2AA5 /* Pods-GLExtensions_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLExtensions_Example-umbrella.h"; sourceTree = "<group>"; };
 		82CB8C388CDCC10455E777B016D8B6AF /* Pods-GLExtensions_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLExtensions_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8398176AB6B0DBB3DDFD822834086A6B /* GLExtReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GLExtReachability.h; sourceTree = "<group>"; };
 		8685E1BD8104B4099CD5D87BB861C4C5 /* Pods-GLExtensions_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLExtensions_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		891BA0E373B4A57DACB79103E9FB3541 /* UIButton+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+GLExtension.h"; sourceTree = "<group>"; };
-		90B096D391E4CF2E6D3D6A4B870BE338 /* GLExtReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GLExtReachability.h; sourceTree = "<group>"; };
-		90C3E3D41E5E27715E5FCECA68EECA78 /* GLExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLExtensions.debug.xcconfig; sourceTree = "<group>"; };
-		9C3A152E7492D7842E689763BE4C7D9F /* Pods_GLExtensions_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DE21D28F94863456AA5BE1332F1DB0C /* NSURL+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GLExtension.m"; sourceTree = "<group>"; };
-		9E43B966FFEFFB9E98224DE24B09EA10 /* NSData+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+GLExtension.m"; sourceTree = "<group>"; };
-		AA54CB7F3C8C292689A6B57D157DFE77 /* GLExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLExtensions.release.xcconfig; sourceTree = "<group>"; };
-		AD6EE038B07AB21AE1FFD8DC8D4801E4 /* NSObject+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+GLExtension.h"; sourceTree = "<group>"; };
+		87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GLExtensions; path = GLExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89AFD1776BC08B7938BFED1AC199711F /* UITableView+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITableView+GLExtension.m"; sourceTree = "<group>"; };
+		8AEA418A7D0A9009CEC4EB867D203C4D /* UIAlertController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+GLExtension.m"; sourceTree = "<group>"; };
+		8E5F550178FF90E8C792E53CBD3C4561 /* UIImage+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+GLExtension.h"; sourceTree = "<group>"; };
+		8FE3F1D275F75CF422677080D1F0794F /* NSURL+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSURL+GLExtension.h"; sourceTree = "<group>"; };
+		94135860C8339AB25DC891AD42F279BC /* UIDevice+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+GLExtension.h"; sourceTree = "<group>"; };
+		958429653E3D998E99D1C1512DBC601F /* GLExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLExtensions.debug.xcconfig; sourceTree = "<group>"; };
+		966BA5188BF6965EA3D48A828A8FB800 /* GLExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLExtensions-prefix.pch"; sourceTree = "<group>"; };
+		971B14445D007AC2A4CB331668BB4557 /* NSDate+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GLExtension.m"; sourceTree = "<group>"; };
+		976852F8859BCB23F1338D3D83E33AB5 /* GLExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLExtensions.release.xcconfig; sourceTree = "<group>"; };
+		9C3A152E7492D7842E689763BE4C7D9F /* Pods-GLExtensions_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GLExtensions_Example"; path = Pods_GLExtensions_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3C4D8A6B76718DEA994FB73564E5A45 /* GLExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GLExtensions.h; path = GLExtensions/Classes/GLExtensions.h; sourceTree = "<group>"; };
+		A4E360CDA1ECBF340828EFF8215944E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		AB67886BA8031CB5FC395713134712E9 /* NSFileManager+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+GLExtension.m"; sourceTree = "<group>"; };
+		ADC91ED895EB7C8DA4D6E1F62029A6A4 /* CALayer+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+GLExtension.h"; sourceTree = "<group>"; };
 		B43928907DE84391721F501D657EFBB1 /* Pods-GLExtensions_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GLExtensions_Example.modulemap"; sourceTree = "<group>"; };
-		B569C9CF411779601113F0B2B8EE208A /* CALayer+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CALayer+GLExtension.h"; sourceTree = "<group>"; };
-		B5E0E89B66E00BCDA3822C8639A8195E /* NSFileManager+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+GLExtension.h"; sourceTree = "<group>"; };
-		BA93888D6D65B30D7A3240D9A7857590 /* UIDevice+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDevice+GLExtension.h"; sourceTree = "<group>"; };
-		C3B71577EE97607FE708B4A2FC10D64D /* NSDate+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+GLExtension.h"; sourceTree = "<group>"; };
-		C47AF34EAE22D886C90228CC893781AB /* CALayer+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CALayer+GLExtension.m"; sourceTree = "<group>"; };
+		B6428E18B643776FE9401D28CE9A4628 /* GLExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLExtensions-dummy.m"; sourceTree = "<group>"; };
+		C2DD5DEC7A8A4AA4C5EDC21356F50A07 /* UIButton+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+GLExtension.h"; sourceTree = "<group>"; };
+		C842748A15F4F77BE30EF9C038E729E7 /* GLExtensions.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GLExtensions.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C97606658FDAE119C460448CB4F71D84 /* Pods-GLExtensions_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLExtensions_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D2EDB886ED20E3CC9913E0AF16B86BFC /* UIButton+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GLExtension.m"; sourceTree = "<group>"; };
+		CCCA5D90060A10ABB2894C07856D7C75 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D31B995E16D943E35AE504FE9A5CD192 /* NSURL+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSURL+GLExtension.m"; sourceTree = "<group>"; };
+		D606BCE35C6F7E95C8F9715D594848FD /* NSTimer+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSTimer+GLExtension.h"; sourceTree = "<group>"; };
+		D8CB4B6CF7B81DD5AF732DCC08F3931A /* NSData+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+GLExtension.m"; sourceTree = "<group>"; };
+		DFCC6B434E7E761008EC7BDC3F3C8F7A /* UIWindow+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIWindow+GLExtension.h"; sourceTree = "<group>"; };
 		E3F3A848D1FCAD42623B9A4F805BD423 /* Pods-GLExtensions_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLExtensions_Example-dummy.m"; sourceTree = "<group>"; };
 		E7D31F3533FCE0E8992C562CE7AF778F /* Pods-GLExtensions_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLExtensions_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E8E823976876608B4B9389BBD5D86984 /* GLExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GLExtensions-Info.plist"; sourceTree = "<group>"; };
-		EEB7E53E594C0E747634FE08A18EA3AA /* UIApplication+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+GLExtension.m"; sourceTree = "<group>"; };
-		F26CB6A280DC4D8155865239B0A1E7A5 /* UIViewController+GLExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GLExtension.m"; sourceTree = "<group>"; };
-		F7223F43CB4F7469C2B4DAFE4508638E /* UIResponder+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIResponder+GLExtension.h"; sourceTree = "<group>"; };
-		FC8361867710B22B2B34FDEC768C7C15 /* UIColor+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+GLExtension.h"; sourceTree = "<group>"; };
-		FEF08F3F3CB0BBD28EA48B31C3F2236C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E96D348845C4F4E519560C0AB72729FC /* NSDate+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+GLExtension.h"; sourceTree = "<group>"; };
+		F403BC57B16A53987A9442AEE0D212FB /* NSString+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+GLExtension.h"; sourceTree = "<group>"; };
+		F702492CAAC3CDB483F53933790BDE6A /* GLExtReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GLExtReachability.m; sourceTree = "<group>"; };
+		FB2EB66B96B0C33A00CBBF606DA382AC /* UINavigationController+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+GLExtension.h"; sourceTree = "<group>"; };
+		FDB70A55F9CEEFF1DDE50762284B09C8 /* NSData+GLExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+GLExtension.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		54B59922C9C61BEFE0A21CF4DADD2950 /* Frameworks */ = {
+		4F388DFE8ADEC572C2D77E1A5F1BAC26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83284E6AD627B35BCD8BA21CFE09AA57 /* Foundation.framework in Frameworks */,
+				6A4BADF96038ADEE2F3D02571A95B6B2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,22 +157,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D757FA51706399DD040C89E98DC6CF9 /* GLExtensions */ = {
+		1D5A4B5B9007B98D84E178113CDEC152 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				CCE4332EDFA7A6FD78EB0A377CCF2625 /* ALL */,
-				FC8E0DB99B45F6CE6C67EB94FA51A6D4 /* Pod */,
-				FEBCC9D1E1F35573816C20D6F8320CB9 /* Support Files */,
+				C842748A15F4F77BE30EF9C038E729E7 /* GLExtensions.podspec */,
+				CCCA5D90060A10ABB2894C07856D7C75 /* LICENSE */,
+				A4E360CDA1ECBF340828EFF8215944E2 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		1FBBB7BECF7F213D26F0464FB6E476D8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B16B29ED5D5AC0E70EA3423A2A6956C /* GLExtensions.modulemap */,
+				B6428E18B643776FE9401D28CE9A4628 /* GLExtensions-dummy.m */,
+				67B4E34C9ECF52747517CD85FF1009C1 /* GLExtensions-Info.plist */,
+				966BA5188BF6965EA3D48A828A8FB800 /* GLExtensions-prefix.pch */,
+				2ABFF83C41FA311CAD5F95916ED60BF2 /* GLExtensions-umbrella.h */,
+				958429653E3D998E99D1C1512DBC601F /* GLExtensions.debug.xcconfig */,
+				976852F8859BCB23F1338D3D83E33AB5 /* GLExtensions.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GLExtensions";
+			sourceTree = "<group>";
+		};
+		200BDEE3F2461921E42DE06CE9B051CB /* GLExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				446A6857116858AEF0A5C6C90632C1E3 /* ALL */,
+				1D5A4B5B9007B98D84E178113CDEC152 /* Pod */,
+				1FBBB7BECF7F213D26F0464FB6E476D8 /* Support Files */,
 			);
 			name = GLExtensions;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		446A6857116858AEF0A5C6C90632C1E3 /* ALL */ = {
+			isa = PBXGroup;
+			children = (
+				A3C4D8A6B76718DEA994FB73564E5A45 /* GLExtensions.h */,
+				FD7C95E076BFD6CA0CBC827FA722587D /* NS */,
+				B23285C8EBBC72B1118CF7C18BBF529B /* UI */,
+			);
+			name = ALL;
+			sourceTree = "<group>";
+		};
 		4511038FAAD68AA571DC3E7217FD5221 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions.framework */,
-				9C3A152E7492D7842E689763BE4C7D9F /* Pods_GLExtensions_Example.framework */,
+				87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions */,
+				9C3A152E7492D7842E689763BE4C7D9F /* Pods-GLExtensions_Example */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,71 +237,38 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		86FD1F8BDAF08FC501EABA0F6BF91FBA /* NS */ = {
+		B23285C8EBBC72B1118CF7C18BBF529B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				90B096D391E4CF2E6D3D6A4B870BE338 /* GLExtReachability.h */,
-				76914265D019BDC21F8BA6540C40B92A /* GLExtReachability.m */,
-				2A3956972C49EAC3491FABFE844F9461 /* NSData+GLExtension.h */,
-				9E43B966FFEFFB9E98224DE24B09EA10 /* NSData+GLExtension.m */,
-				C3B71577EE97607FE708B4A2FC10D64D /* NSDate+GLExtension.h */,
-				5230572B8F061F9D7FAA91CC17F4ECFC /* NSDate+GLExtension.m */,
-				B5E0E89B66E00BCDA3822C8639A8195E /* NSFileManager+GLExtension.h */,
-				073C890E76216386DBD52CE42D3F9339 /* NSFileManager+GLExtension.m */,
-				AD6EE038B07AB21AE1FFD8DC8D4801E4 /* NSObject+GLExtension.h */,
-				2E9E21A6A5EF192EBD1589B922A2E807 /* NSObject+GLExtension.m */,
-				7541352E32407E660186DB6A8BDB4F80 /* NSString+GLExtension.h */,
-				2F3BDC5E39A5060D739BE1AA734F78D1 /* NSString+GLExtension.m */,
-				5691698E8AF249CBC990740101C15A89 /* NSTimer+GLExtension.h */,
-				3CC4826AA565B3B0E97EDF432E785392 /* NSTimer+GLExtension.m */,
-				51EEFF6F0E027817387DB157C564C3BA /* NSURL+GLExtension.h */,
-				9DE21D28F94863456AA5BE1332F1DB0C /* NSURL+GLExtension.m */,
-			);
-			name = NS;
-			path = GLExtensions/Classes/NS;
-			sourceTree = "<group>";
-		};
-		A5772B0CA75A7F5DE65B31F11649C1C2 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				B569C9CF411779601113F0B2B8EE208A /* CALayer+GLExtension.h */,
-				C47AF34EAE22D886C90228CC893781AB /* CALayer+GLExtension.m */,
-				4BA58176D871DDA1B0A5516A051D33ED /* UIAlertController+GLExtension.h */,
-				7BEB282AD63F0AD2EEAC5209E22E994E /* UIAlertController+GLExtension.m */,
-				39D11DB910BCD467DF3C3EF27D602AD4 /* UIApplication+GLExtension.h */,
-				EEB7E53E594C0E747634FE08A18EA3AA /* UIApplication+GLExtension.m */,
-				891BA0E373B4A57DACB79103E9FB3541 /* UIButton+GLExtension.h */,
-				D2EDB886ED20E3CC9913E0AF16B86BFC /* UIButton+GLExtension.m */,
-				FC8361867710B22B2B34FDEC768C7C15 /* UIColor+GLExtension.h */,
-				5CCC9E2F22357207CD1D235A58269AC1 /* UIColor+GLExtension.m */,
-				BA93888D6D65B30D7A3240D9A7857590 /* UIDevice+GLExtension.h */,
-				7289E48BE51F80604079FDE8D88008EA /* UIDevice+GLExtension.m */,
-				3A12A4C62B3302468D513D5D318A65E3 /* UIImage+GLExtension.h */,
-				5E2725309C4A6C6FDB2F17A81F31938D /* UIImage+GLExtension.m */,
-				132DAEC34B112B6000B39442C41BFEED /* UINavigationController+GLExtension.h */,
-				47C08329F5F4A9AB83C364723455E366 /* UINavigationController+GLExtension.m */,
-				F7223F43CB4F7469C2B4DAFE4508638E /* UIResponder+GLExtension.h */,
-				7739D17972385EB109770903ED607AD1 /* UIResponder+GLExtension.m */,
-				2B852DA704E24B9E03CCFF7B5BF76EC6 /* UITableView+GLExtension.h */,
-				274494911B2A27C83BE6258DA8E75746 /* UITableView+GLExtension.m */,
-				7BAF48D57553C2737E9DA44C7F99CD51 /* UIView+GLExtension.h */,
-				3ACD6CFA1C0C65C9CE48D66EEB626E7A /* UIView+GLExtension.m */,
-				2F764FE1D3CE270D0FD6D2709C7626C0 /* UIViewController+GLExtension.h */,
-				F26CB6A280DC4D8155865239B0A1E7A5 /* UIViewController+GLExtension.m */,
-				52F9BA4D3E1EE2F8CCE89895FAC1D7F1 /* UIWindow+GLExtension.h */,
-				13CD8CFCE9B41722834F2246B2A4A0C8 /* UIWindow+GLExtension.m */,
+				ADC91ED895EB7C8DA4D6E1F62029A6A4 /* CALayer+GLExtension.h */,
+				23581C33E4052116166B0721F7CEBE26 /* CALayer+GLExtension.m */,
+				7B19C8655AC73B656EAFEA0EBCE27008 /* UIAlertController+GLExtension.h */,
+				8AEA418A7D0A9009CEC4EB867D203C4D /* UIAlertController+GLExtension.m */,
+				73A12E3330E1BA089BBF3545E834C2AE /* UIApplication+GLExtension.h */,
+				269285B4BA6548525B0D6B405F46EB2A /* UIApplication+GLExtension.m */,
+				C2DD5DEC7A8A4AA4C5EDC21356F50A07 /* UIButton+GLExtension.h */,
+				363B11192273C9389ED71E0F86C5A4EB /* UIButton+GLExtension.m */,
+				27A2C669FB202C0608E7D66CFEA2D20B /* UIColor+GLExtension.h */,
+				28E485318337CE715A2B1643A73D92F2 /* UIColor+GLExtension.m */,
+				94135860C8339AB25DC891AD42F279BC /* UIDevice+GLExtension.h */,
+				1680855F9699EA9CFEB1C72CE5DCB922 /* UIDevice+GLExtension.m */,
+				8E5F550178FF90E8C792E53CBD3C4561 /* UIImage+GLExtension.h */,
+				2DEA8172424DD1F0C6F91AF527FE3A13 /* UIImage+GLExtension.m */,
+				FB2EB66B96B0C33A00CBBF606DA382AC /* UINavigationController+GLExtension.h */,
+				06814E5BD8DE19D444BCEB851C5522C1 /* UINavigationController+GLExtension.m */,
+				707C43F59632C627909BFB7A8E76052E /* UIResponder+GLExtension.h */,
+				3FC5EA8623D6E506AE7FA022E9C70CE2 /* UIResponder+GLExtension.m */,
+				0B180A1AAD2BFC928FC9CEC59C0B73F1 /* UITableView+GLExtension.h */,
+				89AFD1776BC08B7938BFED1AC199711F /* UITableView+GLExtension.m */,
+				1B6F54550C165776D66370B49ABFE403 /* UIView+GLExtension.h */,
+				7D1E767596CCB838ABCB49380A2E5399 /* UIView+GLExtension.m */,
+				3BA6C0270D4E79965E00AAF180D8C613 /* UIViewController+GLExtension.h */,
+				6B59AA2C37544960C2D9A003743EC793 /* UIViewController+GLExtension.m */,
+				DFCC6B434E7E761008EC7BDC3F3C8F7A /* UIWindow+GLExtension.h */,
+				4F0FF7FCE024980140F93DBF641A72D6 /* UIWindow+GLExtension.m */,
 			);
 			name = UI;
 			path = GLExtensions/Classes/UI;
-			sourceTree = "<group>";
-		};
-		CCE4332EDFA7A6FD78EB0A377CCF2625 /* ALL */ = {
-			isa = PBXGroup;
-			children = (
-				86FD1F8BDAF08FC501EABA0F6BF91FBA /* NS */,
-				A5772B0CA75A7F5DE65B31F11649C1C2 /* UI */,
-			);
-			name = ALL;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -297,65 +301,65 @@
 		F5C718CEB6F3BDE3F7EAE4A679B533C3 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2D757FA51706399DD040C89E98DC6CF9 /* GLExtensions */,
+				200BDEE3F2461921E42DE06CE9B051CB /* GLExtensions */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		FC8E0DB99B45F6CE6C67EB94FA51A6D4 /* Pod */ = {
+		FD7C95E076BFD6CA0CBC827FA722587D /* NS */ = {
 			isa = PBXGroup;
 			children = (
-				3EDEA58ED37F12038D579203BE7CBA0B /* GLExtensions.podspec */,
-				59425AAA9F2F1469B073D6140E69761B /* LICENSE */,
-				FEF08F3F3CB0BBD28EA48B31C3F2236C /* README.md */,
+				8398176AB6B0DBB3DDFD822834086A6B /* GLExtReachability.h */,
+				F702492CAAC3CDB483F53933790BDE6A /* GLExtReachability.m */,
+				FDB70A55F9CEEFF1DDE50762284B09C8 /* NSData+GLExtension.h */,
+				D8CB4B6CF7B81DD5AF732DCC08F3931A /* NSData+GLExtension.m */,
+				E96D348845C4F4E519560C0AB72729FC /* NSDate+GLExtension.h */,
+				971B14445D007AC2A4CB331668BB4557 /* NSDate+GLExtension.m */,
+				0F27EAB9A76765B0FA4875BB9821F898 /* NSFileManager+GLExtension.h */,
+				AB67886BA8031CB5FC395713134712E9 /* NSFileManager+GLExtension.m */,
+				3F7B777E08D3DBDBC22C2F10A20AD585 /* NSObject+GLExtension.h */,
+				7C81810C6FF804C9105F64D3165850FD /* NSObject+GLExtension.m */,
+				F403BC57B16A53987A9442AEE0D212FB /* NSString+GLExtension.h */,
+				5732FDAEB0AF0F0E760EA8C438CCC77B /* NSString+GLExtension.m */,
+				D606BCE35C6F7E95C8F9715D594848FD /* NSTimer+GLExtension.h */,
+				45715EF2C9AC0926E1039473FC198B5F /* NSTimer+GLExtension.m */,
+				8FE3F1D275F75CF422677080D1F0794F /* NSURL+GLExtension.h */,
+				D31B995E16D943E35AE504FE9A5CD192 /* NSURL+GLExtension.m */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		FEBCC9D1E1F35573816C20D6F8320CB9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				432A64FC0D1BB7FF2A4A1DA24A18F37E /* GLExtensions.modulemap */,
-				378F9601C524E3BC82AF8C818102EDA5 /* GLExtensions-dummy.m */,
-				E8E823976876608B4B9389BBD5D86984 /* GLExtensions-Info.plist */,
-				65DB5E2F662E6AC3557527CA43C4046B /* GLExtensions-prefix.pch */,
-				3E005CA8E9A66A67663247B18092F886 /* GLExtensions-umbrella.h */,
-				90C3E3D41E5E27715E5FCECA68EECA78 /* GLExtensions.debug.xcconfig */,
-				AA54CB7F3C8C292689A6B57D157DFE77 /* GLExtensions.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GLExtensions";
+			name = NS;
+			path = GLExtensions/Classes/NS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9E677700D257130CA6DFCA1B2F0D669D /* Headers */ = {
+		49ABE73A281EBD907DE7C5C924947784 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C991B355878404D1517FADB46BF4B65 /* CALayer+GLExtension.h in Headers */,
-				1E25CE90AAED6F81AF4C20458548C09B /* GLExtensions-umbrella.h in Headers */,
-				BCF6EA2B2D84B5CD6168C5625C228E91 /* GLExtReachability.h in Headers */,
-				D5AB02D1D95E2FE75BB7F3A4F04D1843 /* NSData+GLExtension.h in Headers */,
-				A058FD51320A3B829545017D7661E018 /* NSDate+GLExtension.h in Headers */,
-				65C1583181A56B0123678C5E8154FF13 /* NSFileManager+GLExtension.h in Headers */,
-				E8326CE77B5779BA7BF0B56B548B9449 /* NSObject+GLExtension.h in Headers */,
-				37491412370FD6B5A2AC54374EC261E3 /* NSString+GLExtension.h in Headers */,
-				EEE5C23ABC8DEE4C8A0C6BB6C75C6AE1 /* NSTimer+GLExtension.h in Headers */,
-				1C92987F89C01C2FC82D81F57C1190BD /* NSURL+GLExtension.h in Headers */,
-				9A684A9D3097950911608A93D5722C29 /* UIAlertController+GLExtension.h in Headers */,
-				2F10F95C9C06FCA809B450640D842044 /* UIApplication+GLExtension.h in Headers */,
-				0B556B2484C734A72DDFEA20DA237B4B /* UIButton+GLExtension.h in Headers */,
-				9ED6E2A963094441B9098EE036EAEFEE /* UIColor+GLExtension.h in Headers */,
-				E98ADF5F54EA97A74E928F30AAABC6C2 /* UIDevice+GLExtension.h in Headers */,
-				D4F9B7733B93C40740DA87A957C12CFA /* UIImage+GLExtension.h in Headers */,
-				BC29119A508C36F909D07C04967F4776 /* UINavigationController+GLExtension.h in Headers */,
-				6C78FF1AB4C2E697186F9E16ECC60CEF /* UIResponder+GLExtension.h in Headers */,
-				6E893720F1CDCCCD77A9C20DCEBA8AE9 /* UITableView+GLExtension.h in Headers */,
-				1ABCC31601334FF44FA69DFC206CA78E /* UIView+GLExtension.h in Headers */,
-				97464C5494AA1DE21CF698C642F5206F /* UIViewController+GLExtension.h in Headers */,
-				D049412272A3283D30135C64B9D6DA4B /* UIWindow+GLExtension.h in Headers */,
+				D988DAC8B4DCCAB8C1E92C2379E117F3 /* CALayer+GLExtension.h in Headers */,
+				A71FCA3C756B9BB758C72DAACEAC2664 /* GLExtensions.h in Headers */,
+				60B0DD9AEEAE047BBFE28157FE567966 /* GLExtensions-umbrella.h in Headers */,
+				CAB874F600FD25078EE0401229E15770 /* GLExtReachability.h in Headers */,
+				3D2BAF4A95BB45D1AF371D1BAC767114 /* NSData+GLExtension.h in Headers */,
+				443A208E59674A71891D06D3A96DDDBB /* NSDate+GLExtension.h in Headers */,
+				95CE8D859CD9604468A94B3DDDCEBF55 /* NSFileManager+GLExtension.h in Headers */,
+				825A3C00B011ACB38314FAC4D8710A3E /* NSObject+GLExtension.h in Headers */,
+				310F09A27C6080F071A966F2D189078E /* NSString+GLExtension.h in Headers */,
+				11BCA82A133C735F3BE294608F301E98 /* NSTimer+GLExtension.h in Headers */,
+				8140D8F9D90BBF88979D5FCFC70D719C /* NSURL+GLExtension.h in Headers */,
+				A26421B3676080C2399D9B8BD8117DAC /* UIAlertController+GLExtension.h in Headers */,
+				FDB6E5090705A402F96B70AB328CA387 /* UIApplication+GLExtension.h in Headers */,
+				6247B3B7A61BBBBF35339D9D28F8FB0B /* UIButton+GLExtension.h in Headers */,
+				FA7B4D9FE0C31509E859EC36FA70C773 /* UIColor+GLExtension.h in Headers */,
+				67B844897745729492D2E5E20548555A /* UIDevice+GLExtension.h in Headers */,
+				62EC190EB348680DEFE6D6B26DE06B24 /* UIImage+GLExtension.h in Headers */,
+				97A6CBB6E12D0E3BE0D656C983F4A662 /* UINavigationController+GLExtension.h in Headers */,
+				C93478143AEFDAA57F75E700ECB357F4 /* UIResponder+GLExtension.h in Headers */,
+				0D019925D710F1969C0EDE36F8E6ED73 /* UITableView+GLExtension.h in Headers */,
+				48FE16D2A11900BD6F0D0DBB5A8AAB4B /* UIView+GLExtension.h in Headers */,
+				AD91577CE3E2D8813762038723B463C7 /* UIViewController+GLExtension.h in Headers */,
+				6EC849D6ED1EFCA8083EC3B9F78677C5 /* UIWindow+GLExtension.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,21 +386,21 @@
 			buildRules = (
 			);
 			dependencies = (
-				1DDE79838A87C2964732562BC29E4459 /* PBXTargetDependency */,
+				66668F727D3D427A2E88DEEDA28093B1 /* PBXTargetDependency */,
 			);
 			name = "Pods-GLExtensions_Example";
 			productName = Pods_GLExtensions_Example;
-			productReference = 9C3A152E7492D7842E689763BE4C7D9F /* Pods_GLExtensions_Example.framework */;
+			productReference = 9C3A152E7492D7842E689763BE4C7D9F /* Pods-GLExtensions_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 		E4ECDC68C999A9012BE1C082A6D30726 /* GLExtensions */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 464071125E113ECC5624D4A73EA0EA7D /* Build configuration list for PBXNativeTarget "GLExtensions" */;
+			buildConfigurationList = 4DDDA887CA066C8AA93AD4B29FDB403C /* Build configuration list for PBXNativeTarget "GLExtensions" */;
 			buildPhases = (
-				9E677700D257130CA6DFCA1B2F0D669D /* Headers */,
-				361CF082DD491310F1116EBC14730666 /* Sources */,
-				54B59922C9C61BEFE0A21CF4DADD2950 /* Frameworks */,
-				77F35914A10357EE7493C90565E7331C /* Resources */,
+				49ABE73A281EBD907DE7C5C924947784 /* Headers */,
+				A0F60DD53099F95F4F7E470A5EB428C1 /* Sources */,
+				4F388DFE8ADEC572C2D77E1A5F1BAC26 /* Frameworks */,
+				B713E54C54C53E2A8C5021A3F8F39062 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -404,7 +408,7 @@
 			);
 			name = GLExtensions;
 			productName = GLExtensions;
-			productReference = 87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions.framework */;
+			productReference = 87CE152EF7DAEE9302CE13F5A1C91CAE /* GLExtensions */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -413,8 +417,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1330;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -443,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		77F35914A10357EE7493C90565E7331C /* Resources */ = {
+		B713E54C54C53E2A8C5021A3F8F39062 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,35 +457,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		361CF082DD491310F1116EBC14730666 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88E6EFCDDF578EE93B10F7B37C414D48 /* CALayer+GLExtension.m in Sources */,
-				26DB9488E85D5BFB43CD9DBC81375955 /* GLExtensions-dummy.m in Sources */,
-				B251A93EECD6E883D2F512646A52CA0A /* GLExtReachability.m in Sources */,
-				9830E9975271718244CCC1698B306EF3 /* NSData+GLExtension.m in Sources */,
-				605FAF823971E484D3A20E751ED8A3D1 /* NSDate+GLExtension.m in Sources */,
-				29236AC37C751BFF963468B137119BFE /* NSFileManager+GLExtension.m in Sources */,
-				07FB367977009C727862712038326BD6 /* NSObject+GLExtension.m in Sources */,
-				C602C8DA0CEB32D61C08DD14BEA7F076 /* NSString+GLExtension.m in Sources */,
-				B47AE39A84D686650DBCCEFD0A05FBEE /* NSTimer+GLExtension.m in Sources */,
-				81B52CD8ACCC27BC07E16D53F794AACE /* NSURL+GLExtension.m in Sources */,
-				E22B0A9A89D720339421E45EB25D3E27 /* UIAlertController+GLExtension.m in Sources */,
-				84B66A673EA09187A71F76DB32080E80 /* UIApplication+GLExtension.m in Sources */,
-				16D49EFF118F00B28E3FBCA26773DFAD /* UIButton+GLExtension.m in Sources */,
-				2DAB6ED9F11CCA91B9E4789B7114F871 /* UIColor+GLExtension.m in Sources */,
-				E3559001FD6703D7F8D3D14E48153521 /* UIDevice+GLExtension.m in Sources */,
-				A48801F22245AC6D25404D49F0B72394 /* UIImage+GLExtension.m in Sources */,
-				4562376267BD7F6E275EF5B1857647D6 /* UINavigationController+GLExtension.m in Sources */,
-				530E27DC62CF05266852374A2AC7B3C4 /* UIResponder+GLExtension.m in Sources */,
-				8E8BE36F2FCEC0527794D6325A2B69B2 /* UITableView+GLExtension.m in Sources */,
-				5E100DB4D22613374652BF6BB1EE224C /* UIView+GLExtension.m in Sources */,
-				9A162569A74A28A41973BA645DC33EB0 /* UIViewController+GLExtension.m in Sources */,
-				727477C904347C3ED27BEC7AE7A05C7E /* UIWindow+GLExtension.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		451A6CC370D790872A1F7F6DEDDAD101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,47 +465,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A0F60DD53099F95F4F7E470A5EB428C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D83E07FF4616CA762A7A8506F9B9A003 /* CALayer+GLExtension.m in Sources */,
+				E2378336F31BF02D2BC9A323A0752B1A /* GLExtensions-dummy.m in Sources */,
+				477A64B14864E3FF916B9631B41B66EF /* GLExtReachability.m in Sources */,
+				CEF9BB684FB60DF7D10D43CC867078FD /* NSData+GLExtension.m in Sources */,
+				7DF4D5EABB8114E1D3D7FAF2E9734F45 /* NSDate+GLExtension.m in Sources */,
+				CF6DA5792FC0B20C99933C5A411A2146 /* NSFileManager+GLExtension.m in Sources */,
+				C5ED776C4A15C49B1F686AFCE3F750E3 /* NSObject+GLExtension.m in Sources */,
+				DF19928C986B49BD69FCF7C1ABDA1824 /* NSString+GLExtension.m in Sources */,
+				167AF11AA18CB1DCD9EF5F4252F98DF9 /* NSTimer+GLExtension.m in Sources */,
+				DE35A630C4A1C286EF8707E99536AF32 /* NSURL+GLExtension.m in Sources */,
+				BED1FC7B6EAAFE0B870A75197754435D /* UIAlertController+GLExtension.m in Sources */,
+				D61C0BA1E97005BC7161579E9A580F6B /* UIApplication+GLExtension.m in Sources */,
+				990252EE8AB4A5636469F118EF6AECCD /* UIButton+GLExtension.m in Sources */,
+				D37BF982ED5DEAED78CB3A7569AE41D0 /* UIColor+GLExtension.m in Sources */,
+				726F5570A128E9430612F4FC83907C17 /* UIDevice+GLExtension.m in Sources */,
+				F84FF948E564D8018ED030E388C1F307 /* UIImage+GLExtension.m in Sources */,
+				51DAA1BCB2D55AEE3AA8CFB868503814 /* UINavigationController+GLExtension.m in Sources */,
+				1F5D3B054F4D002524B1E3E1F5015D83 /* UIResponder+GLExtension.m in Sources */,
+				1362A8456BFA9BDDB4258D9E50A64A0E /* UITableView+GLExtension.m in Sources */,
+				52080BFE64A8E2D21FE0C8474AA760BE /* UIView+GLExtension.m in Sources */,
+				B1EE104F88D5762ADF1318E7FEA80D61 /* UIViewController+GLExtension.m in Sources */,
+				BAAD5FB22B05F2D8B8060548A927F3A4 /* UIWindow+GLExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1DDE79838A87C2964732562BC29E4459 /* PBXTargetDependency */ = {
+		66668F727D3D427A2E88DEEDA28093B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GLExtensions;
 			target = E4ECDC68C999A9012BE1C082A6D30726 /* GLExtensions */;
-			targetProxy = C198AB7D8CE7D7D06D7730CBF7C69C89 /* PBXContainerItemProxy */;
+			targetProxy = 84BA567BF86C871044FFA7DE5A0C954F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0C31D1E7DC57162A17A9FCB286331BD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90C3E3D41E5E27715E5FCECA68EECA78 /* GLExtensions.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GLExtensions/GLExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GLExtensions/GLExtensions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GLExtensions/GLExtensions.modulemap";
-				PRODUCT_MODULE_NAME = GLExtensions;
-				PRODUCT_NAME = GLExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0E7E75189D0765BD11480C647F755355 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E7D31F3533FCE0E8992C562CE7AF778F /* Pods-GLExtensions_Example.release.xcconfig */;
@@ -546,7 +521,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example.modulemap";
@@ -617,7 +592,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -630,9 +605,9 @@
 			};
 			name = Debug;
 		};
-		902EC203EF9B468D86FD05CFDD1DC953 /* Release */ = {
+		78E95D1D5A171DF73F679F5C6A9A02AB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA54CB7F3C8C292689A6B57D157DFE77 /* GLExtensions.release.xcconfig */;
+			baseConfigurationReference = 958429653E3D998E99D1C1512DBC601F /* GLExtensions.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -645,7 +620,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/GLExtensions/GLExtensions-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/GLExtensions/GLExtensions-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/GLExtensions/GLExtensions.modulemap";
 				PRODUCT_MODULE_NAME = GLExtensions;
@@ -654,11 +629,10 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -710,14 +684,45 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		E3B7CEBB10038034F93B89D9152D0207 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 976852F8859BCB23F1338D3D83E33AB5 /* GLExtensions.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GLExtensions/GLExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GLExtensions/GLExtensions-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GLExtensions/GLExtensions.modulemap";
+				PRODUCT_MODULE_NAME = GLExtensions;
+				PRODUCT_NAME = GLExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -736,7 +741,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-GLExtensions_Example/Pods-GLExtensions_Example.modulemap";
@@ -756,20 +761,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		464071125E113ECC5624D4A73EA0EA7D /* Build configuration list for PBXNativeTarget "GLExtensions" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0C31D1E7DC57162A17A9FCB286331BD2 /* Debug */,
-				902EC203EF9B468D86FD05CFDD1DC953 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */,
 				CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DDDA887CA066C8AA93AD4B29FDB403C /* Build configuration list for PBXNativeTarget "GLExtensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78E95D1D5A171DF73F679F5C6A9A02AB /* Debug */,
+				E3B7CEBB10038034F93B89D9152D0207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

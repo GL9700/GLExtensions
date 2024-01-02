@@ -10,27 +10,28 @@
 #endif
 #endif
 
-#import <GLExtensions/GLExtReachability.h>
-#import <GLExtensions/NSData+GLExtension.h>
-#import <GLExtensions/NSDate+GLExtension.h>
-#import <GLExtensions/NSFileManager+GLExtension.h>
-#import <GLExtensions/NSObject+GLExtension.h>
-#import <GLExtensions/NSString+GLExtension.h>
-#import <GLExtensions/NSTimer+GLExtension.h>
-#import <GLExtensions/NSURL+GLExtension.h>
-#import <GLExtensions/CALayer+GLExtension.h>
-#import <GLExtensions/UIAlertController+GLExtension.h>
-#import <GLExtensions/UIApplication+GLExtension.h>
-#import <GLExtensions/UIButton+GLExtension.h>
-#import <GLExtensions/UIColor+GLExtension.h>
-#import <GLExtensions/UIDevice+GLExtension.h>
-#import <GLExtensions/UIImage+GLExtension.h>
-#import <GLExtensions/UINavigationController+GLExtension.h>
-#import <GLExtensions/UIResponder+GLExtension.h>
-#import <GLExtensions/UITableView+GLExtension.h>
-#import <GLExtensions/UIView+GLExtension.h>
-#import <GLExtensions/UIViewController+GLExtension.h>
-#import <GLExtensions/UIWindow+GLExtension.h>
+#import "GLExtensions.h"
+#import "GLExtReachability.h"
+#import "NSData+GLExtension.h"
+#import "NSDate+GLExtension.h"
+#import "NSFileManager+GLExtension.h"
+#import "NSObject+GLExtension.h"
+#import "NSString+GLExtension.h"
+#import "NSTimer+GLExtension.h"
+#import "NSURL+GLExtension.h"
+#import "CALayer+GLExtension.h"
+#import "UIAlertController+GLExtension.h"
+#import "UIApplication+GLExtension.h"
+#import "UIButton+GLExtension.h"
+#import "UIColor+GLExtension.h"
+#import "UIDevice+GLExtension.h"
+#import "UIImage+GLExtension.h"
+#import "UINavigationController+GLExtension.h"
+#import "UIResponder+GLExtension.h"
+#import "UITableView+GLExtension.h"
+#import "UIView+GLExtension.h"
+#import "UIViewController+GLExtension.h"
+#import "UIWindow+GLExtension.h"
 
 FOUNDATION_EXPORT double GLExtensionsVersionNumber;
 FOUNDATION_EXPORT const unsigned char GLExtensionsVersionString[];

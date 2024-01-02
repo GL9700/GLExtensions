@@ -7,10 +7,6 @@
 //
 
 #import "GLEmptyViewController.h"
-#import <UIColor+GLExtension.h>
-@interface GLEmptyViewController ()
-
-@end
 
 @implementation GLEmptyViewController
 

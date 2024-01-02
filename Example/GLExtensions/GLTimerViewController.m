@@ -7,7 +7,6 @@
 //
 
 #import "GLTimerViewController.h"
-#import <NSTimer+GLExtension.h>
 
 @interface GLTimerViewController ()
 @property (nonatomic) NSTimer *t1;
