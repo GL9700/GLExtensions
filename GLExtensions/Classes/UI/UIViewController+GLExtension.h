@@ -57,7 +57,6 @@ UIKIT_STATIC_INLINE void showActivityWithCustom(id vc)
 UIKIT_STATIC_INLINE void showToastMsg(NSString *format, ...) {
     va_list args;
     va_start(args, format);
-    NSLog(@"11");
     [UIAlertController showToastWithMessage:format valist:args];
     va_end(args);
 }
