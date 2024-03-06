@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NSString* const GLToastOptionsName NS_STRING_ENUM;
-UIKIT_EXTERN GLToastOptionsName kToastOptionPointCenter;			// CGPoint
-UIKIT_EXTERN GLToastOptionsName kToastOptionBackgroundColor;		// UIColor
-UIKIT_EXTERN GLToastOptionsName kToastOptionTextFont;			// UIFont
-UIKIT_EXTERN GLToastOptionsName kToastOptionTextColor;			// UIColor
-UIKIT_EXTERN GLToastOptionsName kToastOptionKeepTimeSeconds;		// CGFloat
-
 @interface UIAlertController (GLExtension)
 
 
@@ -33,10 +26,30 @@ UIKIT_EXTERN GLToastOptionsName kToastOptionKeepTimeSeconds;		// CGFloat
 /// 显示Toast ** 位置:3/4, 时间:2.5秒 **
 + (void)showToastWithMessage:(NSString *)format valist:(va_list)list;
 
-/// 显示Toast **默认 位置:3/4, 时间:2.5秒 **
-/// @param format string format
-/// @param list string list
-/// @param options @linkAlias GLToastOptionsName
-+ (void)showToastWithMessage:(NSString *)format valist:(va_list)list options:(NSDictionary<GLToastOptionsName, id> *)options;
+/// 显示Toast ** 时间:2.5秒 **
+/// @param msg 消息内容
+/// @param point 自定义中心点位置
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point;
+
+/// 显示Toast ** 时间:2.5秒 **
+/// @param msg 消息内容
+/// @param point 自定义中心点位置
+/// @param tcolor 消息内容颜色
+/// @param color Toast背景颜色
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color;
+
+/// 显示模态Toast ** 时间:2.5秒 **
+/// @param contentText 文字内容。如果nil，则其他内容居中
+/// @param contentImg 图像内容。如果nil，则其他内容居中
+/// @param color 背景颜色（透明度需要在颜色中设置）
+/// @param size 整体尺寸
++ (void)showStatusToastWithTitle:(NSString *)contentText Image:(UIImage *)contentImg backgroundColor:(UIColor *)color size:(CGSize)size;
+
+/// 显示模态Toast ** 时间:2.5秒 **
+/// @param contentText 文字内容。如果nil，则其他内容居中
+/// @param progress 进度指示。如果nil，则其他内容居中
+/// @param color 背景颜色（透明度需要在颜色中设置）
+/// @param size 整体尺寸
++ (void)showStatusToastWithTitle:(NSString *)contentText Progress:(NSProgress *)progress backgroundColor:(UIColor *)color size:(CGSize)size;
 
 @end

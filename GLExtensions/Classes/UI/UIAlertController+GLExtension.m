@@ -9,20 +9,16 @@
 #import <GLExtensions/UIAlertController+GLExtension.h>
 #import <GLExtensions/UIWindow+GLExtension.h>
 
+#define kToastShowTime 2.5
 #define kToastPointDefault CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 4 * 3)
 
-GLToastOptionsName kToastOptionPointCenter = @"kToastOptionPointCenter";			// CGPoint
-GLToastOptionsName kToastOptionBackgroundColor = @"kToastOptionBackgroundColor";		// UIColor
-GLToastOptionsName kToastOptionTextFont = @"kToastOptionTextFont";			// UIFont
-GLToastOptionsName kToastOptionTextColor = @"kToastOptionTextColor";			// UIColor
-GLToastOptionsName kToastOptionKeepTimeSeconds = @"kToastOptionKeepTimeSeconds";	// CGFloat
+
 
 @interface ToastView : UIView
 @property (nonatomic) CGPoint cenpoint;
 @property (nonatomic) UIColor *fontColor;
 @property (nonatomic) UIColor *backgroundColor;
 @property (nonatomic) UILabel *textLabel;
-@property (nonatomic) CGFloat keepTime;
 - (instancetype)initWithMessage:(NSString *)msg;
 @end
 
@@ -63,13 +59,6 @@ GLToastOptionsName kToastOptionKeepTimeSeconds = @"kToastOptionKeepTimeSeconds";
         _textLabel.layer.masksToBounds = YES;
     }
     return _textLabel;
-}
-
-- (CGFloat)keepTime {
-	if (_keepTime == 0) {
-		_keepTime = 2.5;
-	}
-	return _keepTime;
 }
 @end
 
@@ -128,41 +117,25 @@ static NSMutableArray<ToastView *> *toastList;
 }
 
 + (void)showToastWithMessage:(NSString *)format valist:(va_list)list {
-	[self showToastWithMessage:format valist:list options:nil];
+    NSString *msg = format;
+    if(list != NULL) {
+        msg = [[NSString alloc] initWithFormat:format arguments:list];
+    }
+    [self showToastWithMessage:msg withPoint:CGPointZero];
 }
 
-+ (void)showToastWithMessage:(NSString *)format valist:(va_list)list options:(NSDictionary<GLToastOptionsName, id> *)options {
-	NSString *msg = format;
-	if(list != NULL) {
-		msg = [[NSString alloc] initWithFormat:format arguments:list];
-		dispatch_async(dispatch_get_main_queue(), ^{
-			ToastView *toast = [[ToastView alloc] initWithMessage:msg];
-			toast.backgroundColor = [UIColor colorWithWhite:0 alpha:.6];
-			toast.fontColor = [UIColor whiteColor];
-			if(options) {
-				if([options[kToastOptionTextFont] isKindOfClass:[UIFont class]]) {
-					toast.textLabel.font = options[kToastOptionTextFont];
-				}
-				
-				if([options[kToastOptionBackgroundColor] isKindOfClass:[UIColor class]]) {
-					toast.backgroundColor = options[kToastOptionBackgroundColor];
-				}
-				
-				if([options[kToastOptionTextColor] isKindOfClass:[UIColor class]]) {
-					toast.fontColor = options[kToastOptionTextColor];
-				}
-				
-				if(options[kToastOptionPointCenter]) {
-					toast.cenpoint = [options[kToastOptionPointCenter] CGPointValue];
-				}
-				
-				if([options[kToastOptionKeepTimeSeconds] floatValue]>0) {
-					toast.keepTime = [options[kToastOptionKeepTimeSeconds] floatValue];
-				}
-			}
-			[self showToast:toast inQueue:YES];
-		});
-	}
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point {
+    [self showToastWithMessage:msg withPoint:point textColor:nil backgroundColor:nil];
+}
+
++ (void)showToastWithMessage:(NSString *)msg withPoint:(CGPoint)point textColor:(UIColor *)tcolor backgroundColor:(UIColor *)color {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        ToastView *toast = [[ToastView alloc] initWithMessage:msg];
+        toast.fontColor = tcolor ? : [UIColor whiteColor];
+        toast.backgroundColor = color ? : [UIColor colorWithWhite:0 alpha:.6];
+        toast.cenpoint = point;
+        [self showToast:toast inQueue:YES];
+    });
 }
 
 + (void)showToast:(ToastView *)toast {
@@ -172,7 +145,7 @@ static NSMutableArray<ToastView *> *toastList;
         toast.alpha = 1;
         toast.frame = CGRectOffset(toast.frame, 0, 5);
     } completion: ^(BOOL finished) {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(toast.keepTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kToastShowTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:0.25 animations: ^{
                 toast.alpha = 0;
                 toast.frame = CGRectOffset(toast.frame, 0, -5);
