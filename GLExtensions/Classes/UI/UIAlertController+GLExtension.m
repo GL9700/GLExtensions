@@ -103,7 +103,8 @@ static NSMutableArray<ToastView *> *toastList;
 }
 
 - (void)showAfterAutoDismissSec:(NSUInteger)sec withComplete:(void (^)(void))complete {
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:self animated:YES completion: ^{
+    UIViewController *root = [[UIApplication sharedApplication].keyWindow topViewController];
+    [root presentViewController:self animated:YES completion: ^{
         if (sec > 0) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(sec * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 if (self.view.superview) {

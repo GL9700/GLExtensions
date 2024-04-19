@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GLExtensions'
-  s.version          = '1.1.5'
+  s.version          = '1.1.6'
   s.summary          = 'the GLExtensions.'
   s.description      = <<-DESC
     GLExtensions For App quick Method, and Extensions
