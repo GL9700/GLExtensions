@@ -66,6 +66,11 @@ UIKIT_STATIC_INLINE void showToastMsgAtPoint(NSString *msg, CGPoint point) {
     [UIAlertController showToastWithMessage:msg withPoint:point];
 }
 
+/// 居中
+UIKIT_STATIC_INLINE void showToastMsgAtCenter(NSString *msg) {
+    [UIAlertController showToastWithMessage:msg withPoint:CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds)/2, CGRectGetHeight([UIScreen mainScreen].bounds)/2)];
+}
+
 UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textColor, CGPoint point, UIColor *bgcolor) {
     [UIAlertController showToastWithMessage:msg
                                   withPoint:point
