@@ -47,6 +47,17 @@
                ReferencedContainer = "container:GLExtensions.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2124F3502BF72EE50086A520"
+               BuildableName = "GLExtensions_Test.xctest"
+               BlueprintName = "GLExtensions_Test"
+               ReferencedContainer = "container:GLExtensions.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
