@@ -50,10 +50,10 @@
 - (IBAction)onClickToast:(id)sender {
 	NSInteger tempstamp = [[NSDate date] timeIntervalSince1970];
 	BOOL isDoubleSecond = tempstamp%2==1;
-	showToastMsgWithOptions(@{
-		kToastOptionTextColor:isDoubleSecond ? [UIColor greenColor] : [UIColor redColor],
-		kToastOptionKeepTimeSeconds:@(arc4random()%5)
-	}, @"现在是单数秒?...%@ (%lu)\n随机时间后消失", isDoubleSecond?@" ✅":@" ❌" , tempstamp);
+//	showToastMsgWithOptions(@{
+//		kToastOptionTextColor:isDoubleSecond ? [UIColor greenColor] : [UIColor redColor],
+//		kToastOptionKeepTimeSeconds:@(arc4random()%5)
+//	}, @"现在是单数秒?...%@ (%lu)\n随机时间后消失", isDoubleSecond?@" ✅":@" ❌" , tempstamp);
 	
 	
 	
