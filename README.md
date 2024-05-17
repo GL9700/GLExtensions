@@ -21,7 +21,9 @@ it, simply add the following line to your Podfile:
 pod 'GLExtensions'
 ```
 ## History
-
+* 1.1.6 -- 2024.04.19
+    * 修复`presented`的容器无法执行`present`的问题
+    * 调整手机号码匹配增加`19X`和`14X`开头的手机号
 * 1.1.4 -- 2022.12.09
     * 简化toast的自定义化，可使用限定dict进行更灵活的自定义
 * 1.1.2 -- 2022.04.30
