@@ -7,24 +7,48 @@
 
 #import <UIKit/UIKit.h>
 
-/** app版本 */
-UIKIT_STATIC_INLINE NSArray * releaseVersion()
+/// release版本 ** DEPRECATED : replaced by app_ver_market() **
+UIKIT_STATIC_INLINE NSArray * releaseVersion(void)
 {
     NSString *str = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleShortVersionString"];
     return [str componentsSeparatedByString:@"."];
 }
 
-/** build版本 */
-UIKIT_STATIC_INLINE NSArray * buildVersion()
+/// build版本 ** DEPRECATED : replaced by app_ver_build() **
+UIKIT_STATIC_INLINE NSArray * buildVersion(void)
 {
     NSString *str = [[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleVersion"];
     return [str componentsSeparatedByString:@"."];
 }
 
-/** application bundle id */
-UIKIT_STATIC_INLINE NSString * bundleID()
+/// bundle Id ** DEPRECATED : replaced by app_bundle_Id() **
+UIKIT_STATIC_INLINE NSString * bundleID(void)
 {
     return [[NSBundle mainBundle].infoDictionary objectForKey:(NSString *)kCFBundleIdentifierKey];
+}
+
+/// App Release 版本
+UIKIT_STATIC_INLINE NSArray * app_ver_market(void)
+{
+    return releaseVersion();
+}
+
+/// App Build 版本
+UIKIT_STATIC_INLINE NSArray * app_ver_build(void)
+{
+    return buildVersion();
+}
+
+/// App名称
+UIKIT_STATIC_INLINE NSString * app_display_name(void)
+{
+    return [NSBundle mainBundle].infoDictionary[@"CFBundleDisplayName"];
+}
+
+/// App Bundle Id
+UIKIT_STATIC_INLINE NSString * app_bundle_Id(void)
+{
+    return bundleID();
 }
 
 @interface UIApplication (GLExtension)
