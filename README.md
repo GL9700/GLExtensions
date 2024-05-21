@@ -21,6 +21,8 @@ it, simply add the following line to your Podfile:
 pod 'GLExtensions'
 ```
 ## History
+* 1.1.8 -- 2024.05.21
+    * 增加自定义高度的`present`
 * 1.1.6 -- 2024.04.19
     * 修复`presented`的容器无法执行`present`的问题
     * 调整手机号码匹配增加`19X`和`14X`开头的手机号

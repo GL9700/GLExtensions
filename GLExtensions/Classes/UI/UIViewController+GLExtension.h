@@ -11,7 +11,7 @@
 #import <GLExtensions/UIAlertController+GLExtension.h>
 
 /// 隐藏已经显示的Activity
-UIKIT_STATIC_INLINE void hideActivity()
+UIKIT_STATIC_INLINE void hideActivity(void)
 {
     UIView *actView = [UIView defaultViewForActivityWithFrame:CGRectZero];
     if (actView.superview) {
@@ -79,5 +79,24 @@ UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textC
 }
 
 @interface UIViewController (GLExtension)
+@end
 
+@interface UIViewController(GLExtPresent)<UIViewControllerTransitioningDelegate>
+
+/// [非必需]重写get方法生效 [0、>=main_screen_height、不重写 : 均为全屏]
+@property (nonatomic, readonly) CGFloat pHeight;
+
+/// [非必需]当需要自定义动画的时候，需要在在presentingViewController中重写，并返回正确的AnimatedTransitioningViewController
+@property (nonatomic, readonly) id<UIViewControllerAnimatedTransitioning> transitioningViewController;
+
+/// 可控高度弹出ViewController
+/// - Parameters:
+///   - vc: 弹出ViewController
+///   - overScreen: Yes:UIModalPresentationOverFullScreen | No:UIModalPresentationFullScreen
+///   - animated: 动画
+///   - completion: 完成后回调
+- (void)presentViewController:(UIViewController *)vc isOverScreen:(BOOL)overScreen animated:(BOOL)animated completion:(void (^)(void))completion;
+@end
+
+@interface UIViewController (GLExtanimatedTransitioning)<UIViewControllerAnimatedTransitioning>
 @end
