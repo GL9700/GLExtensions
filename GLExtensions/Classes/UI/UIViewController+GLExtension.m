@@ -137,3 +137,26 @@
 }
 
 @end
+
+@interface UINavigationController(GLExtPresent)
+@end
+@implementation UINavigationController(GLExtPresent)
+- (CGFloat)pHeight {
+    if([self.topViewController respondsToSelector:@selector(pHeight)]) {
+        return [self.topViewController pHeight];
+    }else{
+        return 0;
+    }
+}
+@end
+@interface UITabBarController(GLExtPresent)
+@end
+@implementation UITabBarController(GLExtPresent)
+- (CGFloat)pHeight {
+    if([self.selectedViewController respondsToSelector:@selector(pHeight)]) {
+        return [self.selectedViewController pHeight];
+    }else{
+        return 0;
+    }
+}
+@end
