@@ -29,8 +29,8 @@
 ///   - source: 来源视图控制器
 ///
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
-    if([self respondsToSelector:@selector(transitioningViewController)]) {
-        return [self transitioningViewController];
+    if([presented respondsToSelector:@selector(transitioningViewController)]) {
+        return [presented transitioningViewController];
     }
     return presented;
 }
@@ -92,6 +92,12 @@
         UIView *gesturereView = [containerView viewWithTag:10010];
         CGRect endRect = containerView.bounds;
         endRect.origin.y = containerView.bounds.size.height;
+        
+        // 如果自定义了，就使用自定义的
+        if([fromViewController respondsToSelector:@selector(presentdAnimateEndRect)]) {
+            endRect = [fromViewController presentdAnimateEndRect];
+        }
+        
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             fromViewController.view.frame = endRect;
             gesturereView.alpha = 0.0;
@@ -109,13 +115,23 @@
         
         [gesturereView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapBackground)]];
         
+        
         CGRect startFrame = toViewController.view.frame;
         startFrame.origin.y = containerView.bounds.size.height;
+        
+        // 如果自定义了，就使用自定义的
+        if([toViewController respondsToSelector:@selector(presentdAnimateStartRect)]) {
+            startFrame = [toViewController presentdAnimateStartRect];
+        }
         toViewController.view.frame = startFrame;
         [containerView addSubview:toViewController.view];
         
         CGRect endRect = containerView.bounds;
-        if([toViewController respondsToSelector:NSSelectorFromString(@"pHeight")]) {
+        
+        // 如果自定义了，就使用自定义的，这里优先使用 rect
+        if([toViewController respondsToSelector:@selector(presentdAnimateEndRect)]) {
+            endRect = [fromViewController presentdAnimateEndRect];
+        }else if([toViewController respondsToSelector:NSSelectorFromString(@"pHeight")]) {
             CGFloat ph = [toViewController pHeight];
             if(ph>0) {
                 endRect.origin.y = endRect.size.height - MIN(ph, endRect.size.height);
@@ -138,25 +154,3 @@
 
 @end
 
-@interface UINavigationController(GLExtPresent)
-@end
-@implementation UINavigationController(GLExtPresent)
-- (CGFloat)pHeight {
-    if([self.topViewController respondsToSelector:@selector(pHeight)]) {
-        return [self.topViewController pHeight];
-    }else{
-        return 0;
-    }
-}
-@end
-@interface UITabBarController(GLExtPresent)
-@end
-@implementation UITabBarController(GLExtPresent)
-- (CGFloat)pHeight {
-    if([self.selectedViewController respondsToSelector:@selector(pHeight)]) {
-        return [self.selectedViewController pHeight];
-    }else{
-        return 0;
-    }
-}
-@end

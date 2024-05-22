@@ -83,10 +83,16 @@ UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textC
 
 @interface UIViewController(GLExtPresent)<UIViewControllerTransitioningDelegate>
 
-/// [非必需]重写get方法生效 [0、>=main_screen_height、不重写 : 均为全屏]
+/// Presented重写get方法生效 [0、>=main_screen_height、不重写 : 均为全屏]
 @property (nonatomic, readonly) CGFloat pHeight;
 
-/// [非必需]当需要自定义动画的时候，需要在在presentingViewController中重写，并返回正确的AnimatedTransitioningViewController
+/// Presented重写get方法生效,提供了动画起始点
+@property (nonatomic, readonly) CGRect presentdAnimateStartRect;
+
+/// Presented重写get方法生效,提供了动画结束点
+@property (nonatomic, readonly) CGRect presentdAnimateEndRect;
+
+/// Presented重写get方法生效，当需要自定义特定动画的时候，返回自定义的 UIViewController<UIViewControllerAnimatedTransitioning>
 @property (nonatomic, readonly) id<UIViewControllerAnimatedTransitioning> transitioningViewController;
 
 /// 可控高度弹出ViewController
@@ -95,7 +101,10 @@ UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textC
 ///   - overScreen: Yes:UIModalPresentationOverFullScreen | No:UIModalPresentationFullScreen
 ///   - animated: 动画
 ///   - completion: 完成后回调
-- (void)presentViewController:(UIViewController *)vc isOverScreen:(BOOL)overScreen animated:(BOOL)animated completion:(void (^)(void))completion;
+- (void)presentViewController:(UIViewController *)vc
+                 isOverScreen:(BOOL)overScreen
+                     animated:(BOOL)animated
+                   completion:(void (^)(void))completion;
 @end
 
 @interface UIViewController (GLExtanimatedTransitioning)<UIViewControllerAnimatedTransitioning>
