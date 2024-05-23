@@ -86,10 +86,10 @@ UIKIT_STATIC_INLINE void showToastMsgWithMoreProps(NSString *msg, UIColor *textC
 /// Presented重写get方法生效 [0、>=main_screen_height、不重写 : 均为全屏]
 @property (nonatomic, readonly) CGFloat pHeight;
 
-/// Presented重写get方法生效,提供了动画起始点
+/// Presented重写get方法生效, 提供了动画起始点, 返回Zero，则返回pHeight
 @property (nonatomic, readonly) CGRect presentdAnimateStartRect;
 
-/// Presented重写get方法生效,提供了动画结束点
+/// Presented重写get方法生效, 提供了动画结束点, 返回Zero，则返回pHeight
 @property (nonatomic, readonly) CGRect presentdAnimateEndRect;
 
 /// Presented重写get方法生效，当需要自定义特定动画的时候，返回自定义的 UIViewController<UIViewControllerAnimatedTransitioning>

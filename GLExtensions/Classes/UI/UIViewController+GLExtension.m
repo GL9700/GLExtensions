@@ -90,16 +90,22 @@
     if(toViewController.presentedViewController == fromViewController) {
         // dismiss
         UIView *gesturereView = [containerView viewWithTag:10010];
-        CGRect endRect = containerView.bounds;
-        endRect.origin.y = containerView.bounds.size.height;
+        CGRect endRect = CGRectZero;
         
         // 如果自定义了，就使用自定义的
         if([fromViewController respondsToSelector:@selector(presentdAnimateEndRect)]) {
             endRect = [fromViewController presentdAnimateEndRect];
         }
-        
+        // 如果 endRect 得到的结果为 zero ，就重赋初始值
+        if(CGRectEqualToRect(CGRectZero, endRect)) {
+            endRect = containerView.bounds;
+            endRect.origin.y = containerView.bounds.size.height;
+        }
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             fromViewController.view.frame = endRect;
+            if([fromViewController respondsToSelector:@selector(presentdAnimateEndRect)]) {
+                fromViewController.view.alpha = 0;
+            }
             gesturereView.alpha = 0.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
@@ -116,32 +122,42 @@
         [gesturereView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapBackground)]];
         
         
-        CGRect startFrame = toViewController.view.frame;
-        startFrame.origin.y = containerView.bounds.size.height;
+        CGRect startFrame = CGRectZero;
         
         // 如果自定义了，就使用自定义的
         if([toViewController respondsToSelector:@selector(presentdAnimateStartRect)]) {
             startFrame = [toViewController presentdAnimateStartRect];
+            toViewController.view.alpha = 0;
+        }
+        // 如果 endRect 得到的结果为 zero ，就重赋初始值
+        if(CGRectEqualToRect(CGRectZero, startFrame)) {
+            startFrame = toViewController.view.bounds;
+            startFrame.origin.y = containerView.bounds.size.height;
         }
         toViewController.view.frame = startFrame;
         [containerView addSubview:toViewController.view];
         
-        CGRect endRect = containerView.bounds;
+        CGRect endRect = CGRectZero;
         
         // 如果自定义了，就使用自定义的，这里优先使用 rect
         if([toViewController respondsToSelector:@selector(presentdAnimateEndRect)]) {
             endRect = [toViewController presentdAnimateEndRect];
         }
-        if(CGRectEqualToRect(CGRectZero, endRect) && [toViewController respondsToSelector:NSSelectorFromString(@"pHeight")]) {
-            CGFloat ph = [toViewController pHeight];
-            if(ph>0) {
-                endRect.origin.y = endRect.size.height - MIN(ph, endRect.size.height);
-                endRect.size.height = MIN(ph, endRect.size.height);
+        // 如果 endRect 得到的结果为 zero ，就重赋初始值
+        if(CGRectEqualToRect(CGRectZero, endRect)) {
+            endRect = containerView.bounds;
+            if([toViewController respondsToSelector:NSSelectorFromString(@"pHeight")]) {
+                CGFloat ph = [toViewController pHeight];
+                if(ph>0) {
+                    endRect.origin.y = endRect.size.height - MIN(ph, endRect.size.height);
+                    endRect.size.height = MIN(ph, endRect.size.height);
+                }
             }
         }
         
         [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
             toViewController.view.frame = endRect;
+            toViewController.view.alpha = 1;
             gesturereView.alpha = 1.0;
         } completion:^(BOOL finished) {
             [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
