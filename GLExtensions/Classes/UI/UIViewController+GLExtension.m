@@ -130,8 +130,9 @@
         
         // 如果自定义了，就使用自定义的，这里优先使用 rect
         if([toViewController respondsToSelector:@selector(presentdAnimateEndRect)]) {
-            endRect = [fromViewController presentdAnimateEndRect];
-        }else if([toViewController respondsToSelector:NSSelectorFromString(@"pHeight")]) {
+            endRect = [toViewController presentdAnimateEndRect];
+        }
+        if(CGRectEqualToRect(CGRectZero, endRect) && [toViewController respondsToSelector:NSSelectorFromString(@"pHeight")]) {
             CGFloat ph = [toViewController pHeight];
             if(ph>0) {
                 endRect.origin.y = endRect.size.height - MIN(ph, endRect.size.height);
