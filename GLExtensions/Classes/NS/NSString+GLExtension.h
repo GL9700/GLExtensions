@@ -42,6 +42,16 @@ static inline BOOL isValidString(NSString *str) {
  * [NSCharacterSet symbolCharacterSet];                  //符号的字符集
  * [NSCharacterSet newlineCharacterSet];                 //换行符的字符集
  */
+
+/// 生成随机字符串
+/// - Parameters:
+///   - length: 长度
+///   - letters: 样本
+/// - Discussion:
+///   - 参数 letters 支持 nil、NSString、NSArray
+///   - 参数 letters 默认值: 【大、小写字母和数字 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"】
++ (NSString *)stringOfRandomLength:(NSInteger)length letters:(id)letters;
+
 /// 是否包含字符集。(如果不包含，则返回nil，否则返回自身值)
 - (NSString *)isContainsCharset:(NSCharacterSet *)charset;
 

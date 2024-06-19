@@ -69,6 +69,28 @@
     return @"";
 }
 #pragma clang diagnostic pop
+
++ (NSString *)stringOfRandomLength:(NSInteger)length letters:(id)letters {
+    NSMutableString *randomString = [NSMutableString string];
+    id letterList = letters;
+    if(letterList == nil) {
+        letterList = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    }
+    if([letterList isKindOfClass:[NSString class]]) {
+        for (int i = 0; i < length; i++) {
+            [randomString appendFormat: @"%C", [letterList characterAtIndex: arc4random_uniform((u_int32_t)[letterList length])]];
+        }
+    }
+    else if([letterList isKindOfClass:[NSArray class]]) {
+        for (int i = 0; i < length; i++) {
+//            [randomString appendFormat: @"%C", [letterList characterAtIndex: arc4random_uniform((u_int32_t)[letterList length])]];
+            NSInteger idx = arc4random() % ((NSArray *)letterList).count;
+            [randomString appendString:((NSArray *)letterList)[idx]];
+        }
+    }
+    return randomString;
+}
+
 - (BOOL)isContain:(NSString *)str {
     if([self isContainString:str exact:YES]) {
         return YES;
