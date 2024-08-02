@@ -21,6 +21,8 @@ it, simply add the following line to your Podfile:
 pod 'GLExtensions'
 ```
 ## History
+* 1.1.9 -- 2024.08.02
+    * !! 暂时注释掉所有关于权限请求的内容
 * 1.1.8 -- 2024.05.21
     * 增加自定义高度的`present`
 * 1.1.6 -- 2024.04.19
